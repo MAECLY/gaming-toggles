@@ -3,6 +3,19 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [1.1.1] - 2026-08-29
+
+### Añadido
+
+- Licencia MIT en el repositorio y dentro del instalador distribuido.
+- Guías bilingües para contribuir y comunicar vulnerabilidades.
+- Plantilla de GitHub para proponer mejoras.
+
+### Cambiado
+
+- Autoría actualizada a Miguel Esparza, con `maecly.com` y
+  `hola@maecly.com` como sitio y contacto oficiales.
+
 ## [1.1.0] - 2026-08-29
 
 ### Añadido

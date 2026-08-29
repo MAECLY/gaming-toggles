@@ -1,10 +1,24 @@
 {
   "name": "stream-deck-windows-xbox-settings",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "type": "module",
   "description": "Controles de Stream Deck para el Modo Juego y la apertura de Xbox Game Bar con el mando.",
-  "homepage": "https://github.com/MAECLY/stream-deck-windows-xbox-settings#readme",
+  "homepage": "https://www.maecly.com/",
+  "author": {
+    "name": "Miguel Esparza",
+    "email": "hola@maecly.com",
+    "url": "https://www.maecly.com/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "stream-deck",
+    "windows-11",
+    "xbox",
+    "game-mode",
+    "game-bar",
+    "open-source"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MAECLY/stream-deck-windows-xbox-settings.git"
@@ -16,7 +30,7 @@
     "build": "rollup -c",
     "render:icons": "node scripts/render-icons.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/windows-registry.test.ts tests/localization.test.ts",
+    "test": "node --test tests/windows-registry.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts",
     "validate": "npm run typecheck && npm run test && npm run build",
     "validate:manifest": "node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs validate com.miguelangelstream.windows-xbox-settings.sdPlugin",
     "package:plugin": "npm run render:icons && npm run validate && npm run validate:manifest && node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs pack com.miguelangelstream.windows-xbox-settings.sdPlugin --force",

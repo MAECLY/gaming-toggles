@@ -1,0 +1,27 @@
+name: Proponer una mejora / Suggest an improvement
+description: Comparte una idea para mejorar el plugin. / Share an idea to improve the plugin.
+title: "[Mejora]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: Gracias por ayudar a mejorar Xbox para Windows. Thank you for helping improve Xbox for Windows.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema u oportunidad / Problem or opportunity
+      description: ¿Qué necesidad resolvería? What need would this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta / Proposal
+      description: Describe el comportamiento que propones. Describe the behavior you propose.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas / Alternatives
+      description: ¿Consideraste otras soluciones? Did you consider other solutions?

@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/MAECLY/stream-deck-windows-xbox-settings/actions/workflows/ci.yml/badge.svg)](https://github.com/MAECLY/stream-deck-windows-xbox-settings/actions/workflows/ci.yml)
 [![Última versión](https://img.shields.io/github/v/release/MAECLY/stream-deck-windows-xbox-settings?label=descarga)](https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest)
+[![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
 
 Dos controles para Windows 11 directamente en Stream Deck:
 
@@ -31,7 +32,7 @@ proceso de publicación en Elgato Marketplace.
 Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
 
 ```powershell
-(Get-FileHash .\Xbox-para-Windows-v1.1.0.streamDeckPlugin -Algorithm SHA256).Hash
+(Get-FileHash .\Xbox-para-Windows-v1.1.1.streamDeckPlugin -Algorithm SHA256).Hash
 ```
 
 ## Requisitos
@@ -70,6 +71,20 @@ npm run package:plugin
 El proceso de lanzamiento y versionado está explicado en
 [RELEASING.md](RELEASING.md). Los cambios de cada versión están en
 [CHANGELOG.md](CHANGELOG.md).
+
+## Código abierto y contribuciones
+
+Este proyecto es software de código abierto bajo la [licencia MIT](LICENSE).
+Las correcciones, traducciones, pruebas y propuestas de mejora son bienvenidas.
+Consulta [CONTRIBUTING.md](CONTRIBUTING.md) antes de abrir un issue o pull
+request. Los informes de seguridad deben seguir [SECURITY.md](SECURITY.md).
+
+## Autor y contacto
+
+Creado por [Miguel Esparza](https://www.maecly.com/).
+
+- Sitio web: [maecly.com](https://www.maecly.com/)
+- Contacto: [hola@maecly.com](mailto:hola@maecly.com)
 
 ## Distribución
 
