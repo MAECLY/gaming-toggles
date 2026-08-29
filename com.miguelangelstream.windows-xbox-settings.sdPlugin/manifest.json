@@ -7,22 +7,25 @@
       ],
       "DisableAutomaticStates": true,
       "Icon": "imgs/actions/game-mode/action",
-      "Name": "Alternar Modo Juego",
+      "Name": "Toggle Game Mode",
       "States": [
         {
           "Image": "imgs/actions/game-mode/off",
-          "Title": "Modo Juego\nOFF",
+          "Name": "Off",
+          "Title": "Game Mode\nOFF",
           "TitleAlignment": "bottom",
           "FontSize": 13
         },
         {
           "Image": "imgs/actions/game-mode/on",
-          "Title": "Modo Juego\nON",
+          "Name": "On",
+          "Title": "Game Mode\nON",
           "TitleAlignment": "bottom",
           "FontSize": 13
         }
       ],
-      "Tooltip": "Enciende o apaga el Modo Juego de Windows 11.",
+      "Tooltip": "Turn Windows 11 Game Mode on or off.",
+      "UserTitleEnabled": false,
       "UUID": "com.miguelangelstream.windows-xbox-settings.game-mode"
     },
     {
@@ -31,32 +34,35 @@
       ],
       "DisableAutomaticStates": true,
       "Icon": "imgs/actions/controller-game-bar/action",
-      "Name": "Mando abre Game Bar",
+      "Name": "Controller opens Game Bar",
       "States": [
         {
           "Image": "imgs/actions/controller-game-bar/off",
-          "Title": "Mando → Bar\nOFF",
+          "Name": "Off",
+          "Title": "Pad → Bar\nOFF",
           "TitleAlignment": "bottom",
           "FontSize": 13
         },
         {
           "Image": "imgs/actions/controller-game-bar/on",
-          "Title": "Mando → Bar\nON",
+          "Name": "On",
+          "Title": "Pad → Bar\nON",
           "TitleAlignment": "bottom",
           "FontSize": 13
         }
       ],
-      "Tooltip": "Permite o impide que el botón Xbox del mando abra Game Bar.",
+      "Tooltip": "Allow or prevent the controller's Xbox button from opening Game Bar.",
+      "UserTitleEnabled": false,
       "UUID": "com.miguelangelstream.windows-xbox-settings.controller-game-bar"
     }
   ],
   "Author": "Miguel Angel Stream",
-  "Category": "Xbox para Windows",
+  "Category": "Xbox · Windows",
   "CategoryIcon": "imgs/plugin/category",
   "CodePath": "bin/plugin.js",
-  "Description": "Controla desde Stream Deck el Modo Juego y el botón Xbox del mando en Windows 11.",
+  "Description": "Control Windows 11 Game Mode and the controller's Xbox button from Stream Deck.",
   "Icon": "imgs/plugin/marketplace",
-  "Name": "Xbox para Windows",
+  "Name": "Xbox · Windows",
   "Nodejs": {
     "Version": "24"
   },
@@ -73,5 +79,5 @@
   "SupportURL": "https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues",
   "URL": "https://github.com/MAECLY/stream-deck-windows-xbox-settings",
   "UUID": "com.miguelangelstream.windows-xbox-settings",
-  "Version": "1.0.1.0"
+  "Version": "1.1.0.0"
 }

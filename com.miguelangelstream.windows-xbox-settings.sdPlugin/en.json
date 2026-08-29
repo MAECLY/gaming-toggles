@@ -1,0 +1,34 @@
+{
+  "Name": "Xbox for Windows",
+  "Description": "Control Windows 11 Game Mode and the controller's Xbox button from Stream Deck.",
+  "com.miguelangelstream.windows-xbox-settings.game-mode": {
+    "Name": "Toggle Game Mode",
+    "Tooltip": "Turn Windows 11 Game Mode on or off.",
+    "States": [
+      {
+        "Name": "Off"
+      },
+      {
+        "Name": "On"
+      }
+    ]
+  },
+  "com.miguelangelstream.windows-xbox-settings.controller-game-bar": {
+    "Name": "Controller opens Game Bar",
+    "Tooltip": "Allow or prevent the controller's Xbox button from opening Game Bar.",
+    "States": [
+      {
+        "Name": "Off"
+      },
+      {
+        "Name": "On"
+      }
+    ]
+  },
+  "Localization": {
+    "Game Mode\nOFF": "Game Mode\nOFF",
+    "Game Mode\nON": "Game Mode\nON",
+    "Pad → Bar\nOFF": "Pad → Bar\nOFF",
+    "Pad → Bar\nON": "Pad → Bar\nON"
+  }
+}

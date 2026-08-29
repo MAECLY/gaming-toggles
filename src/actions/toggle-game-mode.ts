@@ -9,6 +9,9 @@ import {
 @action({ UUID: "com.miguelangelstream.windows-xbox-settings.game-mode" })
 export class ToggleGameModeAction extends ToggleXboxSettingAction {
   public constructor(registry: RegistryClient) {
-    super(registry, GAME_MODE_SETTING);
+    super(registry, GAME_MODE_SETTING, {
+      disabled: "Game Mode\nOFF",
+      enabled: "Game Mode\nON"
+    });
   }
 }

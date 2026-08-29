@@ -31,7 +31,7 @@ proceso de publicación en Elgato Marketplace.
 Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
 
 ```powershell
-(Get-FileHash .\Xbox-para-Windows-v1.0.0.streamDeckPlugin -Algorithm SHA256).Hash
+(Get-FileHash .\Xbox-para-Windows-v1.1.0.streamDeckPlugin -Algorithm SHA256).Hash
 ```
 
 ## Requisitos
@@ -47,6 +47,8 @@ Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
   directamente desde Configuración.
 - Si un valor aún no existe en el Registro, se interpreta el valor predeterminado
   de Windows 11 como encendido. La primera pulsación crea el valor apagado.
+- Interfaz disponible en español e inglés, seleccionada automáticamente según el
+  idioma configurado en Stream Deck.
 
 ## Desarrollo
 

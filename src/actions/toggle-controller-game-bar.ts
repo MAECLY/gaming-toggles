@@ -9,6 +9,9 @@ import {
 @action({ UUID: "com.miguelangelstream.windows-xbox-settings.controller-game-bar" })
 export class ToggleControllerGameBarAction extends ToggleXboxSettingAction {
   public constructor(registry: RegistryClient) {
-    super(registry, CONTROLLER_GAME_BAR_SETTING);
+    super(registry, CONTROLLER_GAME_BAR_SETTING, {
+      disabled: "Pad → Bar\nOFF",
+      enabled: "Pad → Bar\nON"
+    });
   }
 }
