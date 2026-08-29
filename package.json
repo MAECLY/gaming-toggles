@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "description": "Controles de Stream Deck para el Modo Juego y la apertura de Xbox Game Bar con el mando.",
-  "homepage": "https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings#readme",
+  "homepage": "https://github.com/MAECLY/stream-deck-windows-xbox-settings#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings.git"
+    "url": "git+https://github.com/MAECLY/stream-deck-windows-xbox-settings.git"
   },
   "bugs": {
-    "url": "https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings/issues"
+    "url": "https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues"
   },
   "scripts": {
     "build": "rollup -c",

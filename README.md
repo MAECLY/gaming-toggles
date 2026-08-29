@@ -1,7 +1,7 @@
 # Xbox para Windows — plugin de Stream Deck
 
-[![CI](https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings/actions/workflows/ci.yml/badge.svg)](https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings/actions/workflows/ci.yml)
-[![Última versión](https://img.shields.io/github/v/release/MigelAngelEC/stream-deck-windows-xbox-settings?label=descarga)](https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings/releases/latest)
+[![CI](https://github.com/MAECLY/stream-deck-windows-xbox-settings/actions/workflows/ci.yml/badge.svg)](https://github.com/MAECLY/stream-deck-windows-xbox-settings/actions/workflows/ci.yml)
+[![Última versión](https://img.shields.io/github/v/release/MAECLY/stream-deck-windows-xbox-settings?label=descarga)](https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest)
 
 Dos controles para Windows 11 directamente en Stream Deck:
 
@@ -18,7 +18,7 @@ actual.
 Este plugin está disponible directamente desde GitHub mientras se completa el
 proceso de publicación en Elgato Marketplace.
 
-1. Abre la [última versión publicada](https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings/releases/latest).
+1. Abre la [última versión publicada](https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest).
 2. Descarga el archivo cuyo nombre termina en `.streamDeckPlugin`.
 3. Ábrelo con doble clic y acepta la instalación en Stream Deck.
 4. Busca **Xbox para Windows** en la lista de acciones y arrastra los dos
