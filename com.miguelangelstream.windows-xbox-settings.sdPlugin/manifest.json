@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Actions": [
+    {
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/game-mode/action",
+      "Name": "Alternar Modo Juego",
+      "States": [
+        {
+          "Image": "imgs/actions/game-mode/off",
+          "Title": "Modo Juego\nOFF",
+          "TitleAlignment": "bottom",
+          "FontSize": 13
+        },
+        {
+          "Image": "imgs/actions/game-mode/on",
+          "Title": "Modo Juego\nON",
+          "TitleAlignment": "bottom",
+          "FontSize": 13
+        }
+      ],
+      "Tooltip": "Enciende o apaga el Modo Juego de Windows 11.",
+      "UUID": "com.miguelangelstream.windows-xbox-settings.game-mode"
+    },
+    {
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/controller-game-bar/action",
+      "Name": "Mando abre Game Bar",
+      "States": [
+        {
+          "Image": "imgs/actions/controller-game-bar/off",
+          "Title": "Mando → Bar\nOFF",
+          "TitleAlignment": "bottom",
+          "FontSize": 13
+        },
+        {
+          "Image": "imgs/actions/controller-game-bar/on",
+          "Title": "Mando → Bar\nON",
+          "TitleAlignment": "bottom",
+          "FontSize": 13
+        }
+      ],
+      "Tooltip": "Permite o impide que el botón Xbox del mando abra Game Bar.",
+      "UUID": "com.miguelangelstream.windows-xbox-settings.controller-game-bar"
+    }
+  ],
+  "Author": "Miguel Angel Stream",
+  "Category": "Xbox para Windows",
+  "CategoryIcon": "imgs/plugin/category",
+  "CodePath": "bin/plugin.js",
+  "Description": "Controla desde Stream Deck el Modo Juego y el botón Xbox del mando en Windows 11.",
+  "Icon": "imgs/plugin/marketplace",
+  "Name": "Xbox para Windows",
+  "Nodejs": {
+    "Version": "24"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "SDKVersion": 3,
+  "Software": {
+    "MinimumVersion": "7.1"
+  },
+  "SupportURL": "https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings/issues",
+  "URL": "https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings",
+  "UUID": "com.miguelangelstream.windows-xbox-settings",
+  "Version": "1.0.0.0"
+}

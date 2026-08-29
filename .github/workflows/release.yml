@@ -1,0 +1,73 @@
+name: Publicar GitHub Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Crear instalador y Release
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      PACKAGE_FILE: com.miguelangelstream.windows-xbox-settings.streamDeckPlugin
+
+    steps:
+      - name: Descargar exactamente la etiqueta publicada
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+
+      - name: Configurar Node.js 24
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Instalar dependencias reproducibles
+        run: npm ci
+
+      - name: Comprobar que la etiqueta coincide con el manifiesto
+        run: npm run version:check -- $env:GITHUB_REF_NAME
+
+      - name: Validar, probar y empaquetar
+        run: npm run package:plugin
+
+      - name: Preparar instalador y checksum
+        id: artifact
+        shell: pwsh
+        run: |
+          $asset = "Xbox-para-Windows-$env:GITHUB_REF_NAME.streamDeckPlugin"
+          Move-Item -LiteralPath $env:PACKAGE_FILE -Destination $asset
+          $hash = (Get-FileHash -LiteralPath $asset -Algorithm SHA256).Hash.ToLowerInvariant()
+          "$hash  $asset" | Set-Content -LiteralPath SHA256SUMS.txt -Encoding utf8NoBOM
+          "asset=$asset" >> $env:GITHUB_OUTPUT
+
+      - name: Crear GitHub Release pública
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_ASSET: ${{ steps.artifact.outputs.asset }}
+        run: |
+          $notes = @"
+          ## Instalación
+
+          Descarga **$env:RELEASE_ASSET** y ábrelo con doble clic. Stream Deck realizará la instalación.
+
+          No descargues los archivos automáticos **Source code (zip/tar.gz)**: contienen el código fuente, no el instalador.
+          "@
+          gh release create $env:GITHUB_REF_NAME `
+            "$env:RELEASE_ASSET#Instalador para Stream Deck (Windows 11)" `
+            "SHA256SUMS.txt#Checksum SHA-256" `
+            --verify-tag `
+            --generate-notes `
+            --title "Xbox para Windows $env:GITHUB_REF_NAME" `
+            --notes $notes

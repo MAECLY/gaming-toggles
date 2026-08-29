@@ -1,0 +1,41 @@
+name: Reportar un problema
+description: Informa de un fallo reproducible del plugin.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Gracias por ayudarnos a mejorar Xbox para Windows.
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Versión del plugin
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: stream-deck-version
+    attributes:
+      label: Versión de Stream Deck
+      placeholder: 7.5.1
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Versión y compilación de Windows 11
+      placeholder: Windows 11 24H2, compilación 26100.x
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducirlo
+      description: Explica qué botón usaste, qué esperabas y qué ocurrió.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Información adicional
+      description: Capturas, registros o detalles que puedan ayudar.

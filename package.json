@@ -1,0 +1,46 @@
+{
+  "name": "stream-deck-windows-xbox-settings",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Controles de Stream Deck para el Modo Juego y la apertura de Xbox Game Bar con el mando.",
+  "homepage": "https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MigelAngelEC/stream-deck-windows-xbox-settings/issues"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "render:icons": "node scripts/render-icons.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/windows-registry.test.ts",
+    "validate": "npm run typecheck && npm run test && npm run build",
+    "validate:manifest": "node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs validate com.miguelangelstream.windows-xbox-settings.sdPlugin",
+    "package:plugin": "npm run render:icons && npm run validate && npm run validate:manifest && node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs pack com.miguelangelstream.windows-xbox-settings.sdPlugin --force",
+    "version:check": "node scripts/check-release-version.mjs",
+    "version:set": "node scripts/set-version.mjs",
+    "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart com.miguelangelstream.windows-xbox-settings\"",
+    "link": "streamdeck link com.miguelangelstream.windows-xbox-settings.sdPlugin",
+    "restart": "streamdeck restart com.miguelangelstream.windows-xbox-settings"
+  },
+  "dependencies": {
+    "@elgato/streamdeck": "^2.0.0"
+  },
+  "devDependencies": {
+    "@elgato/cli": "^1.6.0",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^24.3.0",
+    "rollup": "^4.50.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

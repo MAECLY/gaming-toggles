@@ -1,0 +1,122 @@
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+
+const execFileAsync = promisify(execFile);
+
+export const GAME_BAR_REGISTRY_KEY = String.raw`HKCU\Software\Microsoft\GameBar`;
+
+export type XboxSetting = {
+  readonly valueName: "AutoGameModeEnabled" | "UseNexusForGameBarEnabled";
+  readonly defaultEnabled: boolean;
+};
+
+export const GAME_MODE_SETTING: XboxSetting = {
+  valueName: "AutoGameModeEnabled",
+  // Windows 11 ships with Game Mode enabled when no per-user override exists.
+  defaultEnabled: true
+};
+
+export const CONTROLLER_GAME_BAR_SETTING: XboxSetting = {
+  valueName: "UseNexusForGameBarEnabled",
+  // Windows 11 enables the Xbox/Nexus button shortcut by default.
+  defaultEnabled: true
+};
+
+type ProcessError = Error & {
+  code?: number | string;
+  stderr?: string;
+};
+
+export type RegistryCommand = (args: readonly string[]) => Promise<string>;
+
+export interface RegistryClient {
+  isEnabled(setting: XboxSetting): Promise<boolean>;
+  setEnabled(setting: XboxSetting, enabled: boolean): Promise<void>;
+  toggle(setting: XboxSetting): Promise<boolean>;
+}
+
+export class WindowsRegistryClient implements RegistryClient {
+  readonly #runCommand: RegistryCommand;
+  readonly #pending = new Map<string, Promise<boolean>>();
+
+  public constructor(
+    systemRoot = process.env.SystemRoot ?? String.raw`C:\Windows`,
+    runCommand?: RegistryCommand
+  ) {
+    const regExe = `${systemRoot}\\System32\\reg.exe`;
+    this.#runCommand = runCommand ?? (async (args) => {
+      const { stdout } = await execFileAsync(regExe, [...args], {
+        encoding: "utf8",
+        windowsHide: true
+      });
+      return stdout;
+    });
+  }
+
+  public async isEnabled(setting: XboxSetting): Promise<boolean> {
+    const value = await this.#readDword(setting.valueName);
+    return value === undefined ? setting.defaultEnabled : value !== 0;
+  }
+
+  public async setEnabled(setting: XboxSetting, enabled: boolean): Promise<void> {
+    await this.#runCommand([
+        "add",
+        GAME_BAR_REGISTRY_KEY,
+        "/v",
+        setting.valueName,
+        "/t",
+        "REG_DWORD",
+        "/d",
+        enabled ? "1" : "0",
+        "/f"
+      ]);
+
+    const persisted = await this.#readDword(setting.valueName);
+    if (persisted !== (enabled ? 1 : 0)) {
+      throw new Error(`Windows no confirmó el valor ${setting.valueName}.`);
+    }
+  }
+
+  public toggle(setting: XboxSetting): Promise<boolean> {
+    const previous = this.#pending.get(setting.valueName) ?? Promise.resolve(false);
+    const next = previous
+      .catch(() => false)
+      .then(async () => {
+        const enabled = !(await this.isEnabled(setting));
+        await this.setEnabled(setting, enabled);
+        return enabled;
+      });
+
+    this.#pending.set(setting.valueName, next);
+    const cleanup = (): void => {
+      if (this.#pending.get(setting.valueName) === next) {
+        this.#pending.delete(setting.valueName);
+      }
+    };
+    void next.then(cleanup, cleanup);
+    return next;
+  }
+
+  async #readDword(valueName: XboxSetting["valueName"]): Promise<number | undefined> {
+    try {
+      const stdout = await this.#runCommand([
+        "query",
+        GAME_BAR_REGISTRY_KEY,
+        "/v",
+        valueName
+      ]);
+      const match = stdout.match(/REG_DWORD\s+(0x[0-9a-f]+|\d+)/i);
+      if (!match) {
+        throw new Error(`No se pudo interpretar ${valueName} como REG_DWORD.`);
+      }
+      return Number.parseInt(match[1], 0);
+    } catch (error) {
+      const processError = error as ProcessError;
+      // reg.exe returns code 1 when the key or value has never been created.
+      if (processError.code === 1) {
+        return undefined;
+      }
+      throw error;
+    }
+  }
+}
