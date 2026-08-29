@@ -1,6 +1,6 @@
 {
   "name": "stream-deck-windows-xbox-settings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "Controles de Stream Deck para el Modo Juego y la apertura de Xbox Game Bar con el mando.",

@@ -3,6 +3,12 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [1.0.1] - 2026-08-29
+
+### Cambiado
+
+- Repositorio, soporte y descargas trasladados a la organización `MAECLY`.
+
 ## [1.0.0] - 2026-08-29
 
 ### Añadido
