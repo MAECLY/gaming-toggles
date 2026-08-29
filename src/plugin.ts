@@ -5,6 +5,7 @@ import { ToggleGameModeAction } from "./actions/toggle-game-mode.js";
 import { WindowsRegistryClient } from "./windows-registry.js";
 
 streamDeck.logger.setLevel("info");
+streamDeck.logger.info("Iniciando Xbox para Windows.");
 
 const registry = new WindowsRegistryClient();
 streamDeck.actions.registerAction(new ToggleGameModeAction(registry));

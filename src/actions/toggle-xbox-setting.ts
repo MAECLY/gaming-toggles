@@ -53,8 +53,14 @@ export abstract class ToggleXboxSettingAction extends SingletonAction<EmptySetti
       const enabled = await this.#registry.toggle(this.#setting);
       await this.#renderAction(ev.action, enabled);
       await this.#refreshAll();
+      streamDeck.logger.info(
+        `${this.#setting.valueName}=${enabled ? 1 : 0} confirmado por Windows.`
+      );
     } catch (error) {
-      console.error(`No se pudo alternar ${this.#setting.valueName}:`, error);
+      streamDeck.logger.error(
+        `No se pudo alternar ${this.#setting.valueName}.`,
+        error
+      );
       await ev.action.showAlert();
     }
   }
@@ -72,7 +78,10 @@ export abstract class ToggleXboxSettingAction extends SingletonAction<EmptySetti
         )
       );
     } catch (error) {
-      console.error(`No se pudo leer ${this.#setting.valueName}:`, error);
+      streamDeck.logger.error(
+        `No se pudo leer ${this.#setting.valueName}.`,
+        error
+      );
     } finally {
       this.#refreshing = false;
     }
@@ -83,7 +92,10 @@ export abstract class ToggleXboxSettingAction extends SingletonAction<EmptySetti
       const enabled = await this.#registry.isEnabled(this.#setting);
       await this.#renderAction(action, enabled);
     } catch (error) {
-      console.error(`No se pudo leer ${this.#setting.valueName}:`, error);
+      streamDeck.logger.error(
+        `No se pudo leer ${this.#setting.valueName}.`,
+        error
+      );
       await action.showAlert();
     }
   }

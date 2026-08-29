@@ -1,4 +1,5 @@
 node_modules/
+native/**/target/
 *.sdPlugin/bin/
 *.sdPlugin/logs/
 *.streamDeckPlugin

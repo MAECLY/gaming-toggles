@@ -32,7 +32,7 @@ proceso de publicación en Elgato Marketplace.
 Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
 
 ```powershell
-(Get-FileHash .\Xbox-para-Windows-v1.1.1.streamDeckPlugin -Algorithm SHA256).Hash
+(Get-FileHash .\Xbox-para-Windows-v1.1.2.streamDeckPlugin -Algorithm SHA256).Hash
 ```
 
 ## Requisitos
@@ -46,6 +46,8 @@ Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
 - El estado verde indica que la opción está encendida; el gris, apagada.
 - Los botones vuelven a leer Windows cada 2,5 segundos y reflejan cambios hechos
   directamente desde Configuración.
+- Al cambiar Modo Juego, el plugin notifica únicamente a las ventanas visibles
+  de Configuración para que la página abierta actualice el interruptor.
 - Si un valor aún no existe en el Registro, se interpreta el valor predeterminado
   de Windows 11 como encendido. La primera pulsación crea el valor apagado.
 - Interfaz disponible en español e inglés, seleccionada automáticamente según el
@@ -71,6 +73,9 @@ npm run package:plugin
 El proceso de lanzamiento y versionado está explicado en
 [RELEASING.md](RELEASING.md). Los cambios de cada versión están en
 [CHANGELOG.md](CHANGELOG.md).
+
+Los diagnósticos de ejecución se guardan dentro de la carpeta instalada del
+plugin, en `logs/com.miguelangelstream.windows-xbox-settings*.log`.
 
 ## Código abierto y contribuciones
 

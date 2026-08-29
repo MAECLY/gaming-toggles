@@ -1,19 +1,35 @@
 import { execFile } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 
 const execFileAsync = promisify(execFile);
+
+const NOTIFICATION_COMMAND = String.raw`
+$ErrorActionPreference = "Stop"
+[void][Reflection.Assembly]::LoadFrom(
+  $env:MAECLY_SETTINGS_NOTIFIER_ASSEMBLY
+)
+$result = [Maecly.WindowsSettingsNotifier]::Notify()
+$matched = $result -shr 16
+$notified = $result -band 0xffff
+Write-Output "matched=$matched notified=$notified"
+if ($notified -ne $matched) { exit 1 }
+`;
 
 export const GAME_BAR_REGISTRY_KEY = String.raw`HKCU\Software\Microsoft\GameBar`;
 
 export type XboxSetting = {
   readonly valueName: "AutoGameModeEnabled" | "UseNexusForGameBarEnabled";
   readonly defaultEnabled: boolean;
+  readonly notifyWindows?: boolean;
 };
 
 export const GAME_MODE_SETTING: XboxSetting = {
   valueName: "AutoGameModeEnabled",
   // Windows 11 ships with Game Mode enabled when no per-user override exists.
-  defaultEnabled: true
+  defaultEnabled: true,
+  // The Game Mode settings page caches this value while it is open.
+  notifyWindows: true
 };
 
 export const CONTROLLER_GAME_BAR_SETTING: XboxSetting = {
@@ -28,6 +44,33 @@ type ProcessError = Error & {
 };
 
 export type RegistryCommand = (args: readonly string[]) => Promise<string>;
+export type SettingsChangeNotifier = () => Promise<void>;
+
+export function createWindowsSettingsNotifier(
+  systemRoot: string,
+  assemblyPath = fileURLToPath(
+    new URL("./MAECLY.WindowsSettingsNotifier.dll", import.meta.url)
+  )
+): SettingsChangeNotifier {
+  const powerShell =
+    `${systemRoot}\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`;
+
+  return async () => {
+    await execFileAsync(
+      powerShell,
+      ["-NoLogo", "-NoProfile", "-NonInteractive", "-Command", NOTIFICATION_COMMAND],
+      {
+        encoding: "utf8",
+        env: {
+          ...process.env,
+          MAECLY_SETTINGS_NOTIFIER_ASSEMBLY: assemblyPath
+        },
+        timeout: 5000,
+        windowsHide: true
+      }
+    );
+  };
+}
 
 export interface RegistryClient {
   isEnabled(setting: XboxSetting): Promise<boolean>;
@@ -37,11 +80,13 @@ export interface RegistryClient {
 
 export class WindowsRegistryClient implements RegistryClient {
   readonly #runCommand: RegistryCommand;
+  readonly #notifySettingsChange: SettingsChangeNotifier;
   readonly #pending = new Map<string, Promise<boolean>>();
 
   public constructor(
     systemRoot = process.env.SystemRoot ?? String.raw`C:\Windows`,
-    runCommand?: RegistryCommand
+    runCommand?: RegistryCommand,
+    notifySettingsChange?: SettingsChangeNotifier
   ) {
     const regExe = `${systemRoot}\\System32\\reg.exe`;
     this.#runCommand = runCommand ?? (async (args) => {
@@ -51,6 +96,8 @@ export class WindowsRegistryClient implements RegistryClient {
       });
       return stdout;
     });
+    this.#notifySettingsChange =
+      notifySettingsChange ?? createWindowsSettingsNotifier(systemRoot);
   }
 
   public async isEnabled(setting: XboxSetting): Promise<boolean> {
@@ -74,6 +121,10 @@ export class WindowsRegistryClient implements RegistryClient {
     const persisted = await this.#readDword(setting.valueName);
     if (persisted !== (enabled ? 1 : 0)) {
       throw new Error(`Windows no confirmó el valor ${setting.valueName}.`);
+    }
+
+    if (setting.notifyWindows === true) {
+      await this.#notifySettingsChange();
     }
   }
 

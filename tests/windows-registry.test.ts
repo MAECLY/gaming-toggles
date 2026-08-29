@@ -5,14 +5,17 @@ import {
   CONTROLLER_GAME_BAR_SETTING,
   GAME_MODE_SETTING,
   WindowsRegistryClient,
-  type RegistryCommand
+  type RegistryCommand,
+  type SettingsChangeNotifier
 } from "../src/windows-registry.ts";
 
 function createFakeRegistry(initial: Record<string, number> = {}): {
   client: WindowsRegistryClient;
+  notificationCount: () => number;
   values: Map<string, number>;
 } {
   const values = new Map(Object.entries(initial));
+  let notifications = 0;
   const runCommand: RegistryCommand = async (args) => {
     const operation = args[0];
     const valueFlag = args.indexOf("/v");
@@ -34,9 +37,17 @@ function createFakeRegistry(initial: Record<string, number> = {}): {
 
     throw new Error(`Operación inesperada: ${operation}`);
   };
+  const notifySettingsChange: SettingsChangeNotifier = async () => {
+    notifications += 1;
+  };
 
   return {
-    client: new WindowsRegistryClient(String.raw`C:\Windows`, runCommand),
+    client: new WindowsRegistryClient(
+      String.raw`C:\Windows`,
+      runCommand,
+      notifySettingsChange
+    ),
+    notificationCount: () => notifications,
     values
   };
 }
@@ -60,16 +71,20 @@ describe("WindowsRegistryClient", () => {
   });
 
   it("alterna y verifica el valor persistido", async () => {
-    const { client, values } = createFakeRegistry({ AutoGameModeEnabled: 1 });
+    const { client, notificationCount, values } = createFakeRegistry({
+      AutoGameModeEnabled: 1
+    });
 
     assert.equal(await client.toggle(GAME_MODE_SETTING), false);
     assert.equal(values.get("AutoGameModeEnabled"), 0);
+    assert.equal(notificationCount(), 1);
     assert.equal(await client.toggle(GAME_MODE_SETTING), true);
     assert.equal(values.get("AutoGameModeEnabled"), 1);
+    assert.equal(notificationCount(), 2);
   });
 
   it("serializa pulsaciones simultáneas de una misma acción", async () => {
-    const { client, values } = createFakeRegistry({
+    const { client, notificationCount, values } = createFakeRegistry({
       UseNexusForGameBarEnabled: 1
     });
 
@@ -80,5 +95,6 @@ describe("WindowsRegistryClient", () => {
 
     assert.deepEqual(results, [false, true]);
     assert.equal(values.get("UseNexusForGameBarEnabled"), 1);
+    assert.equal(notificationCount(), 0);
   });
 });

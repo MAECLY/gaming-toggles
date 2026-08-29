@@ -3,6 +3,16 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [1.1.2] - 2026-08-29
+
+### Corregido
+
+- El botón Modo Juego ahora notifica el cambio a Windows mediante
+  `WM_SETTINGCHANGE`, para que la página de Configuración abierta vuelva a leer
+  `AutoGameModeEnabled`.
+- Los cambios confirmados y los errores ahora quedan registrados en el log
+  propio del plugin.
+
 ## [1.1.1] - 2026-08-29
 
 ### Añadido
