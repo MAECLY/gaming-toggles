@@ -81,12 +81,14 @@ export interface RegistryClient {
 export class WindowsRegistryClient implements RegistryClient {
   readonly #runCommand: RegistryCommand;
   readonly #notifySettingsChange: SettingsChangeNotifier;
+  readonly #registryKey: string;
   readonly #pending = new Map<string, Promise<boolean>>();
 
   public constructor(
     systemRoot = process.env.SystemRoot ?? String.raw`C:\Windows`,
     runCommand?: RegistryCommand,
-    notifySettingsChange?: SettingsChangeNotifier
+    notifySettingsChange?: SettingsChangeNotifier,
+    registryKey = GAME_BAR_REGISTRY_KEY
   ) {
     const regExe = `${systemRoot}\\System32\\reg.exe`;
     this.#runCommand = runCommand ?? (async (args) => {
@@ -98,6 +100,7 @@ export class WindowsRegistryClient implements RegistryClient {
     });
     this.#notifySettingsChange =
       notifySettingsChange ?? createWindowsSettingsNotifier(systemRoot);
+    this.#registryKey = registryKey;
   }
 
   public async isEnabled(setting: XboxSetting): Promise<boolean> {
@@ -108,7 +111,7 @@ export class WindowsRegistryClient implements RegistryClient {
   public async setEnabled(setting: XboxSetting, enabled: boolean): Promise<void> {
     await this.#runCommand([
         "add",
-        GAME_BAR_REGISTRY_KEY,
+        this.#registryKey,
         "/v",
         setting.valueName,
         "/t",
@@ -152,7 +155,7 @@ export class WindowsRegistryClient implements RegistryClient {
     try {
       const stdout = await this.#runCommand([
         "query",
-        GAME_BAR_REGISTRY_KEY,
+        this.#registryKey,
         "/v",
         valueName
       ]);

@@ -1,0 +1,29 @@
+# Xbox para Windows by MAECLY
+
+> Free and open-source Stream Deck plugin for two Windows 11 Xbox settings.
+
+## Canonical pages
+
+- [Spanish landing](https://xbox-stream-deck.maecly.com/)
+- [English landing](https://xbox-stream-deck.maecly.com/en/)
+- [Source code](https://github.com/MAECLY/stream-deck-windows-xbox-settings)
+- [Latest installer](https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest)
+- [Support](https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues)
+
+## Capabilities
+
+- Toggle Windows 11 Game Mode (`AutoGameModeEnabled`).
+- Toggle whether the controller Xbox/Nexus button opens Game Bar (`UseNexusForGameBarEnabled`).
+- Reflect external Windows Settings changes on Stream Deck every 2.5 seconds.
+- Spanish and English localization.
+
+## Trust
+
+- MIT licensed, source available on GitHub.
+- Per-user HKCU settings; no administrator permission required.
+- GitHub Actions build and SHA-256 checksum for Releases.
+- Independent project; not affiliated with Microsoft, Xbox, Elgato, or Corsair.
+
+## Publisher
+
+MAECLY. Created by Miguel Esparza. Contact: hola@maecly.com.

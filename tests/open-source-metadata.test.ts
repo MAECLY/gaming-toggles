@@ -16,13 +16,19 @@ describe("metadatos de código abierto", () => {
     const manifest = await readJson(`${pluginDirectory}/manifest.json`);
 
     assert.equal(packageJson.license, "MIT");
+    assert.equal(packageJson.homepage, "https://xbox-stream-deck.maecly.com/");
     assert.deepEqual(author, {
-      name: "Miguel Esparza",
+      name: "MAECLY",
       email: "hola@maecly.com",
       url: "https://www.maecly.com/"
     });
     assert.equal(manifest.Author, author.name);
-    assert.equal(manifest.URL, author.url);
+    assert.equal(
+      manifest.URL,
+      "https://github.com/MAECLY/stream-deck-windows-xbox-settings"
+    );
+    const contributors = packageJson.contributors as Array<Record<string, string>>;
+    assert.equal(contributors[0].name, "Miguel Esparza");
   });
 
   it("incluye el aviso MIT íntegro dentro del instalador", async () => {

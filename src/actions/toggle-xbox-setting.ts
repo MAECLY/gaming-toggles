@@ -1,5 +1,4 @@
 import type {
-  KeyAction,
   KeyDownEvent,
   WillAppearEvent,
   WillDisappearEvent
@@ -7,21 +6,16 @@ import type {
 import streamDeck, { SingletonAction } from "@elgato/streamdeck";
 
 import type { RegistryClient, XboxSetting } from "../windows-registry.js";
+import {
+  ToggleSettingController,
+  type LocalizedStateTitles
+} from "../toggle-setting-controller.js";
 
 type EmptySettings = Record<string, never>;
 
-export type LocalizedStateTitles = {
-  readonly disabled: string;
-  readonly enabled: string;
-};
-
 export abstract class ToggleXboxSettingAction extends SingletonAction<EmptySettings> {
-  readonly #visibleActions = new Map<string, KeyAction>();
-  readonly #registry: RegistryClient;
-  readonly #setting: XboxSetting;
-  readonly #titles: LocalizedStateTitles;
+  readonly #controller: ToggleSettingController;
   readonly #refreshTimer: NodeJS.Timeout;
-  #refreshing = false;
 
   protected constructor(
     registry: RegistryClient,
@@ -29,10 +23,17 @@ export abstract class ToggleXboxSettingAction extends SingletonAction<EmptySetti
     titles: LocalizedStateTitles
   ) {
     super();
-    this.#registry = registry;
-    this.#setting = setting;
-    this.#titles = titles;
-    this.#refreshTimer = setInterval(() => void this.#refreshAll(), 2500);
+    this.#controller = new ToggleSettingController(
+      registry,
+      setting,
+      titles,
+      (key) => streamDeck.i18n.translate(key),
+      streamDeck.logger
+    );
+    this.#refreshTimer = setInterval(
+      () => void this.#controller.refreshAll(),
+      2500
+    );
     this.#refreshTimer.unref();
   }
 
@@ -40,69 +41,14 @@ export abstract class ToggleXboxSettingAction extends SingletonAction<EmptySetti
     if (!ev.action.isKey()) {
       return;
     }
-    this.#visibleActions.set(ev.action.id, ev.action);
-    await this.#refreshAction(ev.action);
+    await this.#controller.willAppear(ev.action);
   }
 
   public override onWillDisappear(ev: WillDisappearEvent<EmptySettings>): void {
-    this.#visibleActions.delete(ev.action.id);
+    this.#controller.willDisappear(ev.action.id);
   }
 
   public override async onKeyDown(ev: KeyDownEvent<EmptySettings>): Promise<void> {
-    try {
-      const enabled = await this.#registry.toggle(this.#setting);
-      await this.#renderAction(ev.action, enabled);
-      await this.#refreshAll();
-      streamDeck.logger.info(
-        `${this.#setting.valueName}=${enabled ? 1 : 0} confirmado por Windows.`
-      );
-    } catch (error) {
-      streamDeck.logger.error(
-        `No se pudo alternar ${this.#setting.valueName}.`,
-        error
-      );
-      await ev.action.showAlert();
-    }
-  }
-
-  async #refreshAll(): Promise<void> {
-    if (this.#refreshing || this.#visibleActions.size === 0) {
-      return;
-    }
-    this.#refreshing = true;
-    try {
-      const enabled = await this.#registry.isEnabled(this.#setting);
-      await Promise.all(
-        [...this.#visibleActions.values()].map((action) =>
-          this.#renderAction(action, enabled)
-        )
-      );
-    } catch (error) {
-      streamDeck.logger.error(
-        `No se pudo leer ${this.#setting.valueName}.`,
-        error
-      );
-    } finally {
-      this.#refreshing = false;
-    }
-  }
-
-  async #refreshAction(action: KeyAction): Promise<void> {
-    try {
-      const enabled = await this.#registry.isEnabled(this.#setting);
-      await this.#renderAction(action, enabled);
-    } catch (error) {
-      streamDeck.logger.error(
-        `No se pudo leer ${this.#setting.valueName}.`,
-        error
-      );
-      await action.showAlert();
-    }
-  }
-
-  async #renderAction(action: KeyAction, enabled: boolean): Promise<void> {
-    await action.setState(enabled ? 1 : 0);
-    const titleKey = enabled ? this.#titles.enabled : this.#titles.disabled;
-    await action.setTitle(streamDeck.i18n.translate(titleKey));
+    await this.#controller.keyDown(ev.action);
   }
 }

@@ -4,6 +4,8 @@
 [![Última versión](https://img.shields.io/github/v/release/MAECLY/stream-deck-windows-xbox-settings?label=descarga)](https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest)
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
 
+Landing oficial: [xbox-stream-deck.maecly.com](https://xbox-stream-deck.maecly.com/)
+
 Dos controles para Windows 11 directamente en Stream Deck:
 
 - **Alternar Modo Juego**: cambia `AutoGameModeEnabled`.
@@ -32,7 +34,7 @@ proceso de publicación en Elgato Marketplace.
 Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
 
 ```powershell
-(Get-FileHash .\Xbox-para-Windows-v1.1.2.streamDeckPlugin -Algorithm SHA256).Hash
+(Get-FileHash .\Xbox-para-Windows-v1.2.0.streamDeckPlugin -Algorithm SHA256).Hash
 ```
 
 ## Requisitos
@@ -58,6 +60,7 @@ Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
 ```powershell
 npm ci
 npm run validate
+npm run test:e2e
 npm run link
 ```
 

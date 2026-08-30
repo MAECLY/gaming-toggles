@@ -1,15 +1,22 @@
 {
   "name": "stream-deck-windows-xbox-settings",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "description": "Controles de Stream Deck para el Modo Juego y la apertura de Xbox Game Bar con el mando.",
-  "homepage": "https://www.maecly.com/",
+  "homepage": "https://xbox-stream-deck.maecly.com/",
   "author": {
-    "name": "Miguel Esparza",
+    "name": "MAECLY",
     "email": "hola@maecly.com",
     "url": "https://www.maecly.com/"
   },
+  "contributors": [
+    {
+      "name": "Miguel Esparza",
+      "email": "hola@maecly.com",
+      "url": "https://www.maecly.com/"
+    }
+  ],
   "license": "MIT",
   "keywords": [
     "stream-deck",
@@ -31,7 +38,12 @@
     "build:notifier": "node scripts/build-settings-notifier.mjs",
     "render:icons": "node scripts/render-icons.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/windows-registry.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts",
+    "test": "node --test tests/windows-registry.test.ts tests/windows-registry.integration.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts tests/release-api.test.ts tests/website-content.test.ts",
+    "test:unit": "node --test tests/windows-registry.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts",
+    "test:integration": "node --test tests/windows-registry.integration.test.ts",
+    "test:api": "node --test tests/release-api.test.ts",
+    "test:web": "node --test tests/website-content.test.ts tests/release-api.test.ts",
+    "test:e2e": "playwright test",
     "validate": "npm run typecheck && npm run test && npm run build",
     "validate:manifest": "node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs validate com.miguelangelstream.windows-xbox-settings.sdPlugin",
     "package:plugin": "npm run render:icons && npm run validate && npm run validate:manifest && node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs pack com.miguelangelstream.windows-xbox-settings.sdPlugin --force",
@@ -45,12 +57,14 @@
     "@elgato/streamdeck": "^2.0.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@elgato/cli": "^1.6.0",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.4",
     "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^24.3.0",
+    "@playwright/test": "^1.55.0",
     "rollup": "^4.50.0",
     "tslib": "^2.8.1",
     "typescript": "^5.9.2"

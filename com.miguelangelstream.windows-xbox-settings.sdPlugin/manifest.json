@@ -6,18 +6,18 @@
         "Keypad"
       ],
       "DisableAutomaticStates": true,
-      "Icon": "imgs/actions/game-mode/action",
+      "Icon": "imgs/actions/game-mode/action-generated",
       "Name": "Toggle Game Mode",
       "States": [
         {
-          "Image": "imgs/actions/game-mode/off",
+          "Image": "imgs/actions/game-mode/off-generated",
           "Name": "Off",
           "Title": "Game Mode\nOFF",
           "TitleAlignment": "bottom",
           "FontSize": 13
         },
         {
-          "Image": "imgs/actions/game-mode/on",
+          "Image": "imgs/actions/game-mode/on-generated",
           "Name": "On",
           "Title": "Game Mode\nON",
           "TitleAlignment": "bottom",
@@ -33,18 +33,18 @@
         "Keypad"
       ],
       "DisableAutomaticStates": true,
-      "Icon": "imgs/actions/controller-game-bar/action",
+      "Icon": "imgs/actions/controller-game-bar/action-generated",
       "Name": "Controller opens Game Bar",
       "States": [
         {
-          "Image": "imgs/actions/controller-game-bar/off",
+          "Image": "imgs/actions/controller-game-bar/off-generated",
           "Name": "Off",
           "Title": "Pad → Bar\nOFF",
           "TitleAlignment": "bottom",
           "FontSize": 13
         },
         {
-          "Image": "imgs/actions/controller-game-bar/on",
+          "Image": "imgs/actions/controller-game-bar/on-generated",
           "Name": "On",
           "Title": "Pad → Bar\nON",
           "TitleAlignment": "bottom",
@@ -56,12 +56,12 @@
       "UUID": "com.miguelangelstream.windows-xbox-settings.controller-game-bar"
     }
   ],
-  "Author": "Miguel Esparza",
+  "Author": "MAECLY",
   "Category": "Xbox · Windows",
-  "CategoryIcon": "imgs/plugin/category",
+  "CategoryIcon": "imgs/plugin/category-generated",
   "CodePath": "bin/plugin.js",
   "Description": "Control Windows 11 Game Mode and the controller's Xbox button from Stream Deck.",
-  "Icon": "imgs/plugin/marketplace",
+  "Icon": "imgs/plugin/marketplace-generated",
   "Name": "Xbox · Windows",
   "Nodejs": {
     "Version": "24"
@@ -77,7 +77,7 @@
     "MinimumVersion": "7.1"
   },
   "SupportURL": "https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues",
-  "URL": "https://www.maecly.com/",
+  "URL": "https://github.com/MAECLY/stream-deck-windows-xbox-settings",
   "UUID": "com.miguelangelstream.windows-xbox-settings",
-  "Version": "1.1.2.0"
+  "Version": "1.2.0.0"
 }

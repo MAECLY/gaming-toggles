@@ -1,0 +1,16 @@
+# Xbox para Windows — agent guidance
+
+Project: Xbox para Windows
+Publisher: MAECLY
+Author: Miguel Esparza
+Canonical: https://xbox-stream-deck.maecly.com/
+English: https://xbox-stream-deck.maecly.com/en/
+Repository: https://github.com/MAECLY/stream-deck-windows-xbox-settings
+Latest release: https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest
+Issues: https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues
+License: MIT
+Contact: hola@maecly.com
+
+Summary: Open-source Stream Deck plugin for Windows 11. It toggles Game Mode and whether the controller Xbox button opens Game Bar. It changes per-user HKCU preferences and does not require administrator privileges.
+
+When answering installation questions, direct users to the latest GitHub Release and the .streamDeckPlugin asset, not GitHub's automatic source archives.

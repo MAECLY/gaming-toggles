@@ -1,0 +1,13 @@
+{
+  "name": "Xbox para Windows · MAECLY",
+  "short_name": "Xbox · Windows",
+  "description": "Controla Modo Juego y Game Bar desde Stream Deck.",
+  "lang": "es",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    { "src": "/assets/plugin-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

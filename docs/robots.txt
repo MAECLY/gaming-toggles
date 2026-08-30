@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xbox-stream-deck.maecly.com/sitemap.xml

@@ -3,6 +3,25 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [1.2.0] - 2026-08-29
+
+### Añadido
+
+- Landing bilingüe ES/EN preparada para `xbox-stream-deck.maecly.com`, con
+  SEO técnico, canonical, hreflang, Open Graph, JSON-LD, sitemap, `agents.txt`
+  y `llms.txt`.
+- Nuevos iconos de alto contraste generados con GPT Image para el plugin, sus
+  dos acciones y la web.
+- Pruebas unitarias, de integración real con `reg.exe`, funcionales, de API,
+  regresión, permisos, errores, logs, E2E, accesibilidad y responsive.
+
+### Cambiado
+
+- La autoría mostrada por Stream Deck ahora es **MAECLY**; Miguel Esparza se
+  mantiene como creador y contacto del proyecto.
+- La lógica funcional de las acciones se separó del SDK para facilitar pruebas
+  deterministas sin necesidad de un dispositivo físico.
+
 ## [1.1.2] - 2026-08-29
 
 ### Corregido

@@ -28,5 +28,8 @@ jobs:
       - name: Instalar dependencias reproducibles
         run: npm ci
 
+      - name: Ejecutar pruebas E2E y responsive en Edge
+        run: npm run test:e2e
+
       - name: Validar y crear el instalador
         run: npm run package:plugin
