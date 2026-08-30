@@ -45,7 +45,7 @@ jobs:
         id: artifact
         shell: pwsh
         run: |
-          $asset = "Xbox-para-Windows-$env:GITHUB_REF_NAME.streamDeckPlugin"
+          $asset = "Gaming-Toggles-for-PC-$env:GITHUB_REF_NAME.streamDeckPlugin"
           Move-Item -LiteralPath $env:PACKAGE_FILE -Destination $asset
           $hash = (Get-FileHash -LiteralPath $asset -Algorithm SHA256).Hash.ToLowerInvariant()
           "$hash  $asset" | Set-Content -LiteralPath SHA256SUMS.txt -Encoding utf8NoBOM

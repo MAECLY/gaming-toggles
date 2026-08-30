@@ -18,6 +18,7 @@ const root = new URL("../", import.meta.url);
 const plugin = new URL("com.maecly.gamingtoggles.sdPlugin/", root);
 const web = new URL("docs/assets/", root);
 const source = (name) => new URL(`assets/icons/${name}.svg`, root);
+const socialSource = (name) => new URL(`assets/social/${name}.svg`, root);
 const readSource = (name) => readFile(source(name), "utf8");
 
 /** @type {{from: string, to: URL, sizes: [number, number]}[]} */
@@ -46,6 +47,9 @@ const site = [
   { from: "game-bar-off", to: new URL("game-bar-off.png", web), size: 256 }
 ];
 
+/** The social card is hand-composed rather than an icon, but it must not drift. */
+const social = [{ from: "og", to: new URL("og.png", web), size: 1200 }];
+
 async function render(svg, destination, width) {
   const png = new Resvg(svg, { fitTo: { mode: "width", value: width } }).render().asPng();
   await mkdir(dirname(fileURLToPath(destination)), { recursive: true });
@@ -70,6 +74,11 @@ for (const entry of vector) {
 
 for (const entry of site) {
   await render(await readSource(entry.from), entry.to, entry.size);
+  count += 1;
+}
+
+for (const entry of social) {
+  await render(await readFile(socialSource(entry.from), "utf8"), entry.to, entry.size);
   count += 1;
 }
 

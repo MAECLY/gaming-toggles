@@ -34,7 +34,7 @@ proceso de publicación en Elgato Marketplace.
 Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
 
 ```powershell
-(Get-FileHash .\Xbox-para-Windows-v1.2.0.streamDeckPlugin -Algorithm SHA256).Hash
+(Get-FileHash .\Gaming-Toggles-for-PC-v2.0.0.streamDeckPlugin -Algorithm SHA256).Hash
 ```
 
 ## Requisitos

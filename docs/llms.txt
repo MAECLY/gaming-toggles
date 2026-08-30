@@ -1,6 +1,6 @@
 # Gaming Toggles for PC by MAECLY
 
-> Free and open-source Stream Deck plugin for two Windows 11 Xbox settings.
+> Free and open-source Stream Deck plugin for two Windows 11 gaming settings.
 
 ## Canonical pages
 
