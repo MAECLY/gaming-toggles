@@ -5,7 +5,7 @@ labels: [bug]
 body:
   - type: markdown
     attributes:
-      value: Gracias por ayudarnos a mejorar Xbox para Windows.
+      value: Gracias por ayudarnos a mejorar Gaming Toggles for PC.
   - type: input
     id: plugin-version
     attributes:

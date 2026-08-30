@@ -3,10 +3,10 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const pluginDirectory =
-  "com.miguelangelstream.windows-xbox-settings.sdPlugin";
+  "com.maecly.gamingtoggles.sdPlugin";
 const actionUuids = [
-  "com.miguelangelstream.windows-xbox-settings.game-mode",
-  "com.miguelangelstream.windows-xbox-settings.controller-game-bar"
+  "com.maecly.gamingtoggles.game-mode",
+  "com.maecly.gamingtoggles.controller-game-bar"
 ];
 const titleKeys = [
   "Game Mode\nOFF",

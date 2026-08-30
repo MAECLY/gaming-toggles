@@ -5,7 +5,7 @@ labels: [enhancement]
 body:
   - type: markdown
     attributes:
-      value: Gracias por ayudar a mejorar Xbox para Windows. Thank you for helping improve Xbox for Windows.
+      value: Gracias por ayudar a mejorar Gaming Toggles for PC. Thank you for helping improve Gaming Toggles for PC.
   - type: textarea
     id: problem
     attributes:

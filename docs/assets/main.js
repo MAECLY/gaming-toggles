@@ -1,4 +1,4 @@
-const RELEASE_API = "https://api.github.com/repos/MAECLY/stream-deck-windows-xbox-settings/releases/latest";
+const RELEASE_API = "https://api.github.com/repos/MAECLY/gaming-toggles/releases/latest";
 
 export function parseLatestRelease(release) {
   if (!release || typeof release !== "object") {
@@ -49,8 +49,12 @@ async function hydrateLatestRelease() {
     document.querySelectorAll("[data-release-version]").forEach((node) => {
       node.textContent = latest.version;
     });
+    // Each page supplies its own wording so the English build stops printing Spanish.
     const status = document.querySelector("[data-release-status]");
-    if (status) status.textContent = `${latest.fileName} · descarga oficial de GitHub`;
+    if (status) {
+      const suffix = status.dataset.releaseStatus;
+      status.textContent = suffix ? `${latest.fileName} · ${suffix}` : latest.fileName;
+    }
   } catch (error) {
     console.info("No se pudo consultar la última Release; se conserva el enlace general.", error);
   }

@@ -1,9 +1,9 @@
 # Contribuir / Contributing
 
-Gracias por ayudar a mejorar **Xbox para Windows**. Se aceptan contribuciones
+Gracias por ayudar a mejorar **Gaming Toggles for PC**. Se aceptan contribuciones
 en español o inglés.
 
-Thank you for helping improve **Xbox for Windows**. Contributions are welcome
+Thank you for helping improve **Gaming Toggles for PC**. Contributions are welcome
 in Spanish or English.
 
 ## Antes de empezar / Before you start

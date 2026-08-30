@@ -1,0 +1,34 @@
+{
+  "Name": "Gaming Toggles for PC",
+  "Description": "Controla desde Stream Deck el Modo Juego y el botón Xbox del mando en Windows 11.",
+  "com.maecly.gamingtoggles.game-mode": {
+    "Name": "Alternar Modo Juego",
+    "Tooltip": "Enciende o apaga el Modo Juego de Windows 11.",
+    "States": [
+      {
+        "Name": "Apagado"
+      },
+      {
+        "Name": "Encendido"
+      }
+    ]
+  },
+  "com.maecly.gamingtoggles.controller-game-bar": {
+    "Name": "Mando abre Game Bar",
+    "Tooltip": "Permite o impide que el botón Xbox del mando abra Game Bar.",
+    "States": [
+      {
+        "Name": "Apagado"
+      },
+      {
+        "Name": "Encendido"
+      }
+    ]
+  },
+  "Localization": {
+    "Game Mode\nOFF": "Modo Juego\nOFF",
+    "Game Mode\nON": "Modo Juego\nON",
+    "Pad → Bar\nOFF": "Mando → Bar\nOFF",
+    "Pad → Bar\nON": "Mando → Bar\nON"
+  }
+}

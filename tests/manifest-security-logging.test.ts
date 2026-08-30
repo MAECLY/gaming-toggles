@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
-const pluginDirectory = "com.miguelangelstream.windows-xbox-settings.sdPlugin";
+const pluginDirectory = "com.maecly.gamingtoggles.sdPlugin";
 
 describe("manifiesto, permisos y observabilidad", () => {
   it("declara únicamente Windows, dos acciones Keypad y ningún requisito de elevación", async () => {
@@ -32,7 +32,7 @@ describe("manifiesto, permisos y observabilidad", () => {
     const controller = await readFile("src/toggle-setting-controller.ts", "utf8");
 
     assert.match(plugin, /logger\.setLevel\("info"\)/);
-    assert.match(plugin, /Iniciando Xbox para Windows/);
+    assert.match(plugin, /Iniciando Gaming Toggles for PC/);
     assert.match(controller, /confirmado por Windows/);
     assert.match(controller, /No se pudo alternar/);
     assert.match(controller, /No se pudo leer/);

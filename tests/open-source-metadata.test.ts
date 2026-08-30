@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 const pluginDirectory =
-  "com.miguelangelstream.windows-xbox-settings.sdPlugin";
+  "com.maecly.gamingtoggles.sdPlugin";
 
 async function readJson(path: string): Promise<Record<string, unknown>> {
   return JSON.parse(await readFile(path, "utf8")) as Record<string, unknown>;
@@ -16,7 +16,7 @@ describe("metadatos de código abierto", () => {
     const manifest = await readJson(`${pluginDirectory}/manifest.json`);
 
     assert.equal(packageJson.license, "MIT");
-    assert.equal(packageJson.homepage, "https://xbox-stream-deck.maecly.com/");
+    assert.equal(packageJson.homepage, "https://gaming-toggles.maecly.com/");
     assert.deepEqual(author, {
       name: "MAECLY",
       email: "hola@maecly.com",
@@ -25,7 +25,7 @@ describe("metadatos de código abierto", () => {
     assert.equal(manifest.Author, author.name);
     assert.equal(
       manifest.URL,
-      "https://xbox-stream-deck.maecly.com/"
+      "https://gaming-toggles.maecly.com/"
     );
     const contributors = packageJson.contributors as Array<Record<string, string>>;
     assert.equal(contributors[0].name, "Miguel Esparza");

@@ -1,13 +1,13 @@
-# Xbox para Windows — agent guidance
+# Gaming Toggles for PC — agent guidance
 
-Project: Xbox para Windows
+Project: Gaming Toggles for PC
 Publisher: MAECLY
 Author: Miguel Esparza
-Canonical: https://xbox-stream-deck.maecly.com/
-English: https://xbox-stream-deck.maecly.com/en/
-Repository: https://github.com/MAECLY/stream-deck-windows-xbox-settings
-Latest release: https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest
-Issues: https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues
+Canonical: https://gaming-toggles.maecly.com/
+English: https://gaming-toggles.maecly.com/en/
+Repository: https://github.com/MAECLY/gaming-toggles
+Latest release: https://github.com/MAECLY/gaming-toggles/releases/latest
+Issues: https://github.com/MAECLY/gaming-toggles/issues
 License: MIT
 Contact: hola@maecly.com
 

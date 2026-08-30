@@ -1,6 +1,6 @@
 {
-  "name": "Xbox para Windows · MAECLY",
-  "short_name": "Xbox · Windows",
+  "name": "Gaming Toggles for PC \u00b7 MAECLY",
+  "short_name": "Gaming Toggles",
   "description": "Controla Modo Juego y Game Bar desde Stream Deck.",
   "lang": "es",
   "start_url": "/",
@@ -8,6 +8,11 @@
   "background_color": "#09090b",
   "theme_color": "#09090b",
   "icons": [
-    { "src": "/assets/plugin-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {
+      "src": "/assets/plugin-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }

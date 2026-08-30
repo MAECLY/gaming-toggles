@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   deploy:
-    name: Publicar xbox-stream-deck.maecly.com
+    name: Publicar gaming-toggles.maecly.com
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

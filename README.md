@@ -1,10 +1,10 @@
-# Xbox para Windows — plugin de Stream Deck
+# Gaming Toggles for PC — plugin de Stream Deck
 
-[![CI](https://github.com/MAECLY/stream-deck-windows-xbox-settings/actions/workflows/ci.yml/badge.svg)](https://github.com/MAECLY/stream-deck-windows-xbox-settings/actions/workflows/ci.yml)
-[![Última versión](https://img.shields.io/github/v/release/MAECLY/stream-deck-windows-xbox-settings?label=descarga)](https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest)
+[![CI](https://github.com/MAECLY/gaming-toggles/actions/workflows/ci.yml/badge.svg)](https://github.com/MAECLY/gaming-toggles/actions/workflows/ci.yml)
+[![Última versión](https://img.shields.io/github/v/release/MAECLY/gaming-toggles?label=descarga)](https://github.com/MAECLY/gaming-toggles/releases/latest)
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
 
-Landing oficial: [xbox-stream-deck.maecly.com](https://xbox-stream-deck.maecly.com/)
+Landing oficial: [gaming-toggles.maecly.com](https://gaming-toggles.maecly.com/)
 
 Dos controles para Windows 11 directamente en Stream Deck:
 
@@ -21,10 +21,10 @@ actual.
 Este plugin está disponible directamente desde GitHub mientras se completa el
 proceso de publicación en Elgato Marketplace.
 
-1. Abre la [última versión publicada](https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest).
+1. Abre la [última versión publicada](https://github.com/MAECLY/gaming-toggles/releases/latest).
 2. Descarga el archivo cuyo nombre termina en `.streamDeckPlugin`.
 3. Ábrelo con doble clic y acepta la instalación en Stream Deck.
-4. Busca **Xbox para Windows** en la lista de acciones y arrastra los dos
+4. Busca **Gaming Toggles for PC** en la lista de acciones y arrastra los dos
    controles a tu perfil.
 
 > No descargues **Source code (zip)** ni **Source code (tar.gz)** para instalar
@@ -64,7 +64,7 @@ npm run test:e2e
 npm run link
 ```
 
-Después de enlazarlo, busca **Xbox para Windows** en la lista de acciones de
+Después de enlazarlo, busca **Gaming Toggles for PC** en la lista de acciones de
 Stream Deck y arrastra ambos botones a un perfil. Durante el desarrollo puedes
 usar `npm run watch`. Para crear localmente el mismo instalador que publica
 GitHub Actions:
@@ -78,7 +78,7 @@ El proceso de lanzamiento y versionado está explicado en
 [CHANGELOG.md](CHANGELOG.md).
 
 Los diagnósticos de ejecución se guardan dentro de la carpeta instalada del
-plugin, en `logs/com.miguelangelstream.windows-xbox-settings*.log`.
+plugin, en `logs/com.maecly.gamingtoggles*.log`.
 
 ## Código abierto y contribuciones
 
