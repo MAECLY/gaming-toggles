@@ -13,7 +13,7 @@ jobs:
     name: Preparar auto-merge seguro
     if: >-
       github.event.pull_request.user.login == 'dependabot[bot]' &&
-      github.repository == 'MAECLY/stream-deck-windows-xbox-settings'
+      github.repository == 'MAECLY/gaming-toggles'
     runs-on: ubuntu-latest
     timeout-minutes: 5
 

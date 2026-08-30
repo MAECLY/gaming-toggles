@@ -13,7 +13,7 @@ const source = path.join(
 );
 const destination = path.join(
   root,
-  "com.miguelangelstream.windows-xbox-settings.sdPlugin",
+  "com.maecly.gamingtoggles.sdPlugin",
   "bin",
   "MAECLY.WindowsSettingsNotifier.dll"
 );

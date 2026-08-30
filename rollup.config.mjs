@@ -5,7 +5,7 @@ import typescript from "@rollup/plugin-typescript";
 export default {
   input: "src/plugin.ts",
   output: {
-    file: "com.miguelangelstream.windows-xbox-settings.sdPlugin/bin/plugin.js",
+    file: "com.maecly.gamingtoggles.sdPlugin/bin/plugin.js",
     format: "esm",
     sourcemap: true
   },

@@ -29,7 +29,7 @@ no se suben paquetes creados manualmente.
    git add --all
    git commit -m "release: v1.0.1"
    git push
-   git tag -a v1.0.1 -m "Xbox para Windows v1.0.1"
+   git tag -a v1.0.1 -m "Gaming Toggles for PC v1.0.1"
    git push origin v1.0.1
    ```
 

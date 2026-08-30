@@ -18,7 +18,7 @@ async function writeJson(path, value) {
 const packagePath = "package.json";
 const lockPath = "package-lock.json";
 const manifestPath =
-  "com.miguelangelstream.windows-xbox-settings.sdPlugin/manifest.json";
+  "com.maecly.gamingtoggles.sdPlugin/manifest.json";
 
 const packageJson = await readJson(packagePath);
 const packageLock = await readJson(lockPath);

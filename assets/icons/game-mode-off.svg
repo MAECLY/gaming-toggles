@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" role="img" aria-label="Game Mode off">
+  <rect width="144" height="144" rx="24" fill="#1a1a1d"/>
+  <g transform="translate(8.06 -10.09) scale(.92)">
+  <path fill="none" stroke="#4a4a50" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 1 1 108 98"/>
+  <path fill="#8a8a90" d="M78 34L50 80h16l-7 30 27-44H76z"/>
+  </g>
+</svg>

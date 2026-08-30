@@ -1,14 +1,14 @@
-# Xbox para Windows by MAECLY
+# Gaming Toggles for PC by MAECLY
 
 > Free and open-source Stream Deck plugin for two Windows 11 Xbox settings.
 
 ## Canonical pages
 
-- [Spanish landing](https://xbox-stream-deck.maecly.com/)
-- [English landing](https://xbox-stream-deck.maecly.com/en/)
-- [Source code](https://github.com/MAECLY/stream-deck-windows-xbox-settings)
-- [Latest installer](https://github.com/MAECLY/stream-deck-windows-xbox-settings/releases/latest)
-- [Support](https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues)
+- [Spanish landing](https://gaming-toggles.maecly.com/)
+- [English landing](https://gaming-toggles.maecly.com/en/)
+- [Source code](https://github.com/MAECLY/gaming-toggles)
+- [Latest installer](https://github.com/MAECLY/gaming-toggles/releases/latest)
+- [Support](https://github.com/MAECLY/gaming-toggles/issues)
 
 ## Capabilities
 

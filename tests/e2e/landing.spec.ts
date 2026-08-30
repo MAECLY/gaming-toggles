@@ -4,7 +4,7 @@ import { expect, test } from "@playwright/test";
 test.describe("landing funcional y responsive", () => {
   test("carga la versión española y alterna ambas teclas", async ({ page }) => {
     await page.goto("/");
-    await expect(page).toHaveTitle(/Xbox para Windows/);
+    await expect(page).toHaveTitle(/Gaming Toggles for PC/);
     await expect(page.getByRole("heading", { level: 1 })).toContainText("Un toque más cerca");
 
     const gameMode = page.locator('[data-setting="game"]');

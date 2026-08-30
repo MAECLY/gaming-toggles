@@ -1,10 +1,10 @@
 {
-  "name": "stream-deck-windows-xbox-settings",
+  "name": "gaming-toggles",
   "version": "1.2.0",
   "private": true,
   "type": "module",
   "description": "Controles de Stream Deck para el Modo Juego y la apertura de Xbox Game Bar con el mando.",
-  "homepage": "https://xbox-stream-deck.maecly.com/",
+  "homepage": "https://gaming-toggles.maecly.com/",
   "author": {
     "name": "MAECLY",
     "email": "hola@maecly.com",
@@ -28,30 +28,30 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MAECLY/stream-deck-windows-xbox-settings.git"
+    "url": "git+https://github.com/MAECLY/gaming-toggles.git"
   },
   "bugs": {
-    "url": "https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues"
+    "url": "https://github.com/MAECLY/gaming-toggles/issues"
   },
   "scripts": {
     "build": "npm run build:notifier && rollup -c",
     "build:notifier": "node scripts/build-settings-notifier.mjs",
     "render:icons": "node scripts/render-icons.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/windows-registry.test.ts tests/windows-registry.integration.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts tests/release-api.test.ts tests/website-content.test.ts tests/dependabot-policy.test.ts",
-    "test:unit": "node --test tests/windows-registry.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts",
+    "test": "node --test tests/windows-registry.test.ts tests/windows-registry.integration.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts tests/release-api.test.ts tests/website-content.test.ts tests/dependabot-policy.test.ts tests/icon-legibility.test.ts",
+    "test:unit": "node --test tests/windows-registry.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts tests/icon-legibility.test.ts",
     "test:integration": "node --test tests/windows-registry.integration.test.ts",
     "test:api": "node --test tests/release-api.test.ts",
     "test:web": "node --test tests/website-content.test.ts tests/release-api.test.ts",
     "test:e2e": "playwright test",
     "validate": "npm run typecheck && npm run test && npm run build",
-    "validate:manifest": "node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs validate com.miguelangelstream.windows-xbox-settings.sdPlugin",
-    "package:plugin": "npm run render:icons && npm run validate && npm run validate:manifest && node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs pack com.miguelangelstream.windows-xbox-settings.sdPlugin --force",
+    "validate:manifest": "node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs validate com.maecly.gamingtoggles.sdPlugin",
+    "package:plugin": "npm run render:icons && npm run validate && npm run validate:manifest && node --use-system-ca node_modules/@elgato/cli/bin/streamdeck.mjs pack com.maecly.gamingtoggles.sdPlugin --force",
     "version:check": "node scripts/check-release-version.mjs",
     "version:set": "node scripts/set-version.mjs",
-    "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart com.miguelangelstream.windows-xbox-settings\"",
-    "link": "streamdeck link com.miguelangelstream.windows-xbox-settings.sdPlugin",
-    "restart": "streamdeck restart com.miguelangelstream.windows-xbox-settings"
+    "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart com.maecly.gamingtoggles\"",
+    "link": "streamdeck link com.maecly.gamingtoggles.sdPlugin",
+    "restart": "streamdeck restart com.maecly.gamingtoggles"
   },
   "dependencies": {
     "@elgato/streamdeck": "^2.0.0"

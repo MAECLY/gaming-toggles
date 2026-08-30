@@ -7,7 +7,7 @@ y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
 ### Añadido
 
-- Landing bilingüe ES/EN preparada para `xbox-stream-deck.maecly.com`, con
+- Landing bilingüe ES/EN preparada para `gaming-toggles.maecly.com`, con
   SEO técnico, canonical, hreflang, Open Graph, JSON-LD, sitemap, `agents.txt`
   y `llms.txt`.
 - Nuevos iconos de alto contraste generados con GPT Image para el plugin, sus

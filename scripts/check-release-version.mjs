@@ -11,7 +11,7 @@ const packageJson = JSON.parse(await readFile("package.json", "utf8"));
 const packageLock = JSON.parse(await readFile("package-lock.json", "utf8"));
 const manifest = JSON.parse(
   await readFile(
-    "com.miguelangelstream.windows-xbox-settings.sdPlugin/manifest.json",
+    "com.maecly.gamingtoggles.sdPlugin/manifest.json",
     "utf8"
   )
 );

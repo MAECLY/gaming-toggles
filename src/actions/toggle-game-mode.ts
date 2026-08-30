@@ -6,7 +6,7 @@ import {
   type RegistryClient
 } from "../windows-registry.js";
 
-@action({ UUID: "com.miguelangelstream.windows-xbox-settings.game-mode" })
+@action({ UUID: "com.maecly.gamingtoggles.game-mode" })
 export class ToggleGameModeAction extends ToggleXboxSettingAction {
   public constructor(registry: RegistryClient) {
     super(registry, GAME_MODE_SETTING, {

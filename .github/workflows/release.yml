@@ -18,7 +18,7 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 15
     env:
-      PACKAGE_FILE: com.miguelangelstream.windows-xbox-settings.streamDeckPlugin
+      PACKAGE_FILE: com.maecly.gamingtoggles.streamDeckPlugin
 
     steps:
       - name: Descargar exactamente la etiqueta publicada
@@ -69,5 +69,5 @@ jobs:
             "SHA256SUMS.txt#Checksum SHA-256" `
             --verify-tag `
             --generate-notes `
-            --title "Xbox para Windows $env:GITHUB_REF_NAME" `
+            --title "Gaming Toggles for PC $env:GITHUB_REF_NAME" `
             --notes $notes

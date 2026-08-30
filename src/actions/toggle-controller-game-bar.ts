@@ -6,7 +6,7 @@ import {
   type RegistryClient
 } from "../windows-registry.js";
 
-@action({ UUID: "com.miguelangelstream.windows-xbox-settings.controller-game-bar" })
+@action({ UUID: "com.maecly.gamingtoggles.controller-game-bar" })
 export class ToggleControllerGameBarAction extends ToggleXboxSettingAction {
   public constructor(registry: RegistryClient) {
     super(registry, CONTROLLER_GAME_BAR_SETTING, {
