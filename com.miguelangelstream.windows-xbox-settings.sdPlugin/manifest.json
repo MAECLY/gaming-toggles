@@ -77,7 +77,7 @@
     "MinimumVersion": "7.1"
   },
   "SupportURL": "https://github.com/MAECLY/stream-deck-windows-xbox-settings/issues",
-  "URL": "https://github.com/MAECLY/stream-deck-windows-xbox-settings",
+  "URL": "https://xbox-stream-deck.maecly.com/",
   "UUID": "com.miguelangelstream.windows-xbox-settings",
   "Version": "1.2.0.0"
 }

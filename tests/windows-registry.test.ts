@@ -99,11 +99,10 @@ describe("WindowsRegistryClient", () => {
   });
 
   it("usa el contrato correcto de reg.exe para leer y escribir en HKCU", async () => {
-    const calls: readonly string[][] = [];
-    const mutableCalls = calls as string[][];
+    const calls: string[][] = [];
     let value = 1;
     const command: RegistryCommand = async (args) => {
-      mutableCalls.push([...args]);
+      calls.push([...args]);
       if (args[0] === "add") {
         value = Number(args[args.indexOf("/d") + 1]);
         return "OK";
