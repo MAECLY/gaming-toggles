@@ -25,7 +25,7 @@ describe("metadatos de código abierto", () => {
     assert.equal(manifest.Author, author.name);
     assert.equal(
       manifest.URL,
-      "https://github.com/MAECLY/stream-deck-windows-xbox-settings"
+      "https://xbox-stream-deck.maecly.com/"
     );
     const contributors = packageJson.contributors as Array<Record<string, string>>;
     assert.equal(contributors[0].name, "Miguel Esparza");
