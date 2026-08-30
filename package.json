@@ -38,7 +38,7 @@
     "build:notifier": "node scripts/build-settings-notifier.mjs",
     "render:icons": "node scripts/render-icons.mjs",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/windows-registry.test.ts tests/windows-registry.integration.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts tests/release-api.test.ts tests/website-content.test.ts",
+    "test": "node --test tests/windows-registry.test.ts tests/windows-registry.integration.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts tests/release-api.test.ts tests/website-content.test.ts tests/dependabot-policy.test.ts",
     "test:unit": "node --test tests/windows-registry.test.ts tests/toggle-setting-controller.test.ts tests/localization.test.ts tests/open-source-metadata.test.ts tests/manifest-security-logging.test.ts",
     "test:integration": "node --test tests/windows-registry.integration.test.ts",
     "test:api": "node --test tests/release-api.test.ts",
