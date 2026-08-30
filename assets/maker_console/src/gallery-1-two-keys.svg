@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="960" viewBox="0 0 1920 960" id="gallery-1-keys" role="img" aria-label="Gaming Toggles for PC — two keys, that is the whole plugin">
+  <title>gallery-1-keys</title>
+
+  <rect width="1920" height="960" fill="#0a0a0b"/>
+
+  <!-- ============ LEFT COLUMN ============ -->
+  <text x="104" y="173" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="3" fill="#7e7e8a">MAECLY · GAMING TOGGLES FOR PC</text>
+
+  <g font-family="Segoe UI, Inter, system-ui, sans-serif" font-weight="700" font-size="72" letter-spacing="-2" fill="#f2f2f3">
+    <text x="104" y="274">Two keys.</text>
+    <text x="104" y="354">That is the</text>
+    <text x="104" y="434">whole plugin.</text>
+  </g>
+
+  <text x="104" y="506" font-family="Segoe UI, Inter, system-ui, sans-serif" font-weight="400" font-size="29" fill="#a3a3ad">The other thirteen keys stay yours.</text>
+
+  <line x1="104" y1="548.5" x2="680" y2="548.5" stroke="#232327" stroke-width="1"/>
+  <text x="104" y="592" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" letter-spacing="2.5" fill="#7e7e8a">THE COMPLETE ACTION LIST</text>
+
+  <!-- legend : the two actions, named exactly as they ship -->
+  <g transform="translate(104,622) scale(0.3888889)">
+    <rect width="144" height="144" rx="12.96" fill="#107c10"/>
+    <g transform="translate(8.06 -10.09) scale(.92)">
+      <path fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 1 1 108 98"/>
+      <path fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 0 1 100 50"/>
+      <path fill="#fff" d="M78 34L50 80h16l-7 30 27-44H76z"/>
+    </g>
+  </g>
+  <text x="190" y="660" font-family="Segoe UI, Inter, system-ui, sans-serif" font-weight="400" font-size="28" fill="#f2f2f3">Toggle Game Mode</text>
+
+  <g transform="translate(104,707) scale(0.3888889)">
+    <rect width="144" height="144" rx="12.96" fill="#107c10"/>
+    <g transform="translate(7.65 -1.55) scale(.9)">
+      <rect x="36" y="18" width="72" height="22" rx="7" fill="#fff"/>
+      <g fill="#107c10"><circle cx="49" cy="29" r="3.2"/><circle cx="61" cy="29" r="3.2"/><rect x="71" y="25.8" width="24" height="6.4" rx="3.2"/></g>
+      <g transform="translate(27.36 23.06) scale(.62)"><path fill="#fff" d="M12 84C12 58 24 42 46 39C55 38 62 37 72 37C82 37 89 40 98 39C120 42 132 58 132 84C132 108 127 126 111 126C99 126 93 115 89 104C86 98 82 100 76 100L68 100C62 100 58 98 55 104C51 115 45 126 33 126C17 126 12 108 12 84Z"/><g fill="#107c10"><circle cx="43" cy="60" r="10"/><path d="M49 78h8v-8h7v8h8v7h-8v8h-7v-8h-8z"/><circle cx="84" cy="82" r="9"/><circle cx="101" cy="49" r="5.5"/><circle cx="90" cy="60" r="5.5"/><circle cx="112" cy="60" r="5.5"/><circle cx="101" cy="71" r="5.5"/></g></g>
+    </g>
+  </g>
+  <text x="190" y="745" font-family="Segoe UI, Inter, system-ui, sans-serif" font-weight="400" font-size="28" fill="#f2f2f3">Controller opens Game Bar</text>
+
+  <!-- ============ DEVICE — Stream Deck MK.2, 5 x 3 ============ -->
+  <g>
+    <rect x="826" y="158" width="980" height="605.25" rx="12" fill="#161619" stroke="#232327" stroke-width="1"/>
+
+    <g fill="#0d0d10" stroke="#232327" stroke-width="1">
+      <rect x="1243.87" y="201.12" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1431.25" y="201.12" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1618.62" y="201.12" width="144.256" height="144.256" rx="12.98"/>
+
+      <rect x="869.12" y="388.50" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1056.50" y="388.50" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1243.87" y="388.50" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1431.25" y="388.50" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1618.62" y="388.50" width="144.256" height="144.256" rx="12.98"/>
+
+      <rect x="869.12" y="575.87" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1056.50" y="575.87" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1243.87" y="575.87" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1431.25" y="575.87" width="144.256" height="144.256" rx="12.98"/>
+      <rect x="1618.62" y="575.87" width="144.256" height="144.256" rx="12.98"/>
+    </g>
+
+    <!-- lit key 1 : Toggle Game Mode -->
+    <g transform="translate(869.12,201.12) scale(1.0017778)">
+      <rect width="144" height="144" rx="12.96" fill="#107c10"/>
+      <g transform="translate(8.06 -10.09) scale(.92)">
+        <path fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 1 1 108 98"/>
+        <path fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 0 1 100 50"/>
+        <path fill="#fff" d="M78 34L50 80h16l-7 30 27-44H76z"/>
+      </g>
+    </g>
+
+    <!-- lit key 2 : Controller opens Game Bar -->
+    <g transform="translate(1056.50,201.12) scale(1.0017778)">
+      <rect width="144" height="144" rx="12.96" fill="#107c10"/>
+      <g transform="translate(7.65 -1.55) scale(.9)">
+        <rect x="36" y="18" width="72" height="22" rx="7" fill="#fff"/>
+        <g fill="#107c10"><circle cx="49" cy="29" r="3.2"/><circle cx="61" cy="29" r="3.2"/><rect x="71" y="25.8" width="24" height="6.4" rx="3.2"/></g>
+        <g transform="translate(27.36 23.06) scale(.62)"><path fill="#fff" d="M12 84C12 58 24 42 46 39C55 38 62 37 72 37C82 37 89 40 98 39C120 42 132 58 132 84C132 108 127 126 111 126C99 126 93 115 89 104C86 98 82 100 76 100L68 100C62 100 58 98 55 104C51 115 45 126 33 126C17 126 12 108 12 84Z"/><g fill="#107c10"><circle cx="43" cy="60" r="10"/><path d="M49 78h8v-8h7v8h8v7h-8v8h-7v-8h-8z"/><circle cx="84" cy="82" r="9"/><circle cx="101" cy="49" r="5.5"/><circle cx="90" cy="60" r="5.5"/><circle cx="112" cy="60" r="5.5"/><circle cx="101" cy="71" r="5.5"/></g></g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============ FOOTER ============ -->
+  <line x1="104" y1="824.5" x2="1806" y2="824.5" stroke="#232327" stroke-width="1"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">
+    <text x="104" y="862">WINDOWS 11 · NO ADMIN RIGHTS · NO NETWORK</text>
+    <text x="1806" y="862" text-anchor="end">MIT · OPEN SOURCE · EN / ES</text>
+  </g>
+</svg>

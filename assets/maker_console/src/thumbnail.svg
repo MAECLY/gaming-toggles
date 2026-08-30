@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="960" viewBox="0 0 1920 960" role="img" aria-label="Gaming Toggles for PC by MAECLY">
+  <rect width="1920" height="960" fill="#0a0a0b"/>
+
+  <!-- ============ RIGHT: a piece of Stream Deck bezel, cropped by the frame ============ -->
+  <rect x="1120" y="150" width="880" height="690" rx="12" fill="#161619"/>
+
+  <rect x="1810" y="190" width="285" height="285" rx="26" fill="#0d0d10"/>
+  <rect x="1160" y="515" width="285" height="285" rx="26" fill="#0d0d10"/>
+  <rect x="1485" y="515" width="285" height="285" rx="26" fill="#0d0d10"/>
+  <rect x="1810" y="515" width="285" height="285" rx="26" fill="#0d0d10"/>
+
+  <!-- key 1 : game mode on -->
+  <g transform="translate(1160,190) scale(1.979167)">
+    <rect width="144" height="144" rx="24" fill="#107c10"/>
+    <g transform="translate(8.06 -10.09) scale(.92)">
+      <path fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 1 1 108 98"/>
+      <path fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 0 1 100 50"/>
+      <path fill="#fff" d="M78 34L50 80h16l-7 30 27-44H76z"/>
+    </g>
+  </g>
+  <text x="1302.5" y="431" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="31" font-weight="600" fill="#f2f2f3">Game Mode</text>
+
+  <!-- key 2 : game bar on -->
+  <g transform="translate(1485,190) scale(1.979167)">
+    <rect width="144" height="144" rx="24" fill="#107c10"/>
+    <g transform="translate(7.65 -1.55) scale(.9)">
+      <rect x="36" y="18" width="72" height="22" rx="7" fill="#fff"/>
+      <g fill="#107c10"><circle cx="49" cy="29" r="3.2"/><circle cx="61" cy="29" r="3.2"/><rect x="71" y="25.8" width="24" height="6.4" rx="3.2"/></g>
+      <g transform="translate(27.36 23.06) scale(.62)"><path fill="#fff" d="M12 84C12 58 24 42 46 39C55 38 62 37 72 37C82 37 89 40 98 39C120 42 132 58 132 84C132 108 127 126 111 126C99 126 93 115 89 104C86 98 82 100 76 100L68 100C62 100 58 98 55 104C51 115 45 126 33 126C17 126 12 108 12 84Z"/><g fill="#107c10"><circle cx="43" cy="60" r="10"/><path d="M49 78h8v-8h7v8h8v7h-8v8h-7v-8h-8z"/><circle cx="84" cy="82" r="9"/><circle cx="101" cy="49" r="5.5"/><circle cx="90" cy="60" r="5.5"/><circle cx="112" cy="60" r="5.5"/><circle cx="101" cy="71" r="5.5"/></g></g>
+    </g>
+  </g>
+  <text x="1627.5" y="431" text-anchor="middle" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="31" font-weight="600" fill="#f2f2f3">Game Bar</text>
+
+  <!-- ============ LEFT: the words ============ -->
+  <rect x="110" y="190" width="96" height="3" fill="#107c10"/>
+
+  <text x="110" y="244" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21" letter-spacing="3" fill="#7e7e8a">STREAM DECK PLUGIN · WINDOWS 11</text>
+
+  <text x="110" y="372" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="76" font-weight="700" letter-spacing="-2" fill="#f2f2f3">Gaming Toggles</text>
+  <text x="110" y="454" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="76" font-weight="700" letter-spacing="-2" fill="#f2f2f3">for PC</text>
+
+  <text x="110" y="536" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#a3a3ad">Game Mode and Game Bar, one key each.</text>
+  <text x="110" y="580" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#a3a3ad">Each key reads the real state back from Windows.</text>
+
+  <rect x="110" y="632" width="8" height="8" fill="#46c246"/>
+  <text x="134" y="640" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2" fill="#7e7e8a">NO ADMIN RIGHTS · NO NETWORK · EN / ES</text>
+
+  <rect x="110" y="706" width="830" height="1" fill="#232327"/>
+  <text x="110" y="762" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" letter-spacing="6" fill="#a3a3ad">MAECLY</text>
+  <text x="940" y="762" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="3" fill="#7e7e8a">MIT · OPEN SOURCE</text>
+</svg>
