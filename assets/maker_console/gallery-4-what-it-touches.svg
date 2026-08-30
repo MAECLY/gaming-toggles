@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="960" viewBox="0 0 1920 960" role="img" aria-label="Gaming Toggles for PC — what it does not do: no administrator rights, no network access, one runtime dependency, exactly two registry values under HKCU Software Microsoft GameBar, Windows 11 only, MIT licensed, English and Spanish, every release built by GitHub Actions with a published SHA-256 checksum.">
+  <title>Gaming Toggles for PC — the complete list of everything it touches</title>
+
+  <!-- page -->
+  <rect x="0" y="0" width="1920" height="960" fill="#0a0a0b"/>
+
+  <!-- ============ header row ============ -->
+  <rect x="112" y="116" width="11" height="11" fill="#107c10"/>
+  <text x="141" y="126" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21" letter-spacing="3" fill="#7e7e8a">WHAT IT DOES NOT DO</text>
+  <text x="1808" y="126" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21" letter-spacing="2" fill="#7e7e8a">com.maecly.gamingtoggles &#183; 2.0.0.0</text>
+
+  <!-- ============ headline ============ -->
+  <text x="112" y="232" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="76" font-weight="700" letter-spacing="-2" fill="#f2f2f3">The complete list of</text>
+  <text x="112" y="314" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="76" font-weight="700" letter-spacing="-2" fill="#f2f2f3">everything it touches.</text>
+
+  <!-- ============ lede, aligned to column 02 ============ -->
+  <text x="1004" y="234" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#a3a3ad">Two actions, one dependency, and two</text>
+  <text x="1004" y="274" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#a3a3ad">registry values under a key you already</text>
+  <text x="1004" y="314" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#a3a3ad">own. Nothing here asks for more.</text>
+
+  <!-- ============ column headers ============ -->
+  <text x="112" y="392" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">01 &#8194;PERMISSIONS</text>
+  <text x="1004" y="392" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">02 &#8194;DISTRIBUTION</text>
+
+  <!-- ============ table rules ============ -->
+  <rect x="112" y="411" width="828" height="1" fill="#34343a"/>
+  <rect x="1004" y="411" width="804" height="1" fill="#34343a"/>
+  <rect x="112" y="507" width="828" height="1" fill="#232327"/>
+  <rect x="112" y="603" width="828" height="1" fill="#232327"/>
+  <rect x="112" y="699" width="828" height="1" fill="#232327"/>
+  <rect x="112" y="831" width="828" height="1" fill="#232327"/>
+  <rect x="1004" y="507" width="804" height="1" fill="#232327"/>
+  <rect x="1004" y="603" width="804" height="1" fill="#232327"/>
+  <rect x="1004" y="699" width="804" height="1" fill="#232327"/>
+  <rect x="1004" y="831" width="804" height="1" fill="#232327"/>
+  <rect x="971" y="368" width="1" height="464" fill="#232327"/>
+
+  <!-- ============ column 01 ============ -->
+  <text x="112" y="446" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">ADMINISTRATOR RIGHTS</text>
+  <text x="112" y="486" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#f2f2f3">Not required</text>
+
+  <text x="112" y="542" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">NETWORK ACCESS</text>
+  <text x="112" y="582" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#46c246">None at all</text>
+
+  <text x="112" y="638" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">RUNTIME DEPENDENCIES</text>
+  <text x="112" y="678" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#f2f2f3">One<tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" fill="#a3a3ad" dx="20">@elgato/streamdeck</tspan></text>
+
+  <text x="112" y="734" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">REGISTRY WRITES</text>
+  <text x="112" y="774" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#f2f2f3">Exactly two values, under</text>
+  <text x="112" y="812" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" fill="#a3a3ad">HKCU\Software\Microsoft\GameBar</text>
+
+  <!-- ============ column 02 ============ -->
+  <text x="1004" y="446" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">PLATFORM</text>
+  <text x="1004" y="486" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#f2f2f3">Windows 11 only</text>
+
+  <text x="1004" y="542" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">LICENSE</text>
+  <text x="1004" y="582" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#f2f2f3">MIT, open source</text>
+
+  <text x="1004" y="638" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">LANGUAGES</text>
+  <text x="1004" y="678" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#f2f2f3">English and Spanish</text>
+
+  <text x="1004" y="734" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" letter-spacing="2.5" fill="#7e7e8a">EVERY RELEASE</text>
+  <text x="1004" y="774" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="30" fill="#f2f2f3">Built by GitHub Actions</text>
+  <text x="1004" y="812" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22" fill="#a3a3ad">SHA-256 checksum published</text>
+
+  <!-- ============ footer ============ -->
+  <text x="112" y="896" font-family="Segoe UI, Inter, system-ui, sans-serif" font-size="28" fill="#7e7e8a">Every line above is checkable in the source.</text>
+  <text x="1808" y="896" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21" letter-spacing="2" fill="#7e7e8a">NOT AFFILIATED WITH MICROSOFT</text>
+</svg>
