@@ -15,7 +15,7 @@ const temporaryKey = [
   "Software",
   "MAECLY",
   "Tests",
-  "WindowsXboxSettings",
+  "GamingToggles",
   String(process.pid)
 ].join("\\");
 
@@ -30,7 +30,7 @@ integration("integración real con reg.exe", () => {
   );
 
   after(async () => {
-    assert.match(temporaryKey, /^HKCU\\Software\\MAECLY\\Tests\\WindowsXboxSettings\\\d+$/);
+    assert.match(temporaryKey, /^HKCU\\Software\\MAECLY\\Tests\\GamingToggles\\\d+$/);
     await execFileAsync(regExe, ["delete", temporaryKey, "/f"]).catch(() => undefined);
   });
 

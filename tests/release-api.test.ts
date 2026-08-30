@@ -6,22 +6,22 @@ import { parseLatestRelease } from "../docs/assets/main.js";
 describe("API de GitHub Releases", () => {
   it("elige el instalador de Stream Deck e ignora otros assets", () => {
     assert.deepEqual(parseLatestRelease({
-      tag_name: "v1.2.0",
+      tag_name: "v2.0.0",
       assets: [
         { name: "SHA256SUMS.txt", browser_download_url: "https://example.test/hash" },
-        { name: "Xbox-para-Windows-v1.2.0.streamDeckPlugin", browser_download_url: "https://example.test/plugin" }
+        { name: "Gaming-Toggles-for-PC-v2.0.0.streamDeckPlugin", browser_download_url: "https://example.test/plugin" }
       ]
     }), {
-      version: "v1.2.0",
+      version: "v2.0.0",
       downloadUrl: "https://example.test/plugin",
-      fileName: "Xbox-para-Windows-v1.2.0.streamDeckPlugin"
+      fileName: "Gaming-Toggles-for-PC-v2.0.0.streamDeckPlugin"
     });
   });
 
   it("rechaza respuestas inválidas y Releases sin instalador", () => {
     assert.throws(() => parseLatestRelease(null), /Release inválida/);
     assert.throws(
-      () => parseLatestRelease({ tag_name: "v1.2.0", assets: [] }),
+      () => parseLatestRelease({ tag_name: "v2.0.0", assets: [] }),
       /no contiene un instalador/
     );
   });

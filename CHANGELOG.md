@@ -3,11 +3,56 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [2.0.0] - 2026-08-30
+
+### Cambiado
+
+- **RUPTURA.** El plugin pasa a llamarse **Gaming Toggles for PC** y su UUID
+  cambia de `com.miguelangelstream.windows-xbox-settings` a
+  `com.maecly.gamingtoggles`. Stream Deck identifica los plugins por UUID, así
+  que esta versión **se instala junto a la anterior en lugar de actualizarla**:
+  desinstala la antigua y vuelve a arrastrar las dos acciones a tu perfil.
+- La landing se traslada de `xbox-stream-deck.maecly.com` a
+  `gaming-toggles.maecly.com`, y el repositorio de
+  `stream-deck-windows-xbox-settings` a `gaming-toggles`. Los identificadores ya
+  no incluyen marcas de terceros; Microsoft y Elgato prohíben su uso en nombres
+  de producto, dominios y paquetes. Las marcas se mantienen en las
+  descripciones, que es el uso nominativo permitido.
+- Iconos rehechos como vectores planos desde `assets/icons/`. El mando se dibuja
+  con la disposición correcta y se retiran el logo nexus de Xbox y el logo de
+  Windows que venían incrustados en el arte anterior. Cada recurso se genera al
+  tamaño que pide el SDK (256/512, 28/56, 20/40, 72/144) en lugar de un 144/288
+  uniforme, y el arte deja libre la banda donde el SDK dibuja el título.
+- Landing rediseñada: se retiran degradados, capas decorativas y la terminal
+  simulada. El hero muestra un Stream Deck MK.2 a tamaño real junto a un panel
+  de Configuración de Windows reconstruido con la geometría Fluent de WinUI.
+  Los recursos del sitio bajan de 5,1 MB a 264 KB.
+- El pipeline de imágenes en PowerShell se sustituye por un render SVG
+  determinista (`npm run render:icons`).
+
+### Corregido
+
+- Los estados ON y OFF de cada tecla eran indistinguibles en escala de grises
+  (diferían en el 3,4 % de los píxeles) y el de Modo Juego estaba invertido:
+  OFF se veía más brillante que ON. Ahora difieren en 66 niveles sobre el 98 %
+  de los píxeles.
+- La nota de descarga imprimía texto en español en la página inglesa.
+- La tecla de demostración de la landing anunciaba el estado contrario al pulsarla.
+- `.reveal` y `.reveal.is-visible` eran idénticas, así que el observador de
+  intersección no animaba nada.
+- El artefacto de la Release conservaba el nombre antiguo por una variante con
+  guiones que el renombrado no había alcanzado.
+
+### Añadido
+
+- `tests/icon-legibility.test.ts`, que renderiza ambos estados a 72 px y falla
+  si dejan de distinguirse en escala de grises.
+
 ## [1.2.0] - 2026-08-29
 
 ### Añadido
 
-- Landing bilingüe ES/EN preparada para `gaming-toggles.maecly.com`, con
+- Landing bilingüe ES/EN preparada para `xbox-stream-deck.maecly.com`, con
   SEO técnico, canonical, hreflang, Open Graph, JSON-LD, sitemap, `agents.txt`
   y `llms.txt`.
 - Nuevos iconos de alto contraste generados con GPT Image para el plugin, sus
