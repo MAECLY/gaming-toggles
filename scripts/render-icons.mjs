@@ -19,8 +19,10 @@ const plugin = new URL("com.maecly.gamingtoggles.sdPlugin/", root);
 const web = new URL("docs/assets/", root);
 const source = (name) => new URL(`assets/icons/${name}.svg`, root);
 const socialSource = (name) => new URL(`assets/social/${name}.svg`, root);
-const makerSource = (name) => new URL(`assets/maker_console/${name}.svg`, root);
-const maker = new URL("assets/maker_console/", root);
+// Sources and uploads are kept in separate folders on purpose: Maker Console only
+// accepts .png/.jpg, and a flat folder makes it too easy to pick the .svg by mistake.
+const makerSource = (name) => new URL(`assets/maker_console/src/${name}.svg`, root);
+const maker = new URL("assets/maker_console/upload/", root);
 const readSource = (name) => readFile(source(name), "utf8");
 
 /** @type {{from: string, to: URL, sizes: [number, number]}[]} */
