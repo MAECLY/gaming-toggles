@@ -19,6 +19,39 @@ test.describe("landing funcional y responsive", () => {
     await expect(gameBar.locator("img")).toHaveAttribute("src", /game-bar-off\.png$/);
   });
 
+  test("el hero demuestra las siete acciones con su comportamiento correcto", async ({ page }) => {
+    await page.goto("/");
+    const keys = page.locator(".deck-key[data-demo]");
+    await expect(keys).toHaveCount(7);
+
+    const pointer = page.locator('[data-setting="pointer"]');
+    await pointer.click();
+    await expect(pointer).toHaveAttribute("aria-pressed", "false");
+    await expect(pointer.locator("img")).toHaveAttribute("src", /pointer-precision-off\.png$/);
+    await expect(page.locator('[data-indicator="pointer"]')).toHaveText("OFF");
+
+    const power = page.locator('[data-setting="power"]');
+    await power.click();
+    await expect(power.locator("strong")).toHaveText("B");
+    await expect(power.locator("img")).toHaveAttribute("src", /power-plan-b\.png$/);
+    await power.click();
+    await expect(power.locator("strong")).toHaveText("OTRO");
+    await expect(power.locator("img")).toHaveAttribute("src", /power-plan-other\.png$/);
+
+    const xbox = page.locator('[data-setting="xbox"]');
+    await xbox.click();
+    await expect(xbox).not.toHaveAttribute("aria-pressed", /.+/);
+    await expect(xbox.locator("strong")).toHaveText("ENVIADO");
+    await expect(xbox.locator("strong")).toHaveText("WIN+F11", { timeout: 2000 });
+
+    for (const setting of ["hdr", "windowed"]) {
+      const labs = page.locator(`[data-setting="${setting}"]`);
+      await labs.click();
+      await expect(labs).toHaveAttribute("aria-pressed", "false");
+      await expect(page.locator(`[data-indicator="${setting}"]`)).toHaveText("OFF");
+    }
+  });
+
   test("navega a inglés y conserva la descarga oficial", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: "View in English" }).click();
