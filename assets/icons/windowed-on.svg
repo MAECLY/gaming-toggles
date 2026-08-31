@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" role="img" aria-label="Windowed games optimization on">
+  <rect width="144" height="144" rx="24" fill="#0078d4"/>
+  <rect x="22" y="27" width="100" height="88" rx="9" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M22 49h100" stroke="#fff" stroke-width="8"/><circle cx="38" cy="38" r="4" fill="#fff"/><circle cx="51" cy="38" r="4" fill="#fff"/>
+  <path d="m73 61 9 19 21 3-15 15 4 20-19-10-19 10 4-20-15-15 21-3Z" fill="#fff"/>
+</svg>
