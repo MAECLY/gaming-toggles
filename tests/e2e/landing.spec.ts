@@ -19,6 +19,61 @@ test.describe("landing funcional y responsive", () => {
     await expect(gameBar.locator("img")).toHaveAttribute("src", /game-bar-off\.png$/);
   });
 
+  test("el hero demuestra las siete acciones con su comportamiento correcto", async ({ page }) => {
+    await page.goto("/");
+    const keys = page.locator(".deck-key[data-demo]");
+    await expect(keys).toHaveCount(7);
+
+    const pointer = page.locator('[data-setting="pointer"]');
+    await pointer.click();
+    await expect(pointer).toHaveAttribute("aria-pressed", "false");
+    await expect(pointer.locator("img")).toHaveAttribute("src", /pointer-precision-off\.png$/);
+    await expect(pointer.locator("strong")).toHaveText("OFF");
+
+    const power = page.locator('[data-setting="power"]');
+    await power.click();
+    await expect(power.locator("strong")).toHaveText("B");
+    await expect(power.locator("img")).toHaveAttribute("src", /power-plan-b\.png$/);
+    await power.click();
+    await expect(power.locator("strong")).toHaveText("OTRO");
+    await expect(power.locator("img")).toHaveAttribute("src", /power-plan-other\.png$/);
+
+    const xbox = page.locator('[data-setting="xbox"]');
+    await xbox.click();
+    await expect(xbox).not.toHaveAttribute("aria-pressed", /.+/);
+    await expect(xbox.locator("strong")).toHaveText("ENVIADO");
+    await expect(xbox.locator("strong")).toHaveText("WIN+F11", { timeout: 2000 });
+
+    for (const setting of ["hdr", "windowed"]) {
+      const labs = page.locator(`[data-setting="${setting}"]`);
+      await labs.click();
+      await expect(labs).toHaveAttribute("aria-pressed", "false");
+      await expect(labs.locator("strong")).toHaveText("OFF");
+    }
+  });
+
+  test("mantiene un perfil físico 5 por 3 equilibrado", async ({ page }) => {
+    await page.goto("/");
+    const slots = await page.locator(".deck > *").evaluateAll((items) => items.map((item) =>
+      item instanceof HTMLElement ? item.dataset.setting ?? "blank" : "blank"
+    ));
+
+    expect(slots).toEqual([
+      "blank", "game", "xbox", "bar", "blank",
+      "pointer", "power", "blank", "hdr", "windowed",
+      "blank", "blank", "blank", "blank", "blank"
+    ]);
+
+    const geometry = await page.locator(".deck > *").evaluateAll((items) => items.map((item) => {
+      const box = item.getBoundingClientRect();
+      return { width: box.width, height: box.height, top: box.top };
+    }));
+    expect(geometry).toHaveLength(15);
+    expect(new Set(geometry.map(({ width }) => Math.round(width))).size).toBe(1);
+    expect(new Set(geometry.map(({ height }) => Math.round(height))).size).toBe(1);
+    expect(new Set(geometry.map(({ top }) => Math.round(top))).size).toBe(3);
+  });
+
   test("navega a inglés y conserva la descarga oficial", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: "View in English" }).click();

@@ -31,8 +31,63 @@ export function toggleDemoKey(key, root = document) {
   const indicator = root.querySelector(`[data-indicator="${setting}"]`);
   if (strong && label) strong.textContent = label;
   if (icon && image) icon.src = image;
-  if (indicator) indicator.classList.toggle("is-on", isOn);
+  if (indicator) {
+    indicator.classList.toggle("is-on", isOn);
+    indicator.textContent = label;
+    indicator.dataset.state = isOn ? "on" : "off";
+  }
   return isOn;
+}
+
+export function cycleDemoKey(key, root = document) {
+  const labels = (key.dataset.cycleLabels ?? "").split("|").filter(Boolean);
+  const images = (key.dataset.cycleImages ?? "").split("|").filter(Boolean);
+  if (labels.length === 0 || labels.length !== images.length) {
+    throw new Error("La tecla cíclica de la demo no tiene estados válidos.");
+  }
+  const previous = Number.parseInt(key.dataset.demoIndex ?? "0", 10);
+  const index = (Number.isFinite(previous) ? previous + 1 : 0) % labels.length;
+  const label = labels[index];
+  key.dataset.demoIndex = String(index);
+  const strong = key.querySelector("strong");
+  const icon = key.querySelector("img");
+  const indicator = root.querySelector(`[data-indicator="${key.dataset.setting}"]`);
+  if (strong) strong.textContent = label;
+  if (icon) icon.src = images[index];
+  if (indicator) {
+    indicator.textContent = label;
+    indicator.dataset.state = "cycle";
+  }
+  return label;
+}
+
+export function triggerDemoCommand(key, root = document) {
+  const strong = key.querySelector("strong");
+  const indicator = root.querySelector(`[data-indicator="${key.dataset.setting}"]`);
+  const original = strong?.textContent ?? "WIN+F11";
+  const ready = document.documentElement.lang === "es" ? "LISTO" : "READY";
+  key.classList.add("is-command-active");
+  if (strong) strong.textContent = key.dataset.commandLabel ?? "SENT";
+  if (indicator) {
+    indicator.textContent = key.dataset.commandLabel ?? "SENT";
+    indicator.dataset.state = "command";
+  }
+  window.setTimeout(() => {
+    key.classList.remove("is-command-active");
+    if (strong) strong.textContent = original;
+    if (indicator) {
+      indicator.textContent = ready;
+      indicator.dataset.state = "command";
+    }
+  }, 900);
+  return true;
+}
+
+export function activateDemoKey(key, root = document) {
+  if (key.dataset.demo === "toggle") return toggleDemoKey(key, root);
+  if (key.dataset.demo === "cycle") return cycleDemoKey(key, root);
+  if (key.dataset.demo === "command") return triggerDemoCommand(key, root);
+  return false;
 }
 
 async function hydrateLatestRelease() {
@@ -61,8 +116,8 @@ async function hydrateLatestRelease() {
 }
 
 function initialize() {
-  document.querySelectorAll(".deck-key").forEach((key) => {
-    key.addEventListener("click", () => toggleDemoKey(key));
+  document.querySelectorAll(".deck-key[data-demo]").forEach((key) => {
+    key.addEventListener("click", () => activateDemoKey(key));
   });
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

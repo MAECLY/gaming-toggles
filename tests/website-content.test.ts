@@ -47,10 +47,28 @@ describe("landing estática ES/EN", () => {
       "docs/assets/game-bar-off.png",
       "docs/assets/xbox-mode.png",
       "docs/assets/pointer-precision-on.png",
+      "docs/assets/pointer-precision-off.png",
       "docs/assets/power-plan-a.png",
+      "docs/assets/power-plan-b.png",
+      "docs/assets/power-plan-other.png",
       "docs/assets/auto-hdr-on.png",
+      "docs/assets/auto-hdr-off.png",
       "docs/assets/windowed-on.png",
+      "docs/assets/windowed-off.png",
       "docs/assets/og.png"
     ].map((path) => access(path)));
+  });
+
+  it("presenta las siete acciones en el live demo del hero", async () => {
+    for (const page of ["docs/index.html", "docs/en/index.html"]) {
+      const html = await readFile(page, "utf8");
+      assert.equal(html.match(/<button class="deck-key/g)?.length, 7);
+      assert.equal(html.match(/data-demo="toggle"/g)?.length, 5);
+      assert.equal(html.match(/data-demo="command"/g)?.length, 1);
+      assert.equal(html.match(/data-demo="cycle"/g)?.length, 1);
+      assert.equal(html.match(/class="deck-blank(?: deck-blank-separator)?"/g)?.length, 8);
+      assert.doesNotMatch(html, /class="demo-status"/);
+      assert.match(html, /La demo no cambia tu PC|The demo never changes your PC/);
+    }
   });
 });

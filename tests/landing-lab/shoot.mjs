@@ -9,7 +9,9 @@ const shots = [
   { name: "mobile", width: 390, height: 844, full: true }
 ];
 
-const browser = await chromium.launch();
+const channel = process.env.PLAYWRIGHT_CHANNEL ??
+  (process.platform === "win32" ? "msedge" : undefined);
+const browser = await chromium.launch(channel ? { channel } : {});
 for (const shot of shots) {
   const page = await browser.newPage({
     viewport: { width: shot.width, height: shot.height },

@@ -77,39 +77,42 @@
         </div>
 
         <div class="rig">
-          <p class="rig-label"><span>Stream Deck MK.2</span><span>Pulsa una tecla</span></p>
-          <div class="deck">
-            <button class="deck-key is-on" type="button" data-setting="game" data-on-image="assets/game-mode-on.png" data-off-image="assets/game-mode-off.png" data-on-label="ON" data-off-label="OFF" aria-pressed="true">
+          <p class="rig-label"><span>Stream Deck MK.2 · 7 acciones</span><span>Demo interactiva</span></p>
+          <div class="deck" role="group" aria-label="Perfil Gaming de Stream Deck con 15 teclas">
+            <div class="deck-blank" aria-hidden="true"></div>
+            <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="game" data-on-image="assets/game-mode-on.png" data-off-image="assets/game-mode-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar Modo Juego en la demo" aria-pressed="true">
               <img src="assets/game-mode-on.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Modo Juego</span><strong>ON</strong></span>
             </button>
-            <button class="deck-key is-on" type="button" data-setting="bar" data-on-image="assets/game-bar-on.png" data-off-image="assets/game-bar-off.png" data-on-label="ON" data-off-label="OFF" aria-pressed="true">
+            <button class="deck-key" type="button" data-demo="command" data-setting="xbox" data-command-label="ENVIADO" aria-label="Simular el comando Win más F11">
+              <img src="assets/xbox-mode.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Modo Xbox</span><strong>WIN+F11</strong></span>
+            </button>
+            <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="bar" data-on-image="assets/game-bar-on.png" data-off-image="assets/game-bar-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar Mando abre Game Bar en la demo" aria-pressed="true">
               <img src="assets/game-bar-on.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Mando → Bar</span><strong>ON</strong></span>
             </button>
-            <div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div>
-            <div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div>
+            <div class="deck-blank" aria-hidden="true"></div>
+            <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="pointer" data-on-image="assets/pointer-precision-on.png" data-off-image="assets/pointer-precision-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar precisión del puntero en la demo" aria-pressed="true">
+              <img src="assets/pointer-precision-on.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Precisión</span><strong>ON</strong></span>
+            </button>
+            <button class="deck-key" type="button" data-demo="cycle" data-setting="power" data-cycle-labels="A|B|OTRO" data-cycle-images="assets/power-plan-a.png|assets/power-plan-b.png|assets/power-plan-other.png" data-demo-index="0" aria-label="Cambiar el plan de energía de demostración">
+              <img src="assets/power-plan-a.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Energía</span><strong>A</strong></span>
+            </button>
+            <div class="deck-blank deck-blank-separator" aria-hidden="true"></div>
+            <button class="deck-key is-on is-labs" type="button" data-demo="toggle" data-setting="hdr" data-on-image="assets/auto-hdr-on.png" data-off-image="assets/auto-hdr-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar Auto HDR Labs en la demo" aria-pressed="true">
+              <img src="assets/auto-hdr-on.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Auto HDR</span><strong>ON</strong></span>
+            </button>
+            <button class="deck-key is-on is-labs" type="button" data-demo="toggle" data-setting="windowed" data-on-image="assets/windowed-on.png" data-off-image="assets/windowed-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar optimizaciones en ventana Labs en la demo" aria-pressed="true">
+              <img src="assets/windowed-on.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Ventana</span><strong>ON</strong></span>
+            </button>
             <div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div>
           </div>
-
-          <p class="rig-label"><span>Configuración de Windows</span><span>HKCU</span></p>
-          <div class="settings">
-            <div class="settings-row">
-              <div>
-                <h4>Modo Juego</h4>
-                <p>AutoGameModeEnabled</p>
-              </div>
-              <i class="switch is-on" data-indicator="game" aria-hidden="true"></i>
-            </div>
-            <div class="settings-row">
-              <div>
-                <h4>Permitir que el mando abra Game Bar</h4>
-                <p>UseNexusForGameBarEnabled</p>
-              </div>
-              <i class="switch is-on" data-indicator="bar" aria-hidden="true"></i>
-            </div>
-          </div>
-          <p class="rig-hint">La tecla y Windows nunca se contradicen.</p>
+          <p class="rig-hint"><span>Core</span> · <span>Labs</span> — Prueba las siete teclas. La demo no cambia tu PC.</p>
         </div>
       </section>
 

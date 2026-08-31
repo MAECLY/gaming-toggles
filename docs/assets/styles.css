@@ -358,6 +358,9 @@ code {
 .deck-key-title strong { font-size: clamp(.45rem, 1.35vw, .5625rem); letter-spacing: -.01em; }
 .deck-key-title strong { font-weight: 700; }
 .deck-key:hover:not([disabled]) { outline: 1px solid var(--line-strong); outline-offset: 2px; }
+.deck-key:active { transform: scale(.96); }
+.deck-key.is-labs { box-shadow: inset 0 0 0 1px rgb(169 140 255 / .7); }
+.deck-key.is-command-active { outline: 2px solid var(--accent-fg); outline-offset: 2px; }
 
 .deck-blank {
   aspect-ratio: 1;
@@ -434,6 +437,8 @@ code {
   font-size: .75rem;
   font-family: var(--font-mono);
 }
+.rig-hint span:first-child { color: var(--accent-fg); }
+.rig-hint span:nth-child(2) { color: #cbbcff; }
 
 /* ---------- spec strip ---------- */
 
