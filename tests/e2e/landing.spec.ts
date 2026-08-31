@@ -34,6 +34,16 @@ test.describe("landing funcional y responsive", () => {
     await expect(page.locator(".download-panel")).toBeVisible();
   });
 
+  test("presenta los siete controles y diferencia Labs del núcleo", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.getByRole("heading", { name: "Siete controles. Un solo plugin." })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /Entrar o salir del modo Xbox/ })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /Precisión del puntero/ })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /Plan de energía A \/ B/ })).toBeVisible();
+    await expect(page.locator(".labs-badge")).toHaveCount(2);
+    await expect(page.getByText("Win", { exact: true })).toBeVisible();
+  });
+
   test("no presenta violaciones de accesibilidad críticas o serias", async ({ page }) => {
     await page.goto("/");
     const results = await new AxeBuilder({ page }).analyze();

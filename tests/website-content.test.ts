@@ -45,6 +45,11 @@ describe("landing estática ES/EN", () => {
       "docs/assets/game-mode-off.png",
       "docs/assets/game-bar-on.png",
       "docs/assets/game-bar-off.png",
+      "docs/assets/xbox-mode.png",
+      "docs/assets/pointer-precision-on.png",
+      "docs/assets/power-plan-a.png",
+      "docs/assets/auto-hdr-on.png",
+      "docs/assets/windowed-on.png",
       "docs/assets/og.png"
     ].map((path) => access(path)));
   });
