@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" role="img" aria-label="Pointer precision on">
+  <rect width="144" height="144" rx="24" fill="#6d3cff"/>
+  <path d="M42 25v79l20-18 14 30 15-7-14-30 27-2Z" fill="#fff" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="103" cy="39" r="11" fill="none" stroke="#fff" stroke-width="6" opacity=".75"/>
+  <path d="M103 21v8m0 20v8m-18-18h8m20 0h8" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+</svg>

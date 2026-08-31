@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" role="img" aria-label="Xbox full-screen experience">
+  <rect width="144" height="144" rx="24" fill="#107c10"/>
+  <path d="M35 34h74a11 11 0 0 1 11 11v54a11 11 0 0 1-11 11H35a11 11 0 0 1-11-11V45a11 11 0 0 1 11-11Z" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M45 82V62h20M99 62H79M45 62l18 18m36 2V62L81 80" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="49" y="94" width="46" height="6" rx="3" fill="#fff" opacity=".55"/>
+</svg>
