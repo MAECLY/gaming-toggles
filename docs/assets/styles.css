@@ -369,44 +369,6 @@ code {
   box-shadow: inset 0 1px 0 rgb(255 255 255 / .03);
 }
 
-.demo-status {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
-  gap: 3px;
-  padding: 3px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--surface);
-}
-.demo-status > span {
-  display: flex;
-  align-items: center;
-  gap: .4rem;
-  min-width: 0;
-  min-height: 34px;
-  padding: .4rem .55rem;
-  border-radius: 4px;
-  background: var(--surface-2);
-  color: var(--text-3);
-  font-family: var(--font-mono);
-  font-size: .625rem;
-  white-space: nowrap;
-}
-.demo-status b { margin-left: auto; color: var(--accent-fg); font-size: .6875rem; }
-.demo-status b[data-state="off"] { color: var(--text-3); }
-.demo-status b[data-state="command"] { color: #4cc2ff; }
-.demo-status b[data-state="cycle"] { color: #f2b84b; }
-.demo-status i {
-  padding: .05rem .2rem;
-  border: 1px solid #7555d9;
-  border-radius: 3px;
-  color: #cbbcff;
-  font-size: .5rem;
-  font-style: normal;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
 /* Windows 11 Settings — Fluent geometry taken from the WinUI ToggleSwitch and
    SettingsCard resources, not eyeballed: card 68px min-height, 16px padding,
    4px radius; track 40x20 r10 with a 12px thumb travelling exactly 20px.
@@ -475,6 +437,8 @@ code {
   font-size: .75rem;
   font-family: var(--font-mono);
 }
+.rig-hint span:first-child { color: var(--accent-fg); }
+.rig-hint span:nth-child(2) { color: #cbbcff; }
 
 /* ---------- spec strip ---------- */
 

@@ -78,19 +78,21 @@
 
         <div class="rig">
           <p class="rig-label"><span>Stream Deck MK.2 · 7 acciones</span><span>Demo interactiva</span></p>
-          <div class="deck">
+          <div class="deck" role="group" aria-label="Perfil Gaming de Stream Deck con 15 teclas">
+            <div class="deck-blank" aria-hidden="true"></div>
             <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="game" data-on-image="assets/game-mode-on.png" data-off-image="assets/game-mode-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar Modo Juego en la demo" aria-pressed="true">
               <img src="assets/game-mode-on.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Modo Juego</span><strong>ON</strong></span>
-            </button>
-            <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="bar" data-on-image="assets/game-bar-on.png" data-off-image="assets/game-bar-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar Mando abre Game Bar en la demo" aria-pressed="true">
-              <img src="assets/game-bar-on.png" width="144" height="144" alt="">
-              <span class="deck-key-title"><span>Mando → Bar</span><strong>ON</strong></span>
             </button>
             <button class="deck-key" type="button" data-demo="command" data-setting="xbox" data-command-label="ENVIADO" aria-label="Simular el comando Win más F11">
               <img src="assets/xbox-mode.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Modo Xbox</span><strong>WIN+F11</strong></span>
             </button>
+            <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="bar" data-on-image="assets/game-bar-on.png" data-off-image="assets/game-bar-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar Mando abre Game Bar en la demo" aria-pressed="true">
+              <img src="assets/game-bar-on.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Mando → Bar</span><strong>ON</strong></span>
+            </button>
+            <div class="deck-blank" aria-hidden="true"></div>
             <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="pointer" data-on-image="assets/pointer-precision-on.png" data-off-image="assets/pointer-precision-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar precisión del puntero en la demo" aria-pressed="true">
               <img src="assets/pointer-precision-on.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Precisión</span><strong>ON</strong></span>
@@ -99,6 +101,7 @@
               <img src="assets/power-plan-a.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Energía</span><strong>A</strong></span>
             </button>
+            <div class="deck-blank deck-blank-separator" aria-hidden="true"></div>
             <button class="deck-key is-on is-labs" type="button" data-demo="toggle" data-setting="hdr" data-on-image="assets/auto-hdr-on.png" data-off-image="assets/auto-hdr-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Alternar Auto HDR Labs en la demo" aria-pressed="true">
               <img src="assets/auto-hdr-on.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Auto HDR</span><strong>ON</strong></span>
@@ -107,21 +110,9 @@
               <img src="assets/windowed-on.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Ventana</span><strong>ON</strong></span>
             </button>
-            <div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div>
             <div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div>
           </div>
-
-          <p class="rig-label"><span>Estado simulado</span><span>Núcleo + Labs</span></p>
-          <div class="demo-status" aria-live="polite">
-            <span>Juego <b data-indicator="game">ON</b></span>
-            <span>Game Bar <b data-indicator="bar">ON</b></span>
-            <span>Xbox <b data-indicator="xbox" data-state="command">LISTO</b></span>
-            <span>Puntero <b data-indicator="pointer">ON</b></span>
-            <span>Energía <b data-indicator="power" data-state="cycle">A</b></span>
-            <span>HDR <b data-indicator="hdr">ON</b><i>Labs</i></span>
-            <span>Ventana <b data-indicator="windowed">ON</b><i>Labs</i></span>
-          </div>
-          <p class="rig-hint">Prueba las siete teclas. La demo no cambia tu PC.</p>
+          <p class="rig-hint"><span>Core</span> · <span>Labs</span> — Prueba las siete teclas. La demo no cambia tu PC.</p>
         </div>
       </section>
 

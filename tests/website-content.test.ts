@@ -66,6 +66,8 @@ describe("landing estática ES/EN", () => {
       assert.equal(html.match(/data-demo="toggle"/g)?.length, 5);
       assert.equal(html.match(/data-demo="command"/g)?.length, 1);
       assert.equal(html.match(/data-demo="cycle"/g)?.length, 1);
+      assert.equal(html.match(/class="deck-blank(?: deck-blank-separator)?"/g)?.length, 8);
+      assert.doesNotMatch(html, /class="demo-status"/);
       assert.match(html, /La demo no cambia tu PC|The demo never changes your PC/);
     }
   });

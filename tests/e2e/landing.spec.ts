@@ -28,7 +28,7 @@ test.describe("landing funcional y responsive", () => {
     await pointer.click();
     await expect(pointer).toHaveAttribute("aria-pressed", "false");
     await expect(pointer.locator("img")).toHaveAttribute("src", /pointer-precision-off\.png$/);
-    await expect(page.locator('[data-indicator="pointer"]')).toHaveText("OFF");
+    await expect(pointer.locator("strong")).toHaveText("OFF");
 
     const power = page.locator('[data-setting="power"]');
     await power.click();
@@ -48,8 +48,30 @@ test.describe("landing funcional y responsive", () => {
       const labs = page.locator(`[data-setting="${setting}"]`);
       await labs.click();
       await expect(labs).toHaveAttribute("aria-pressed", "false");
-      await expect(page.locator(`[data-indicator="${setting}"]`)).toHaveText("OFF");
+      await expect(labs.locator("strong")).toHaveText("OFF");
     }
+  });
+
+  test("mantiene un perfil físico 5 por 3 equilibrado", async ({ page }) => {
+    await page.goto("/");
+    const slots = await page.locator(".deck > *").evaluateAll((items) => items.map((item) =>
+      item instanceof HTMLElement ? item.dataset.setting ?? "blank" : "blank"
+    ));
+
+    expect(slots).toEqual([
+      "blank", "game", "xbox", "bar", "blank",
+      "pointer", "power", "blank", "hdr", "windowed",
+      "blank", "blank", "blank", "blank", "blank"
+    ]);
+
+    const geometry = await page.locator(".deck > *").evaluateAll((items) => items.map((item) => {
+      const box = item.getBoundingClientRect();
+      return { width: box.width, height: box.height, top: box.top };
+    }));
+    expect(geometry).toHaveLength(15);
+    expect(new Set(geometry.map(({ width }) => Math.round(width))).size).toBe(1);
+    expect(new Set(geometry.map(({ height }) => Math.round(height))).size).toBe(1);
+    expect(new Set(geometry.map(({ top }) => Math.round(top))).size).toBe(3);
   });
 
   test("navega a inglés y conserva la descarga oficial", async ({ page }) => {
