@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gaming Toggles for PC · Plugin para Stream Deck | MAECLY</title>
-    <meta name="description" content="Controla el Modo Juego de Windows 11 y si el botón Xbox del mando abre Game Bar desde Stream Deck. Gratis, open source y en español e inglés.">
+    <meta name="description" content="Siete controles gaming para Windows 11 desde Stream Deck: Modo Juego, Game Bar, modo Xbox, puntero, energía, Auto HDR y juegos en ventana.">
     <meta name="author" content="Miguel Esparza · MAECLY">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#0a0a0b">
@@ -20,7 +20,7 @@
     <meta property="og:locale" content="es_ES">
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="Gaming Toggles for PC · Un toque más cerca">
-    <meta property="og:description" content="Controla Modo Juego y Game Bar desde tu Stream Deck. Plugin gratuito y open source para Windows 11.">
+    <meta property="og:description" content="Siete controles gaming de Windows 11 en tu Stream Deck. Gratis, open source y sin permisos de administrador.">
     <meta property="og:url" content="https://gaming-toggles.maecly.com/">
     <meta property="og:image" content="https://gaming-toggles.maecly.com/assets/og.png">
     <meta property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
     <meta property="og:image:alt" content="Gaming Toggles for PC de MAECLY con un Stream Deck y un mando">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gaming Toggles for PC · Plugin para Stream Deck">
-    <meta name="twitter:description" content="Modo Juego y Game Bar en dos teclas. Gratis y open source.">
+    <meta name="twitter:description" content="Xbox, ratón, energía y gráficos de Windows 11 a un toque. Gratis y open source.">
     <meta name="twitter:image" content="https://gaming-toggles.maecly.com/assets/og.png">
     <script type="application/ld+json">
       {
@@ -36,8 +36,8 @@
         "@graph": [
           {"@type":"WebSite","@id":"https://gaming-toggles.maecly.com/#website","url":"https://gaming-toggles.maecly.com/","name":"Gaming Toggles for PC · MAECLY","inLanguage":["es","en"]},
           {"@type":"Person","@id":"https://www.maecly.com/#miguel","name":"Miguel Esparza","url":"https://www.maecly.com/","email":"mailto:hola@maecly.com","jobTitle":"Full-Stack Developer & Content Creator"},
-          {"@type":"SoftwareApplication","@id":"https://gaming-toggles.maecly.com/#software","name":"Gaming Toggles for PC","description":"Plugin para controlar Modo Juego y el acceso de Game Bar con el mando desde Stream Deck.","url":"https://gaming-toggles.maecly.com/","downloadUrl":"https://github.com/MAECLY/gaming-toggles/releases/latest","softwareVersion":"1.2.0","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 11","isAccessibleForFree":true,"license":"https://opensource.org/license/mit","author":{"@id":"https://www.maecly.com/#miguel"},"inLanguage":["es","en"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
-          {"@type":"FAQPage","@id":"https://gaming-toggles.maecly.com/#faq","mainEntity":[{"@type":"Question","name":"¿Necesita permisos de administrador?","acceptedAnswer":{"@type":"Answer","text":"No. El plugin modifica únicamente preferencias del usuario actual en HKCU."}},{"@type":"Question","name":"¿Qué versiones admite?","acceptedAnswer":{"@type":"Answer","text":"Windows 11 y Stream Deck 7.1 o posterior."}},{"@type":"Question","name":"¿Es código abierto?","acceptedAnswer":{"@type":"Answer","text":"Sí. El código se publica en GitHub bajo licencia MIT."}}]}
+          {"@type":"SoftwareApplication","@id":"https://gaming-toggles.maecly.com/#software","name":"Gaming Toggles for PC","description":"Plugin con siete controles para gaming, Xbox, ratón, energía y gráficos de Windows 11 desde Stream Deck.","url":"https://gaming-toggles.maecly.com/","downloadUrl":"https://github.com/MAECLY/gaming-toggles/releases/latest","softwareVersion":"2.1.0","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 11","isAccessibleForFree":true,"license":"https://opensource.org/license/mit","author":{"@id":"https://www.maecly.com/#miguel"},"inLanguage":["es","en"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
+          {"@type":"FAQPage","@id":"https://gaming-toggles.maecly.com/#faq","mainEntity":[{"@type":"Question","name":"¿Necesita permisos de administrador?","acceptedAnswer":{"@type":"Answer","text":"No. Usa preferencias del usuario y APIs públicas de Windows sin elevación."}},{"@type":"Question","name":"¿Qué versiones admite?","acceptedAnswer":{"@type":"Answer","text":"Windows 11 y Stream Deck 7.1 o posterior. El modo Xbox requiere una versión compatible de Windows."}},{"@type":"Question","name":"¿Es código abierto?","acceptedAnswer":{"@type":"Answer","text":"Sí. El código se publica en GitHub bajo licencia MIT."}}]}
         ]
       }
     </script>
@@ -63,7 +63,7 @@
         <div>
           <p class="eyebrow">Gaming Toggles for PC · Open source</p>
           <h1 id="hero-title">Tu Xbox.<br>Un toque más cerca.</h1>
-          <p class="lede">Controla <strong>Modo Juego</strong> y decide si el botón Xbox del mando abre <strong>Game Bar</strong>, directamente desde tu Stream Deck. Sin abrir Configuración, sin permisos de administrador.</p>
+          <p class="lede">Controla <strong>Xbox, ratón, energía y gráficos</strong> de Windows 11 directamente desde tu Stream Deck. Siete acciones, estados reales y ninguna elevación.</p>
           <div class="actions">
             <a class="button button-primary" data-latest-download href="https://github.com/MAECLY/gaming-toggles/releases/latest">Descargar para Stream Deck</a>
             <a class="button button-secondary" href="https://github.com/MAECLY/gaming-toggles">Ver el código</a>
@@ -71,7 +71,7 @@
           <ul class="hero-specs">
             <li>MIT</li>
             <li>ES / EN</li>
-            <li>1 dependencia</li>
+            <li>7 acciones</li>
             <li>Sin admin</li>
           </ul>
         </div>
@@ -119,8 +119,8 @@
 
       <section class="section shell" id="funciones" aria-labelledby="features-title">
         <div class="section-head">
-          <h2 id="features-title">Dos acciones. Nada más.</h2>
-          <p>Cada acción escribe un único valor en el Registro del usuario actual y vuelve a leerlo para confirmar que Windows lo guardó.</p>
+          <h2 id="features-title">Siete controles. Un solo plugin.</h2>
+          <p>El núcleo usa APIs y comandos de Windows sin elevación; dos controles gráficos se publican como Labs porque Microsoft no ofrece todavía un setter público estable.</p>
         </div>
         <div class="rows">
           <article class="row reveal">
@@ -138,6 +138,31 @@
               <p>Decide si el botón Xbox central del mando puede abrir Game Bar, sin navegar por Configuración. Útil cuando ese botón te interrumpe a mitad de partida.</p>
             </div>
             <p class="row-key">HKCU\Software\Microsoft\GameBar<br>UseNexusForGameBarEnabled</p>
+          </article>
+          <article class="row reveal">
+            <img class="row-art" src="assets/xbox-mode.png" width="144" height="144" alt="Icono del modo Xbox a pantalla completa" loading="lazy">
+            <div><h3>Entrar o salir del modo Xbox</h3><p>Envía el atajo oficial <kbd>Win</kbd> + <kbd>F11</kbd>. Es una orden deliberadamente sin ON/OFF: Windows no publica un estado fiable para esa sesión.</p></div>
+            <p class="row-key">Windows 11 24H2+ compatible<br>GamingHomeApp configurada</p>
+          </article>
+          <article class="row reveal">
+            <img class="row-art" src="assets/pointer-precision-on.png" width="144" height="144" alt="Icono de precisión del puntero" loading="lazy">
+            <div><h3>Precisión del puntero</h3><p>Activa o desactiva la aceleración del ratón con <code>SystemParametersInfo</code>, conservando los dos umbrales personalizados de Windows.</p></div>
+            <p class="row-key">SPI_GETMOUSE · SPI_SETMOUSE<br>sin reiniciar ni elevar</p>
+          </article>
+          <article class="row reveal">
+            <img class="row-art" src="assets/power-plan-a.png" width="144" height="144" alt="Icono de planes de energía A y B" loading="lazy">
+            <div><h3>Plan de energía A / B</h3><p>Elige dos planes existentes en el inspector de propiedades. La tecla muestra A, B u OTRO y confirma cada activación.</p></div>
+            <p class="row-key">powercfg /list · /getactivescheme<br>/setactive únicamente</p>
+          </article>
+          <article class="row reveal">
+            <img class="row-art" src="assets/auto-hdr-on.png" width="144" height="144" alt="Icono experimental Auto HDR" loading="lazy">
+            <div><h3><span class="labs-badge">Labs</span> Auto HDR</h3><p>Alterna solo el token de Auto HDR y conserva cualquier opción desconocida añadida por Windows o el fabricante de la GPU.</p></div>
+            <p class="row-key">DirectXUserGlobalSettings<br>AutoHDREnable</p>
+          </article>
+          <article class="row reveal">
+            <img class="row-art" src="assets/windowed-on.png" width="144" height="144" alt="Icono experimental de optimizaciones en ventana" loading="lazy">
+            <div><h3><span class="labs-badge">Labs</span> Juegos en ventana</h3><p>Control experimental de las optimizaciones para juegos en ventana. Falla de forma segura si Windows cambia el formato.</p></div>
+            <p class="row-key">DirectXUserGlobalSettings<br>SwapEffectUpgradeEnable</p>
           </article>
           <article class="row reveal">
             <p class="row-marker">cada 2,5 s</p>
@@ -170,14 +195,14 @@
           <li class="reveal">
             <div>
               <h3>Personaliza</h3>
-              <p>Busca «Gaming Toggles for PC» y arrastra ambas acciones a tu perfil.</p>
+              <p>Busca «Gaming Toggles for PC» y arrastra las acciones que quieras a tu perfil.</p>
             </div>
           </li>
         </ol>
         <div class="download-panel reveal">
           <img src="assets/plugin-icon.png" width="512" height="512" alt="" loading="lazy">
           <div>
-            <h3>Gaming Toggles for PC <span data-release-version>v2.0.0</span></h3>
+            <h3>Gaming Toggles for PC <span data-release-version>v2.1.0</span></h3>
             <p>Windows 11 · Stream Deck 7.1+ · ES/EN · MIT</p>
           </div>
           <a class="button button-primary" data-latest-download href="https://github.com/MAECLY/gaming-toggles/releases/latest">Descargar gratis</a>
@@ -188,14 +213,14 @@
       <section class="section shell split" id="codigo" aria-labelledby="code-title">
         <div>
           <h2 id="code-title">Pequeño por diseño.</h2>
-          <p class="lede">TypeScript para la integración con Stream Deck y un notificador C# mínimo para que Configuración de Windows refleje el Modo Juego al instante. Nada más se ejecuta en tu máquina.</p>
+          <p class="lede">TypeScript para Stream Deck y una biblioteca C# mínima para las llamadas Win32 de teclado, ratón y notificación. Sin servicios residentes ni ejecutables adicionales.</p>
           <p style="margin-top:1.75rem"><a class="text-link" href="https://github.com/MAECLY/gaming-toggles">Explorar el repositorio →</a></p>
         </div>
         <dl class="facts">
           <div><dt>licencia</dt><dd>MIT</dd></div>
           <div><dt>dependencias</dt><dd>1</dd></div>
           <div><dt>runtime</dt><dd>Node.js 24</dd></div>
-          <div><dt>permisos</dt><dd>HKCU, sin admin</dd></div>
+          <div><dt>permisos</dt><dd>usuario actual, sin admin</dd></div>
           <div><dt>idiomas</dt><dd>es · en</dd></div>
           <div><dt>releases</dt><dd>GitHub Actions + SHA-256</dd></div>
         </dl>
@@ -218,8 +243,9 @@
           <h2 id="faq-title">Preguntas frecuentes</h2>
         </div>
         <div class="faq-list">
-          <details><summary>¿Necesita permisos de administrador?</summary><p>No. Las dos preferencias viven en <code>HKCU</code>, el Registro del usuario actual.</p></details>
-          <details><summary>¿Qué versiones admite?</summary><p>Windows 11 y Stream Deck 7.1 o posterior. Node.js solo es necesario para desarrollar o empaquetar.</p></details>
+          <details><summary>¿Necesita permisos de administrador?</summary><p>No. Usa preferencias del usuario actual y APIs públicas de Windows. Nunca solicita UAC ni modifica HKLM.</p></details>
+          <details><summary>¿Qué versiones admite?</summary><p>Windows 11 y Stream Deck 7.1 o posterior. El modo Xbox depende de que Windows ofrezca y tenga configurada la experiencia a pantalla completa.</p></details>
+          <details><summary>¿Qué significa Labs?</summary><p>Auto HDR y las optimizaciones en ventana dependen de una preferencia interna documentada por comportamiento, no de un setter público de Microsoft. El plugin preserva campos desconocidos y no escribe ante formatos inesperados.</p></details>
           <details><summary>¿Es seguro instalarlo desde GitHub?</summary><p>Cada Release se construye con GitHub Actions, incluye checksum SHA-256 y publica el mismo código que puedes auditar.</p></details>
           <details><summary>¿Puedo contribuir?</summary><p>Sí. Está bajo licencia MIT y acepta mejoras, pruebas, traducciones e issues en GitHub.</p></details>
         </div>

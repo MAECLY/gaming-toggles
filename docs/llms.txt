@@ -1,6 +1,6 @@
 # Gaming Toggles for PC by MAECLY
 
-> Free and open-source Stream Deck plugin for two Windows 11 gaming settings.
+> Free and open-source Stream Deck plugin with seven Windows 11 gaming controls.
 
 ## Canonical pages
 
@@ -14,13 +14,17 @@
 
 - Toggle Windows 11 Game Mode (`AutoGameModeEnabled`).
 - Toggle whether the controller Xbox/Nexus button opens Game Bar (`UseNexusForGameBarEnabled`).
+- Trigger the official Win+F11 Xbox full-screen experience command without claiming a false state.
+- Toggle Enhance pointer precision through Win32 while preserving mouse thresholds.
+- Switch between two user-selected, installed Windows power plans.
+- Labs: toggle Auto HDR and optimizations for windowed games while preserving unknown DirectX preference tokens.
 - Reflect external Windows Settings changes on Stream Deck every 2.5 seconds.
 - Spanish and English localization.
 
 ## Trust
 
 - MIT licensed, source available on GitHub.
-- Per-user HKCU settings; no administrator permission required.
+- Current-user settings and non-elevated Windows APIs; no administrator permission required.
 - GitHub Actions build and SHA-256 checksum for Releases.
 - Independent project; not affiliated with Microsoft, Xbox, Elgato, or Corsair.
 
