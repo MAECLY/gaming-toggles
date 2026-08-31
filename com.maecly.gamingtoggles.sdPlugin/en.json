@@ -1,6 +1,6 @@
 {
   "Name": "Gaming Toggles for PC",
-  "Description": "Control Windows 11 Game Mode and the controller's Xbox button from Stream Deck.",
+  "Description": "Control Windows 11 gaming, Xbox, mouse, graphics and power settings from Stream Deck.",
   "com.maecly.gamingtoggles.game-mode": {
     "Name": "Toggle Game Mode",
     "Tooltip": "Turn Windows 11 Game Mode on or off.",
@@ -25,10 +25,49 @@
       }
     ]
   },
+  "com.maecly.gamingtoggles.xbox-mode": {
+    "Name": "Enter / exit Xbox Mode",
+    "Tooltip": "Send the official Win+F11 command to enter or exit the Windows Xbox full-screen experience.",
+    "States": [{ "Name": "Command" }]
+  },
+  "com.maecly.gamingtoggles.pointer-precision": {
+    "Name": "Enhance pointer precision",
+    "Tooltip": "Turn Enhance pointer precision on or off while preserving your mouse thresholds.",
+    "States": [{ "Name": "Off" }, { "Name": "On" }]
+  },
+  "com.maecly.gamingtoggles.power-plan": {
+    "Name": "Power plan A / B",
+    "Tooltip": "Switch between two existing Windows power plans selected in the Property Inspector.",
+    "States": [{ "Name": "Plan A" }, { "Name": "Plan B" }, { "Name": "Other / setup" }]
+  },
+  "com.maecly.gamingtoggles.auto-hdr": {
+    "Name": "[Labs] Auto HDR",
+    "Tooltip": "Experimental: toggle the current-user Auto HDR preference. Windows or GPU updates may change this behavior.",
+    "States": [{ "Name": "Off" }, { "Name": "On" }, { "Name": "Unavailable" }]
+  },
+  "com.maecly.gamingtoggles.windowed-optimizations": {
+    "Name": "[Labs] Windowed game optimizations",
+    "Tooltip": "Experimental: toggle Windows optimizations for windowed games for the current user.",
+    "States": [{ "Name": "Off" }, { "Name": "On" }, { "Name": "Unavailable" }]
+  },
   "Localization": {
     "Game Mode\nOFF": "Game Mode\nOFF",
     "Game Mode\nON": "Game Mode\nON",
     "Pad → Bar\nOFF": "Pad → Bar\nOFF",
-    "Pad → Bar\nON": "Pad → Bar\nON"
+    "Pad → Bar\nON": "Pad → Bar\nON",
+    "Xbox Mode\nWIN+F11": "Xbox Mode\nWIN+F11",
+    "Xbox Mode\nSETUP": "Xbox Mode\nSETUP",
+    "Pointer Precision\nOFF": "Pointer\nOFF",
+    "Pointer Precision\nON": "Pointer\nON",
+    "Power Plan\nA": "Power Plan\nA",
+    "Power Plan\nB": "Power Plan\nB",
+    "Power Plan\nOTHER": "Power Plan\nOTHER",
+    "Power Plan\nSETUP": "Power Plan\nSETUP",
+    "Auto HDR LABS\nOFF": "Auto HDR LABS\nOFF",
+    "Auto HDR LABS\nON": "Auto HDR LABS\nON",
+    "Auto HDR LABS\nUNAVAILABLE": "Auto HDR LABS\nN/A",
+    "Windowed LABS\nOFF": "Windowed LABS\nOFF",
+    "Windowed LABS\nON": "Windowed LABS\nON",
+    "Windowed LABS\nUNAVAILABLE": "Windowed LABS\nN/A"
   }
 }

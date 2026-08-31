@@ -1,6 +1,6 @@
 {
   "Name": "Gaming Toggles for PC",
-  "Description": "Controla desde Stream Deck el Modo Juego y el botón Xbox del mando en Windows 11.",
+  "Description": "Controla desde Stream Deck opciones de gaming, Xbox, ratón, gráficos y energía en Windows 11.",
   "com.maecly.gamingtoggles.game-mode": {
     "Name": "Alternar Modo Juego",
     "Tooltip": "Enciende o apaga el Modo Juego de Windows 11.",
@@ -25,10 +25,49 @@
       }
     ]
   },
+  "com.maecly.gamingtoggles.xbox-mode": {
+    "Name": "Entrar / salir del modo Xbox",
+    "Tooltip": "Envía el comando oficial Win+F11 para entrar o salir de la experiencia Xbox a pantalla completa de Windows.",
+    "States": [{ "Name": "Comando" }]
+  },
+  "com.maecly.gamingtoggles.pointer-precision": {
+    "Name": "Mejorar precisión del puntero",
+    "Tooltip": "Activa o desactiva Mejorar la precisión del puntero conservando los umbrales del ratón.",
+    "States": [{ "Name": "Apagado" }, { "Name": "Encendido" }]
+  },
+  "com.maecly.gamingtoggles.power-plan": {
+    "Name": "Plan de energía A / B",
+    "Tooltip": "Alterna entre dos planes de energía existentes elegidos en el inspector de propiedades.",
+    "States": [{ "Name": "Plan A" }, { "Name": "Plan B" }, { "Name": "Otro / configurar" }]
+  },
+  "com.maecly.gamingtoggles.auto-hdr": {
+    "Name": "[Labs] HDR automático",
+    "Tooltip": "Experimental: alterna la preferencia HDR automático del usuario. Windows o el controlador gráfico pueden cambiar este comportamiento.",
+    "States": [{ "Name": "Apagado" }, { "Name": "Encendido" }, { "Name": "No disponible" }]
+  },
+  "com.maecly.gamingtoggles.windowed-optimizations": {
+    "Name": "[Labs] Optimizaciones para juegos en ventana",
+    "Tooltip": "Experimental: alterna las optimizaciones de Windows para juegos en ventana del usuario actual.",
+    "States": [{ "Name": "Apagado" }, { "Name": "Encendido" }, { "Name": "No disponible" }]
+  },
   "Localization": {
     "Game Mode\nOFF": "Modo Juego\nOFF",
     "Game Mode\nON": "Modo Juego\nON",
     "Pad → Bar\nOFF": "Mando → Bar\nOFF",
-    "Pad → Bar\nON": "Mando → Bar\nON"
+    "Pad → Bar\nON": "Mando → Bar\nON",
+    "Xbox Mode\nWIN+F11": "Modo Xbox\nWIN+F11",
+    "Xbox Mode\nSETUP": "Modo Xbox\nCONFIG",
+    "Pointer Precision\nOFF": "Precisión\nOFF",
+    "Pointer Precision\nON": "Precisión\nON",
+    "Power Plan\nA": "Plan Energía\nA",
+    "Power Plan\nB": "Plan Energía\nB",
+    "Power Plan\nOTHER": "Plan Energía\nOTRO",
+    "Power Plan\nSETUP": "Plan Energía\nCONFIG",
+    "Auto HDR LABS\nOFF": "HDR Auto LABS\nOFF",
+    "Auto HDR LABS\nON": "HDR Auto LABS\nON",
+    "Auto HDR LABS\nUNAVAILABLE": "HDR Auto LABS\nN/D",
+    "Windowed LABS\nOFF": "Ventana LABS\nOFF",
+    "Windowed LABS\nON": "Ventana LABS\nON",
+    "Windowed LABS\nUNAVAILABLE": "Ventana LABS\nN/D"
   }
 }

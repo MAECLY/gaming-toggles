@@ -54,13 +54,163 @@
       "Tooltip": "Allow or prevent the controller's Xbox button from opening Game Bar.",
       "UserTitleEnabled": false,
       "UUID": "com.maecly.gamingtoggles.controller-game-bar"
+    },
+    {
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/xbox-mode/action",
+      "Name": "Enter / exit Xbox Mode",
+      "States": [
+        {
+          "Image": "imgs/actions/xbox-mode/default",
+          "Name": "Command",
+          "Title": "Xbox Mode\nWIN+F11",
+          "TitleAlignment": "bottom",
+          "FontSize": 12
+        }
+      ],
+      "Tooltip": "Send the official Win+F11 command to enter or exit the Windows Xbox full-screen experience.",
+      "UserTitleEnabled": false,
+      "UUID": "com.maecly.gamingtoggles.xbox-mode"
+    },
+    {
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/pointer-precision/action",
+      "Name": "Enhance pointer precision",
+      "States": [
+        {
+          "Image": "imgs/actions/pointer-precision/off",
+          "Name": "Off",
+          "Title": "Pointer\nOFF",
+          "TitleAlignment": "bottom",
+          "FontSize": 12
+        },
+        {
+          "Image": "imgs/actions/pointer-precision/on",
+          "Name": "On",
+          "Title": "Pointer\nON",
+          "TitleAlignment": "bottom",
+          "FontSize": 12
+        }
+      ],
+      "Tooltip": "Turn Windows Enhance pointer precision on or off while preserving mouse thresholds.",
+      "UserTitleEnabled": false,
+      "UUID": "com.maecly.gamingtoggles.pointer-precision"
+    },
+    {
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/power-plan/action",
+      "Name": "Power plan A / B",
+      "PropertyInspectorPath": "property-inspector/power-plan.html",
+      "States": [
+        {
+          "Image": "imgs/actions/power-plan/a",
+          "Name": "Plan A",
+          "Title": "Power Plan\nA",
+          "TitleAlignment": "bottom",
+          "FontSize": 12
+        },
+        {
+          "Image": "imgs/actions/power-plan/b",
+          "Name": "Plan B",
+          "Title": "Power Plan\nB",
+          "TitleAlignment": "bottom",
+          "FontSize": 12
+        },
+        {
+          "Image": "imgs/actions/power-plan/other",
+          "Name": "Other / setup",
+          "Title": "Power Plan\nOTHER",
+          "TitleAlignment": "bottom",
+          "FontSize": 11
+        }
+      ],
+      "Tooltip": "Switch between two existing Windows power plans selected in the Property Inspector.",
+      "UserTitleEnabled": false,
+      "UUID": "com.maecly.gamingtoggles.power-plan"
+    },
+    {
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/auto-hdr/action",
+      "Name": "[Labs] Auto HDR",
+      "States": [
+        {
+          "Image": "imgs/actions/auto-hdr/off",
+          "Name": "Off",
+          "Title": "Auto HDR LABS\nOFF",
+          "TitleAlignment": "bottom",
+          "FontSize": 11
+        },
+        {
+          "Image": "imgs/actions/auto-hdr/on",
+          "Name": "On",
+          "Title": "Auto HDR LABS\nON",
+          "TitleAlignment": "bottom",
+          "FontSize": 11
+        },
+        {
+          "Image": "imgs/actions/auto-hdr/off",
+          "Name": "Unavailable",
+          "Title": "Auto HDR LABS\nUNAVAILABLE",
+          "TitleAlignment": "bottom",
+          "FontSize": 9
+        }
+      ],
+      "Tooltip": "Experimental: toggle the current-user Auto HDR preference. Windows or GPU updates may change this behavior.",
+      "UserTitleEnabled": false,
+      "UUID": "com.maecly.gamingtoggles.auto-hdr"
+    },
+    {
+      "Controllers": [
+        "Keypad"
+      ],
+      "DisableAutomaticStates": true,
+      "Icon": "imgs/actions/windowed-optimizations/action",
+      "Name": "[Labs] Windowed game optimizations",
+      "States": [
+        {
+          "Image": "imgs/actions/windowed-optimizations/off",
+          "Name": "Off",
+          "Title": "Windowed LABS\nOFF",
+          "TitleAlignment": "bottom",
+          "FontSize": 11
+        },
+        {
+          "Image": "imgs/actions/windowed-optimizations/on",
+          "Name": "On",
+          "Title": "Windowed LABS\nON",
+          "TitleAlignment": "bottom",
+          "FontSize": 11
+        },
+        {
+          "Image": "imgs/actions/windowed-optimizations/off",
+          "Name": "Unavailable",
+          "Title": "Windowed LABS\nUNAVAILABLE",
+          "TitleAlignment": "bottom",
+          "FontSize": 9
+        }
+      ],
+      "Tooltip": "Experimental: toggle Windows optimizations for windowed games for the current user.",
+      "UserTitleEnabled": false,
+      "UUID": "com.maecly.gamingtoggles.windowed-optimizations"
     }
   ],
   "Author": "MAECLY",
   "Category": "Gaming Toggles for PC",
   "CategoryIcon": "imgs/plugin/category",
   "CodePath": "bin/plugin.js",
-  "Description": "Control Windows 11 Game Mode and the controller's Xbox button from Stream Deck.",
+  "Description": "Control Windows 11 gaming, Xbox, mouse, graphics and power settings from Stream Deck.",
   "Icon": "imgs/plugin/marketplace",
   "Name": "Gaming Toggles for PC",
   "Nodejs": {
@@ -79,5 +229,5 @@
   "SupportURL": "https://github.com/MAECLY/gaming-toggles/issues",
   "URL": "https://gaming-toggles.maecly.com/",
   "UUID": "com.maecly.gamingtoggles",
-  "Version": "2.0.0.0"
+  "Version": "2.1.0.0"
 }
