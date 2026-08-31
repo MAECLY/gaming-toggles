@@ -77,39 +77,51 @@
         </div>
 
         <div class="rig">
-          <p class="rig-label"><span>Stream Deck MK.2</span><span>Press a key</span></p>
+          <p class="rig-label"><span>Stream Deck MK.2 · 7 actions</span><span>Interactive demo</span></p>
           <div class="deck">
-            <button class="deck-key is-on" type="button" data-setting="game" data-on-image="../assets/game-mode-on.png" data-off-image="../assets/game-mode-off.png" data-on-label="ON" data-off-label="OFF" aria-pressed="true">
+            <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="game" data-on-image="../assets/game-mode-on.png" data-off-image="../assets/game-mode-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Toggle Game Mode in the demo" aria-pressed="true">
               <img src="../assets/game-mode-on.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Game Mode</span><strong>ON</strong></span>
             </button>
-            <button class="deck-key is-on" type="button" data-setting="bar" data-on-image="../assets/game-bar-on.png" data-off-image="../assets/game-bar-off.png" data-on-label="ON" data-off-label="OFF" aria-pressed="true">
+            <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="bar" data-on-image="../assets/game-bar-on.png" data-off-image="../assets/game-bar-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Toggle Controller opens Game Bar in the demo" aria-pressed="true">
               <img src="../assets/game-bar-on.png" width="144" height="144" alt="">
               <span class="deck-key-title"><span>Pad → Bar</span><strong>ON</strong></span>
             </button>
+            <button class="deck-key" type="button" data-demo="command" data-setting="xbox" data-command-label="SENT" aria-label="Simulate the Windows key plus F11 command">
+              <img src="../assets/xbox-mode.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Xbox Mode</span><strong>WIN+F11</strong></span>
+            </button>
+            <button class="deck-key is-on" type="button" data-demo="toggle" data-setting="pointer" data-on-image="../assets/pointer-precision-on.png" data-off-image="../assets/pointer-precision-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Toggle pointer precision in the demo" aria-pressed="true">
+              <img src="../assets/pointer-precision-on.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Pointer</span><strong>ON</strong></span>
+            </button>
+            <button class="deck-key" type="button" data-demo="cycle" data-setting="power" data-cycle-labels="A|B|OTHER" data-cycle-images="../assets/power-plan-a.png|../assets/power-plan-b.png|../assets/power-plan-other.png" data-demo-index="0" aria-label="Change the demo power plan">
+              <img src="../assets/power-plan-a.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Power</span><strong>A</strong></span>
+            </button>
+            <button class="deck-key is-on is-labs" type="button" data-demo="toggle" data-setting="hdr" data-on-image="../assets/auto-hdr-on.png" data-off-image="../assets/auto-hdr-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Toggle Auto HDR Labs in the demo" aria-pressed="true">
+              <img src="../assets/auto-hdr-on.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Auto HDR</span><strong>ON</strong></span>
+            </button>
+            <button class="deck-key is-on is-labs" type="button" data-demo="toggle" data-setting="windowed" data-on-image="../assets/windowed-on.png" data-off-image="../assets/windowed-off.png" data-on-label="ON" data-off-label="OFF" aria-label="Toggle windowed optimizations Labs in the demo" aria-pressed="true">
+              <img src="../assets/windowed-on.png" width="144" height="144" alt="">
+              <span class="deck-key-title"><span>Windowed</span><strong>ON</strong></span>
+            </button>
             <div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div>
-            <div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div>
             <div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div><div class="deck-blank" aria-hidden="true"></div>
           </div>
 
-          <p class="rig-label"><span>Windows Settings</span><span>HKCU</span></p>
-          <div class="settings">
-            <div class="settings-row">
-              <div>
-                <h4>Game Mode</h4>
-                <p>AutoGameModeEnabled</p>
-              </div>
-              <i class="switch is-on" data-indicator="game" aria-hidden="true"></i>
-            </div>
-            <div class="settings-row">
-              <div>
-                <h4>Allow your controller to open Game Bar</h4>
-                <p>UseNexusForGameBarEnabled</p>
-              </div>
-              <i class="switch is-on" data-indicator="bar" aria-hidden="true"></i>
-            </div>
+          <p class="rig-label"><span>Simulated status</span><span>Core + Labs</span></p>
+          <div class="demo-status" aria-live="polite">
+            <span>Game <b data-indicator="game">ON</b></span>
+            <span>Game Bar <b data-indicator="bar">ON</b></span>
+            <span>Xbox <b data-indicator="xbox" data-state="command">READY</b></span>
+            <span>Pointer <b data-indicator="pointer">ON</b></span>
+            <span>Power <b data-indicator="power" data-state="cycle">A</b></span>
+            <span>HDR <b data-indicator="hdr">ON</b><i>Labs</i></span>
+            <span>Windowed <b data-indicator="windowed">ON</b><i>Labs</i></span>
           </div>
-          <p class="rig-hint">The key and Windows never disagree.</p>
+          <p class="rig-hint">Try all seven keys. The demo never changes your PC.</p>
         </div>
       </section>
 

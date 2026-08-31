@@ -66,9 +66,14 @@ const site = [
   { from: "game-bar-off", to: new URL("game-bar-off.png", web), size: 256 },
   { from: "xbox-mode", to: new URL("xbox-mode.png", web), size: 256 },
   { from: "pointer-precision-on", to: new URL("pointer-precision-on.png", web), size: 256 },
+  { from: "pointer-precision-off", to: new URL("pointer-precision-off.png", web), size: 256 },
   { from: "power-plan-a", to: new URL("power-plan-a.png", web), size: 256 },
+  { from: "power-plan-b", to: new URL("power-plan-b.png", web), size: 256 },
+  { from: "power-plan-other", to: new URL("power-plan-other.png", web), size: 256 },
   { from: "auto-hdr-on", to: new URL("auto-hdr-on.png", web), size: 256 },
-  { from: "windowed-on", to: new URL("windowed-on.png", web), size: 256 }
+  { from: "auto-hdr-off", to: new URL("auto-hdr-off.png", web), size: 256 },
+  { from: "windowed-on", to: new URL("windowed-on.png", web), size: 256 },
+  { from: "windowed-off", to: new URL("windowed-off.png", web), size: 256 }
 ];
 
 /** The social card is hand-composed rather than an icon, but it must not drift. */
