@@ -6,13 +6,32 @@ const pluginDirectory =
   "com.maecly.gamingtoggles.sdPlugin";
 const actionUuids = [
   "com.maecly.gamingtoggles.game-mode",
-  "com.maecly.gamingtoggles.controller-game-bar"
+  "com.maecly.gamingtoggles.controller-game-bar",
+  "com.maecly.gamingtoggles.xbox-mode",
+  "com.maecly.gamingtoggles.pointer-precision",
+  "com.maecly.gamingtoggles.power-plan",
+  "com.maecly.gamingtoggles.auto-hdr",
+  "com.maecly.gamingtoggles.windowed-optimizations"
 ];
 const titleKeys = [
   "Game Mode\nOFF",
   "Game Mode\nON",
   "Pad → Bar\nOFF",
-  "Pad → Bar\nON"
+  "Pad → Bar\nON",
+  "Xbox Mode\nWIN+F11",
+  "Xbox Mode\nSETUP",
+  "Pointer Precision\nOFF",
+  "Pointer Precision\nON",
+  "Power Plan\nA",
+  "Power Plan\nB",
+  "Power Plan\nOTHER",
+  "Power Plan\nSETUP",
+  "Auto HDR LABS\nOFF",
+  "Auto HDR LABS\nON",
+  "Auto HDR LABS\nUNAVAILABLE",
+  "Windowed LABS\nOFF",
+  "Windowed LABS\nON",
+  "Windowed LABS\nUNAVAILABLE"
 ];
 
 type JsonObject = Record<string, unknown>;
@@ -33,7 +52,7 @@ describe("localización ES/EN", () => {
         const action = resource[uuid] as JsonObject;
         assert.equal(typeof action.Name, "string");
         assert.equal(typeof action.Tooltip, "string");
-        assert.equal((action.States as unknown[]).length, 2);
+        assert.ok((action.States as unknown[]).length >= 1);
       }
     }
   });

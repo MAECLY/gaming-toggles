@@ -3,6 +3,29 @@
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/)
 y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [2.1.0] - 2026-08-31
+
+### Añadido
+
+- Acción sin estado para entrar o salir de la experiencia Xbox a pantalla
+  completa mediante el atajo oficial `Win+F11`.
+- Acción para alternar Mejorar la precisión del puntero mediante Win32,
+  preservando los umbrales del ratón.
+- Acción configurable para alternar dos planes de energía instalados, con
+  inspector de propiedades bilingüe y estados A/B/OTRO.
+- Acciones experimentales Labs para Auto HDR y optimizaciones para juegos en
+  ventana, con parser conservador del valor compuesto de DirectX.
+- Iconos de alto contraste y documentación ES/EN para las cinco acciones.
+- Matriz ampliada de pruebas unitarias, integración, funcionales, API, E2E,
+  regresión, UI responsive, permisos, errores, smoke y logs.
+
+### Seguridad
+
+- Ninguna acción solicita elevación, escribe HKLM o crea, elimina o modifica
+  planes de energía.
+- Labs no escribe si la plataforma no es compatible o el formato existente no
+  puede interpretarse sin pérdida.
+
 ## [2.0.0] - 2026-08-30
 
 ### Cambiado

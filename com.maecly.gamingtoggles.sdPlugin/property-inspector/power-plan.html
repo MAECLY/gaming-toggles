@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Power plan A/B</title>
+    <link rel="stylesheet" href="power-plan.css">
+  </head>
+  <body>
+    <main>
+      <p id="intro" class="intro">Choose two existing Windows power plans. The key switches between them and never creates, edits, or deletes a plan.</p>
+      <label for="plan-a"><span id="label-a">Plan A</span><select id="plan-a" disabled></select></label>
+      <label for="plan-b"><span id="label-b">Plan B</span><select id="plan-b" disabled></select></label>
+      <button id="refresh" type="button">Refresh Windows plans</button>
+      <p id="status" role="status" aria-live="polite">Waiting for Stream Deck…</p>
+      <p id="permission" class="note">Current user only · No administrator rights required</p>
+    </main>
+    <script src="power-plan.js"></script>
+  </body>
+</html>

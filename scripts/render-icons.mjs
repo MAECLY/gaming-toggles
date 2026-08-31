@@ -31,14 +31,29 @@ const raster = [
   { from: "game-mode-on", to: new URL("imgs/actions/game-mode/on", plugin), sizes: [72, 144] },
   { from: "game-mode-off", to: new URL("imgs/actions/game-mode/off", plugin), sizes: [72, 144] },
   { from: "game-bar-on", to: new URL("imgs/actions/controller-game-bar/on", plugin), sizes: [72, 144] },
-  { from: "game-bar-off", to: new URL("imgs/actions/controller-game-bar/off", plugin), sizes: [72, 144] }
+  { from: "game-bar-off", to: new URL("imgs/actions/controller-game-bar/off", plugin), sizes: [72, 144] },
+  { from: "xbox-mode", to: new URL("imgs/actions/xbox-mode/default", plugin), sizes: [72, 144] },
+  { from: "pointer-precision-on", to: new URL("imgs/actions/pointer-precision/on", plugin), sizes: [72, 144] },
+  { from: "pointer-precision-off", to: new URL("imgs/actions/pointer-precision/off", plugin), sizes: [72, 144] },
+  { from: "power-plan-a", to: new URL("imgs/actions/power-plan/a", plugin), sizes: [72, 144] },
+  { from: "power-plan-b", to: new URL("imgs/actions/power-plan/b", plugin), sizes: [72, 144] },
+  { from: "power-plan-other", to: new URL("imgs/actions/power-plan/other", plugin), sizes: [72, 144] },
+  { from: "auto-hdr-on", to: new URL("imgs/actions/auto-hdr/on", plugin), sizes: [72, 144] },
+  { from: "auto-hdr-off", to: new URL("imgs/actions/auto-hdr/off", plugin), sizes: [72, 144] },
+  { from: "windowed-on", to: new URL("imgs/actions/windowed-optimizations/on", plugin), sizes: [72, 144] },
+  { from: "windowed-off", to: new URL("imgs/actions/windowed-optimizations/off", plugin), sizes: [72, 144] }
 ];
 
 /** Vector slots keep their SVG so they stay crisp at 20px and in the Marketplace. */
 const vector = [
   { from: "category-glyph", to: new URL("imgs/plugin/category.svg", plugin) },
   { from: "game-mode-glyph", to: new URL("imgs/actions/game-mode/action.svg", plugin) },
-  { from: "game-bar-glyph", to: new URL("imgs/actions/controller-game-bar/action.svg", plugin) }
+  { from: "game-bar-glyph", to: new URL("imgs/actions/controller-game-bar/action.svg", plugin) },
+  { from: "xbox-mode-glyph", to: new URL("imgs/actions/xbox-mode/action.svg", plugin) },
+  { from: "pointer-precision-glyph", to: new URL("imgs/actions/pointer-precision/action.svg", plugin) },
+  { from: "power-plan-glyph", to: new URL("imgs/actions/power-plan/action.svg", plugin) },
+  { from: "auto-hdr-glyph", to: new URL("imgs/actions/auto-hdr/action.svg", plugin) },
+  { from: "windowed-glyph", to: new URL("imgs/actions/windowed-optimizations/action.svg", plugin) }
 ];
 
 /** The landing reuses the same art; the demo keys are displayed around 120 CSS px. */
@@ -48,7 +63,12 @@ const site = [
   { from: "game-mode-on", to: new URL("game-mode-on.png", web), size: 256 },
   { from: "game-mode-off", to: new URL("game-mode-off.png", web), size: 256 },
   { from: "game-bar-on", to: new URL("game-bar-on.png", web), size: 256 },
-  { from: "game-bar-off", to: new URL("game-bar-off.png", web), size: 256 }
+  { from: "game-bar-off", to: new URL("game-bar-off.png", web), size: 256 },
+  { from: "xbox-mode", to: new URL("xbox-mode.png", web), size: 256 },
+  { from: "pointer-precision-on", to: new URL("pointer-precision-on.png", web), size: 256 },
+  { from: "power-plan-a", to: new URL("power-plan-a.png", web), size: 256 },
+  { from: "auto-hdr-on", to: new URL("auto-hdr-on.png", web), size: 256 },
+  { from: "windowed-on", to: new URL("windowed-on.png", web), size: 256 }
 ];
 
 /** The social card is hand-composed rather than an icon, but it must not drift. */

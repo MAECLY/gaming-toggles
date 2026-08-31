@@ -488,6 +488,28 @@ code {
 }
 .row h3 { margin-bottom: .5rem; }
 .row p { margin: 0; color: var(--text-2); font-size: .9375rem; }
+.labs-badge {
+  display: inline-block;
+  margin-right: .45rem;
+  padding: .16rem .42rem;
+  border: 1px solid #a98cff;
+  border-radius: 999px;
+  color: #d8ccff;
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  vertical-align: .16rem;
+}
+kbd {
+  padding: .08rem .3rem;
+  border: 1px solid var(--line-strong);
+  border-bottom-width: 2px;
+  border-radius: .25rem;
+  background: var(--surface);
+  color: var(--text);
+  font: .78em var(--font-mono);
+}
 
 /* ---------- install ---------- */
 

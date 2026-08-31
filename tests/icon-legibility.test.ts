@@ -11,6 +11,12 @@ const PAIRS = [
   ["assets/icons/game-bar-on.svg", "assets/icons/game-bar-off.svg"]
 ] as const;
 
+const NEW_BOOLEAN_PAIRS = [
+  ["assets/icons/pointer-precision-on.svg", "assets/icons/pointer-precision-off.svg"],
+  ["assets/icons/auto-hdr-on.svg", "assets/icons/auto-hdr-off.svg"],
+  ["assets/icons/windowed-on.svg", "assets/icons/windowed-off.svg"]
+] as const;
+
 // The SDK paints a two-line Title over the lower third of the key.
 const TITLE_BAND_TOP = 92;
 const SAFE_INSET = 12;
@@ -68,4 +74,20 @@ describe("legibilidad de los iconos de tecla", () => {
       }
     });
   }
+
+  for (const [on, off] of NEW_BOOLEAN_PAIRS) {
+    it(`${on.split("/").pop()}: conserva contraste ON/OFF a 72 px`, () => {
+      const result = metrics(on, off, 72);
+      assert.ok(result.meanAbsDiff > 40);
+      assert.ok(result.pctOver25 > 25);
+      assert.ok(result.meanLumaOn > result.meanLumaOff);
+    });
+  }
+
+  it("los planes A, B y OTRO se distinguen a resolución de Stream Deck", () => {
+    const ab = metrics("assets/icons/power-plan-a.svg", "assets/icons/power-plan-b.svg", 72);
+    const other = metrics("assets/icons/power-plan-a.svg", "assets/icons/power-plan-other.svg", 72);
+    assert.ok(ab.meanAbsDiff > 40);
+    assert.ok(other.meanAbsDiff > 40);
+  });
 });

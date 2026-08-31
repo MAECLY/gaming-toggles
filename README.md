@@ -6,15 +6,25 @@
 
 Landing oficial: [gaming-toggles.maecly.com](https://gaming-toggles.maecly.com/)
 
-Dos controles para Windows 11 directamente en Stream Deck:
+Siete controles para Windows 11 directamente en Stream Deck:
 
 - **Alternar Modo Juego**: cambia `AutoGameModeEnabled`.
 - **Mando abre Game Bar**: cambia `UseNexusForGameBarEnabled`.
+- **Entrar / salir del modo Xbox**: envía el atajo oficial `Win+F11` sin
+  inventar un estado ON/OFF que Windows no publica.
+- **Mejorar precisión del puntero**: usa `SystemParametersInfo` y conserva los
+  umbrales personalizados del ratón.
+- **Plan de energía A / B**: alterna dos planes instalados elegidos desde el
+  inspector de propiedades; nunca crea, edita ni elimina planes.
+- **[Labs] Auto HDR**: cambia únicamente `AutoHDREnable`.
+- **[Labs] Optimizaciones para juegos en ventana**: cambia únicamente
+  `SwapEffectUpgradeEnable`.
 
-Ambos valores se guardan como `REG_DWORD` en
-`HKCU\Software\Microsoft\GameBar`, la ubicación documentada por Microsoft.
-No se requieren permisos de administrador porque son preferencias del usuario
-actual.
+No se requieren permisos de administrador. El plugin combina preferencias
+`HKCU`, APIs Win32 públicas y los comandos de lectura/activación de `powercfg`.
+Los controles Labs están marcados como experimentales porque Microsoft no
+ofrece un setter público estable; el parser conserva campos desconocidos y se
+niega a escribir formatos inesperados.
 
 ## Descargar e instalar
 
@@ -24,8 +34,8 @@ proceso de publicación en Elgato Marketplace.
 1. Abre la [última versión publicada](https://github.com/MAECLY/gaming-toggles/releases/latest).
 2. Descarga el archivo cuyo nombre termina en `.streamDeckPlugin`.
 3. Ábrelo con doble clic y acepta la instalación en Stream Deck.
-4. Busca **Gaming Toggles for PC** en la lista de acciones y arrastra los dos
-   controles a tu perfil.
+4. Busca **Gaming Toggles for PC** en la lista de acciones y arrastra los
+   controles que quieras a tu perfil.
 
 > No descargues **Source code (zip)** ni **Source code (tar.gz)** para instalar
 > el plugin. GitHub crea esos archivos automáticamente, pero no son instaladores
@@ -34,18 +44,22 @@ proceso de publicación en Elgato Marketplace.
 Cada Release incluye `SHA256SUMS.txt`. Puedes verificar una descarga con:
 
 ```powershell
-(Get-FileHash .\Gaming-Toggles-for-PC-v2.0.0.streamDeckPlugin -Algorithm SHA256).Hash
+(Get-FileHash .\Gaming-Toggles-for-PC-v2.1.0.streamDeckPlugin -Algorithm SHA256).Hash
 ```
 
 ## Requisitos
 
 - Windows 11.
 - Stream Deck 7.1 o posterior.
+- El modo Xbox a pantalla completa requiere una versión compatible de Windows
+  11 y `GamingHomeApp` configurada.
 - Node.js 24 o posterior únicamente para desarrollar o empaquetar.
 
 ## Comportamiento
 
-- El estado verde indica que la opción está encendida; el gris, apagada.
+- Las acciones con estado releen Windows y muestran el valor confirmado.
+- El modo Xbox es una orden sin estado que usa `Win+F11`.
+- El plan de energía muestra `A`, `B` u `OTRO` y se configura desde Stream Deck.
 - Los botones vuelven a leer Windows cada 2,5 segundos y reflejan cambios hechos
   directamente desde Configuración.
 - Al cambiar Modo Juego, el plugin notifica únicamente a las ventanas visibles
@@ -65,7 +79,7 @@ npm run link
 ```
 
 Después de enlazarlo, busca **Gaming Toggles for PC** en la lista de acciones de
-Stream Deck y arrastra ambos botones a un perfil. Durante el desarrollo puedes
+Stream Deck y arrastra los botones a un perfil. Durante el desarrollo puedes
 usar `npm run watch`. Para crear localmente el mismo instalador que publica
 GitHub Actions:
 
