@@ -1,0 +1,62 @@
+{
+  "version": "2.1.0",
+  "imageLanguage": "en",
+  "copyLanguages": [
+    "en",
+    "es"
+  ],
+  "actionUUIDs": [
+    "com.maecly.gamingtoggles.game-mode",
+    "com.maecly.gamingtoggles.controller-game-bar",
+    "com.maecly.gamingtoggles.xbox-mode",
+    "com.maecly.gamingtoggles.pointer-precision",
+    "com.maecly.gamingtoggles.power-plan",
+    "com.maecly.gamingtoggles.auto-hdr",
+    "com.maecly.gamingtoggles.windowed-optimizations"
+  ],
+  "guidelines": "https://docs.elgato.com/guidelines/products/",
+  "files": [
+    {
+      "file": "upload/thumbnail.png",
+      "width": 1920,
+      "height": 960,
+      "sha256": "f90870138f8a6a5f2bef65ced19bda2b36bb94743aff0f37523882b16bbad76d"
+    },
+    {
+      "file": "upload/gallery-1-seven-actions.png",
+      "width": 1920,
+      "height": 960,
+      "sha256": "0472de69e9520db7d3f873703ae98464094727a8831a77eaf0ada12ed0f2fd2c"
+    },
+    {
+      "file": "upload/gallery-2-key-state.png",
+      "width": 1920,
+      "height": 960,
+      "sha256": "38a4a69d2dbf41c4baf6ae55fe5bf0faa41d91bc5438c6e0635097b8fc525867"
+    },
+    {
+      "file": "upload/gallery-3-power-plans.png",
+      "width": 1920,
+      "height": 960,
+      "sha256": "0e912fc8fbbf3639ab9ef89ad137fb4fd8e69b247959d71307261342acabed9f"
+    },
+    {
+      "file": "upload/gallery-4-labs.png",
+      "width": 1920,
+      "height": 960,
+      "sha256": "2ff5fa6ac84def925b5b1d416caf759d44465f373bd4c56419bf978f32642921"
+    },
+    {
+      "file": "upload/gallery-5-local-controls.png",
+      "width": 1920,
+      "height": 960,
+      "sha256": "72028d51156ff676573045e7e72944302d8e430774ac7b224be6e945c48dfc86"
+    },
+    {
+      "file": "upload/icon-288.png",
+      "width": 288,
+      "height": 288,
+      "sha256": "ce9e95beb1727085ccc9a1c9dd171ced0c525eb002acf41e633213d65324bb11"
+    }
+  ]
+}

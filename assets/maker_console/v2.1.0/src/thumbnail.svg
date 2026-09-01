@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="960" viewBox="0 0 1920 960" role="img" aria-label="Gaming Toggles for PC 2.1.0 — seven controls for Stream Deck">
+  <title>Gaming Toggles for PC 2.1.0 — seven controls for Stream Deck</title>
+  <rect width="1920" height="960" fill="#0a0a0b"/>
+  <rect x="96" y="65" width="48" height="48" rx="8" fill="#132013" stroke="#294429"/>
+  <text x="120" y="99" fill="#46c246" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="middle">M</text>
+  <text x="164" y="100" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="start">MAECLY</text>
+  <text x="330" y="99" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">GAMING TOGGLES FOR PC</text>
+  <text x="1824" y="100" fill="#46c246" font-family="Consolas, monospace" font-size="23" font-weight="600" text-anchor="end">v2.1.0</text>
+  <text x="96" y="233" fill="#46c246" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">SEVEN CONTROLS. ONE TOUCH AWAY.</text><text x="96" y="353" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="84" font-weight="700" text-anchor="start">Gaming Toggles</text>
+<text x="96" y="447" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="84" font-weight="700" text-anchor="start">for PC</text><text x="96" y="543" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="400" text-anchor="start">Xbox, mouse, power and graphics.</text>
+<text x="96" y="587.8" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="400" text-anchor="start">Windows gaming, at your fingertips.</text><text x="96" y="714" fill="#b39aff" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">5 CORE ACTIONS  +  2 LABS</text><text x="96" y="756" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">NO ADMIN RIGHTS · NO TELEMETRY</text><rect x="954" y="255" width="870" height="538" rx="24" fill="#161619" stroke="#39393f"/><g data-slot="1"><rect x="990" y="291" width="142" height="142" rx="13" fill="#0d0d10" stroke="#1d1d22"/></g><g data-slot="2"><svg data-asset="game-mode-on" x="1154" y="291" width="142" height="142" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#107c10"/>
+  <g transform="translate(8.06 -10.09) scale(.92)">
+  <path fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 1 1 108 98"/>
+  <path fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" d="M36 98A40 40 0 0 1 100 50"/>
+  <path fill="#fff" d="M78 34L50 80h16l-7 30 27-44H76z"/>
+  </g>
+</svg><g paint-order="stroke" stroke="#101014" stroke-opacity=".8" stroke-width="1.4" stroke-linejoin="round"><text x="1225" y="412" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Game Mode</text><text x="1225" y="427" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">ON</text></g></g><g data-slot="3"><svg data-asset="xbox-mode" x="1318" y="291" width="142" height="142" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#107c10"/>
+  <path d="M35 34h74a11 11 0 0 1 11 11v54a11 11 0 0 1-11 11H35a11 11 0 0 1-11-11V45a11 11 0 0 1 11-11Z" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M45 82V62h20M99 62H79M45 62l18 18m36 2V62L81 80" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="49" y="94" width="46" height="6" rx="3" fill="#fff" opacity=".55"/>
+</svg><g paint-order="stroke" stroke="#101014" stroke-opacity=".8" stroke-width="1.4" stroke-linejoin="round"><text x="1389" y="412" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Xbox Mode</text><text x="1389" y="427" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">WIN+F11</text></g></g><g data-slot="4"><svg data-asset="game-bar-on" x="1482" y="291" width="142" height="142" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#107c10"/>
+  <g transform="translate(7.65 -1.55) scale(.9)">
+  <rect x="36" y="18" width="72" height="22" rx="7" fill="#fff"/>
+  <g fill="#107c10"><circle cx="49" cy="29" r="3.2"/><circle cx="61" cy="29" r="3.2"/><rect x="71" y="25.8" width="24" height="6.4" rx="3.2"/></g>
+  <g transform="translate(27.36 23.06) scale(.62)"><path fill="#fff" d="M12 84C12 58 24 42 46 39C55 38 62 37 72 37C82 37 89 40 98 39C120 42 132 58 132 84C132 108 127 126 111 126C99 126 93 115 89 104C86 98 82 100 76 100L68 100C62 100 58 98 55 104C51 115 45 126 33 126C17 126 12 108 12 84Z"/><g fill="#107c10"><circle cx="43" cy="60" r="10"/><path d="M49 78h8v-8h7v8h8v7h-8v8h-7v-8h-8z"/><circle cx="84" cy="82" r="9"/><circle cx="101" cy="49" r="5.5"/><circle cx="90" cy="60" r="5.5"/><circle cx="112" cy="60" r="5.5"/><circle cx="101" cy="71" r="5.5"/></g></g>
+  </g>
+</svg><g paint-order="stroke" stroke="#101014" stroke-opacity=".8" stroke-width="1.4" stroke-linejoin="round"><text x="1553" y="412" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Pad → Bar</text><text x="1553" y="427" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">ON</text></g></g><g data-slot="5"><rect x="1646" y="291" width="142" height="142" rx="13" fill="#0d0d10" stroke="#1d1d22"/></g><g data-slot="6"><svg data-asset="pointer-precision-on" x="990" y="455" width="142" height="142" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#6d3cff"/>
+  <path d="M42 25v79l20-18 14 30 15-7-14-30 27-2Z" fill="#fff" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="103" cy="39" r="11" fill="none" stroke="#fff" stroke-width="6" opacity=".75"/>
+  <path d="M103 21v8m0 20v8m-18-18h8m20 0h8" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+</svg><g paint-order="stroke" stroke="#101014" stroke-opacity=".8" stroke-width="1.4" stroke-linejoin="round"><text x="1061" y="576" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Pointer</text><text x="1061" y="591" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">ON</text></g></g><g data-slot="7"><svg data-asset="power-plan-a" x="1154" y="455" width="142" height="142" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#0067c0"/>
+  <path d="M77 18 38 79h28l-9 47 49-72H77Z" fill="#fff"/>
+  <circle cx="112" cy="112" r="19" fill="#fff"/><text x="112" y="121" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#0067c0">A</text>
+</svg><g paint-order="stroke" stroke="#101014" stroke-opacity=".8" stroke-width="1.4" stroke-linejoin="round"><text x="1225" y="576" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Power Plan</text><text x="1225" y="591" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">A</text></g></g><g data-slot="8"><rect x="1318" y="455" width="142" height="142" rx="13" fill="#0d0d10" stroke="#1d1d22"/></g><g data-slot="9"><svg data-asset="auto-hdr-on" x="1482" y="455" width="142" height="142" viewBox="0 0 144 144">
+  <defs><linearGradient id="icon-5-g" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#0067c0"/><stop offset=".52" stop-color="#6d3cff"/><stop offset="1" stop-color="#ff2d92"/></linearGradient></defs>
+  <rect width="144" height="144" rx="24" fill="url(#icon-5-g)"/>
+  <rect x="20" y="31" width="104" height="74" rx="13" fill="none" stroke="#fff" stroke-width="7"/>
+  <text x="72" y="79" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="800" fill="#fff">HDR</text>
+  <path d="m105 19 3 9 9 3-9 3-3 9-3-9-9-3 9-3Z" fill="#fff"/>
+</svg><g paint-order="stroke" stroke="#101014" stroke-opacity=".8" stroke-width="1.4" stroke-linejoin="round"><text x="1553" y="576" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Auto HDR LABS</text><text x="1553" y="591" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">ON</text></g></g><g data-slot="10"><svg data-asset="windowed-on" x="1646" y="455" width="142" height="142" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#0078d4"/>
+  <rect x="22" y="27" width="100" height="88" rx="9" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M22 49h100" stroke="#fff" stroke-width="8"/><circle cx="38" cy="38" r="4" fill="#fff"/><circle cx="51" cy="38" r="4" fill="#fff"/>
+  <path d="m73 61 9 19 21 3-15 15 4 20-19-10-19 10 4-20-15-15 21-3Z" fill="#fff"/>
+</svg><g paint-order="stroke" stroke="#101014" stroke-opacity=".8" stroke-width="1.4" stroke-linejoin="round"><text x="1717" y="576" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Windowed LABS</text><text x="1717" y="591" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">ON</text></g></g><g data-slot="11"><rect x="990" y="619" width="142" height="142" rx="13" fill="#0d0d10" stroke="#1d1d22"/></g><g data-slot="12"><rect x="1154" y="619" width="142" height="142" rx="13" fill="#0d0d10" stroke="#1d1d22"/></g><g data-slot="13"><rect x="1318" y="619" width="142" height="142" rx="13" fill="#0d0d10" stroke="#1d1d22"/></g><g data-slot="14"><rect x="1482" y="619" width="142" height="142" rx="13" fill="#0d0d10" stroke="#1d1d22"/></g><g data-slot="15"><rect x="1646" y="619" width="142" height="142" rx="13" fill="#0d0d10" stroke="#1d1d22"/></g><text x="954" y="221" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">ILLUSTRATED STREAM DECK MK.2 PROFILE</text>
+  <path d="M96 854H1824" stroke="#29292f"/>
+  <text x="96" y="902" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">WINDOWS 11  /  STREAM DECK 7.1+</text>
+  <text x="1824" y="902" fill="#a3a3ad" font-family="Consolas, monospace" font-size="21" font-weight="400" text-anchor="end">MIT · OPEN SOURCE · EN / ES</text>
+</svg>

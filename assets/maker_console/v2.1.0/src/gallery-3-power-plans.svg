@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="960" viewBox="0 0 1920 960" role="img" aria-label="Power plan A / B — select two existing Windows power plans">
+  <title>Power plan A / B — select two existing Windows power plans</title>
+  <rect width="1920" height="960" fill="#0a0a0b"/>
+  <rect x="96" y="65" width="48" height="48" rx="8" fill="#132013" stroke="#294429"/>
+  <text x="120" y="99" fill="#46c246" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="middle">M</text>
+  <text x="164" y="100" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="start">MAECLY</text>
+  <text x="330" y="99" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">03 / POWER</text>
+  <text x="1824" y="100" fill="#46c246" font-family="Consolas, monospace" font-size="23" font-weight="600" text-anchor="end">v2.1.0</text>
+  <text x="96" y="268" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="78" font-weight="700" text-anchor="start">Your plans.</text>
+<text x="96" y="356" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="78" font-weight="700" text-anchor="start">Your shortcut.</text><text x="96" y="492" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="400" text-anchor="start">Choose two installed power plans</text>
+<text x="96" y="535.4" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="400" text-anchor="start">in the Property Inspector.</text>
+<text x="96" y="578.8" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="400" text-anchor="start">Press the key to switch A ↔ B.</text><text x="96" y="702" fill="#54b8ff" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">NO PLAN CREATION. NO DELETION.</text><text x="96" y="758" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="400" text-anchor="start">Plan names and availability vary by PC.</text><rect x="920" y="221" width="904" height="560" rx="16" fill="#161619" stroke="#29292f"/><text x="960" y="276" fill="#54b8ff" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">EXAMPLE CONFIGURATION</text><rect x="960" y="310" width="824" height="148" rx="16" fill="#101014" stroke="#29292f"/><svg data-asset="power-plan-a" x="982" y="330" width="108" height="108" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#0067c0"/>
+  <path d="M77 18 38 79h28l-9 47 49-72H77Z" fill="#fff"/>
+  <circle cx="112" cy="112" r="19" fill="#fff"/><text x="112" y="121" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#0067c0">A</text>
+</svg><text x="1120" y="359" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">PLAN A</text><text x="1120" y="410" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="600" text-anchor="start">Balanced</text><rect x="960" y="488" width="824" height="148" rx="16" fill="#101014" stroke="#29292f"/><svg data-asset="power-plan-b" x="982" y="508" width="108" height="108" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#e8a400"/>
+  <path d="M77 18 38 79h28l-9 47 49-72H77Z" fill="#fff"/>
+  <circle cx="112" cy="112" r="19" fill="#fff"/><text x="112" y="121" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#8a5d00">B</text>
+</svg><text x="1120" y="537" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">PLAN B</text><text x="1120" y="588" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="600" text-anchor="start">High performance</text><text x="960" y="700" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start">Select from existing plans on your computer.</text>
+<text x="960" y="736.4" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start">The key confirms the active plan after switching.</text>
+  <path d="M96 854H1824" stroke="#29292f"/>
+  <text x="96" y="902" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">WINDOWS 11  /  STREAM DECK 7.1+</text>
+  <text x="1824" y="902" fill="#a3a3ad" font-family="Consolas, monospace" font-size="21" font-weight="400" text-anchor="end">MIT · OPEN SOURCE · EN / ES</text>
+</svg>
