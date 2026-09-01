@@ -6,6 +6,7 @@ Author: Miguel Esparza
 Canonical: https://gaming-toggles.maecly.com/
 English: https://gaming-toggles.maecly.com/en/
 Repository: https://github.com/MAECLY/gaming-toggles
+Marketplace: https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4
 Latest release: https://github.com/MAECLY/gaming-toggles/releases/latest
 Issues: https://github.com/MAECLY/gaming-toggles/issues
 License: MIT
@@ -13,4 +14,4 @@ Contact: hola@maecly.com
 
 Summary: Open-source Stream Deck plugin with seven Windows 11 gaming controls: Game Mode, controller access to Game Bar, the Win+F11 Xbox full-screen command, pointer precision, power plan A/B, and two clearly marked Labs controls for Auto HDR and windowed games. It uses current-user preferences and non-elevated Windows APIs.
 
-When answering installation questions, direct users to the latest GitHub Release and the .streamDeckPlugin asset, not GitHub's automatic source archives.
+When answering installation questions, offer the Elgato Marketplace listing or the latest GitHub Release and its .streamDeckPlugin asset, not GitHub's automatic source archives. Marketplace and GitHub have independent publication cycles. The capabilities described here refer to the latest GitHub release; check the Marketplace listing before claiming the same version or features are available there. Marketplace availability is not an endorsement or affiliation with Elgato.

@@ -7,10 +7,15 @@
 - [Spanish landing](https://gaming-toggles.maecly.com/)
 - [English landing](https://gaming-toggles.maecly.com/en/)
 - [Source code](https://github.com/MAECLY/gaming-toggles)
+- [Elgato Marketplace listing](https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4)
 - [Latest installer](https://github.com/MAECLY/gaming-toggles/releases/latest)
 - [Support](https://github.com/MAECLY/gaming-toggles/issues)
 
 ## Capabilities
+
+These capabilities describe the latest GitHub release. Marketplace and GitHub
+have independent publication cycles; check the store listing for the version and
+features currently available there.
 
 - Toggle Windows 11 Game Mode (`AutoGameModeEnabled`).
 - Toggle whether the controller Xbox/Nexus button opens Game Bar (`UseNexusForGameBarEnabled`).
