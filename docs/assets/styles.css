@@ -296,6 +296,14 @@ code {
   .hero-specs { gap: .4rem 1.5rem; }
 }
 
+.distribution-note {
+  margin: 1rem 0 0;
+  color: var(--text-2);
+  font-size: .8125rem;
+  line-height: 1.6;
+  max-width: 38rem;
+}
+
 /* ---------- the device ---------- */
 
 .rig { display: grid; gap: 1rem; min-width: 0; }
@@ -556,6 +564,7 @@ kbd {
   .download-panel { grid-template-columns: 56px minmax(0, 1fr) auto; }
 }
 .download-panel img { width: 56px; height: 56px; border-radius: var(--r-md); }
+.download-channels { display: flex; flex-direction: column; gap: .65rem; min-width: 0; }
 .download-panel h3 { margin: 0; font-size: 1rem; }
 .download-panel p {
   margin: .3rem 0 0;
