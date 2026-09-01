@@ -13,7 +13,7 @@ describe("landing estática ES/EN", () => {
       assert.match(html, /hreflang="en"/);
       assert.match(html, /property="og:image" content="https:\/\/gaming-toggles\.maecly\.com\/assets\/og\.png"/);
       assert.match(html, /name="twitter:card" content="summary_large_image"/);
-      const jsonLd = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
+      const jsonLd = html.match(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/)?.[1];
       assert.ok(jsonLd);
       const parsed = JSON.parse(jsonLd);
       assert.equal(parsed["@context"], "https://schema.org");
@@ -69,6 +69,18 @@ describe("landing estática ES/EN", () => {
       assert.equal(html.match(/class="deck-blank(?: deck-blank-separator)?"/g)?.length, 8);
       assert.doesNotMatch(html, /class="demo-status"/);
       assert.match(html, /La demo no cambia tu PC|The demo never changes your PC/);
+    }
+  });
+
+  it("deja descarga y versión bajo control del último GitHub Release", async () => {
+    for (const page of ["docs/index.html", "docs/en/index.html"]) {
+      const html = await readFile(page, "utf8");
+      assert.equal(html.match(/data-latest-download/g)?.length, 3);
+      assert.equal(html.match(/data-release-version/g)?.length, 2);
+      assert.equal(html.match(/href="https:\/\/github\.com\/MAECLY\/gaming-toggles\/releases\/latest"/g)?.length, 3);
+      assert.match(html, /data-release-schema/);
+      assert.doesNotMatch(html, /data-release-version[^>]*>v\d/);
+      assert.doesNotMatch(html, /"softwareVersion"/);
     }
   });
 });
