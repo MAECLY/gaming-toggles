@@ -6,6 +6,8 @@
 
 Landing oficial: [gaming-toggles.maecly.com](https://gaming-toggles.maecly.com/)
 
+Disponible en [Elgato Marketplace](https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4).
+
 Siete controles para Windows 11 directamente en Stream Deck:
 
 - **Alternar Modo Juego**: cambia `AutoGameModeEnabled`.
@@ -28,8 +30,14 @@ niega a escribir formatos inesperados.
 
 ## Descargar e instalar
 
-Este plugin está disponible directamente desde GitHub mientras se completa el
-proceso de publicación en Elgato Marketplace.
+### Elgato Marketplace
+
+Abre la [ficha de Gaming Toggles for PC](https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4)
+y sigue las instrucciones de instalación de la tienda para Stream Deck.
+
+### GitHub Releases
+
+La descarga directa sigue disponible con instalador y checksum SHA-256:
 
 1. Abre la [última versión publicada](https://github.com/MAECLY/gaming-toggles/releases/latest).
 2. Descarga el archivo cuyo nombre termina en `.streamDeckPlugin`.
@@ -110,7 +118,11 @@ Creado por [Miguel Esparza](https://www.maecly.com/).
 
 ## Distribución
 
-El archivo `.streamDeckPlugin` de GitHub Releases es el instalador oficial del
-proyecto durante la etapa previa al Marketplace. Cuando Elgato apruebe el
-producto, este README enlazará también su ficha en
-[Elgato Marketplace](https://marketplace.elgato.com/).
+El plugin se distribuye en [Elgato Marketplace](https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4)
+y mediante [GitHub Releases](https://github.com/MAECLY/gaming-toggles/releases/latest).
+Los canales tienen ciclos de publicación independientes: las funciones descritas
+en este README corresponden a la última versión de GitHub. Consulta la versión y
+las funciones disponibles en la ficha de Marketplace antes de instalar desde allí.
+
+La presencia en Marketplace no convierte al proyecto en un producto de Elgato:
+sigue siendo un proyecto independiente de MAECLY, de código abierto bajo MIT.
