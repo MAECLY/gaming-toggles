@@ -90,28 +90,54 @@ export function activateDemoKey(key, root = document) {
   return false;
 }
 
-async function hydrateLatestRelease() {
+export function applyLatestRelease(latest, root = document) {
+  root.querySelectorAll("[data-latest-download]").forEach((link) => {
+    link.href = latest.downloadUrl;
+    link.setAttribute("download", latest.fileName);
+  });
+  root.querySelectorAll("[data-release-version]").forEach((node) => {
+    node.textContent = latest.version;
+    node.removeAttribute("aria-busy");
+  });
+
+  const status = root.querySelector("[data-release-status]");
+  if (status) {
+    const suffix = status.dataset.releaseStatus;
+    status.textContent = suffix ? `${latest.fileName} · ${suffix}` : latest.fileName;
+  }
+
+  const schemaNode = root.querySelector("[data-release-schema]");
+  if (schemaNode?.textContent) {
+    try {
+      const schema = JSON.parse(schemaNode.textContent);
+      const software = schema["@graph"]?.find((item) => item["@type"] === "SoftwareApplication");
+      if (software) {
+        software.softwareVersion = latest.version.replace(/^v/i, "");
+        software.downloadUrl = latest.downloadUrl;
+        schemaNode.textContent = JSON.stringify(schema);
+      }
+    } catch (error) {
+      console.info("No se pudieron actualizar los metadatos de la Release.", error);
+    }
+  }
+}
+
+export async function hydrateLatestRelease(fetchRelease = fetch, root = document) {
   try {
-    const response = await fetch(RELEASE_API, {
+    const response = await fetchRelease(RELEASE_API, {
+      cache: "no-store",
       headers: { Accept: "application/vnd.github+json" }
     });
     if (!response.ok) throw new Error(`GitHub API ${response.status}`);
     const latest = parseLatestRelease(await response.json());
-    document.querySelectorAll("[data-latest-download]").forEach((link) => {
-      link.href = latest.downloadUrl;
-      link.setAttribute("download", latest.fileName);
-    });
-    document.querySelectorAll("[data-release-version]").forEach((node) => {
-      node.textContent = latest.version;
-    });
-    // Each page supplies its own wording so the English build stops printing Spanish.
-    const status = document.querySelector("[data-release-status]");
-    if (status) {
-      const suffix = status.dataset.releaseStatus;
-      status.textContent = suffix ? `${latest.fileName} · ${suffix}` : latest.fileName;
-    }
+    applyLatestRelease(latest, root);
+    return latest;
   } catch (error) {
+    root.querySelectorAll("[data-release-version]").forEach((node) => {
+      node.removeAttribute("aria-busy");
+    });
     console.info("No se pudo consultar la última Release; se conserva el enlace general.", error);
+    return null;
   }
 }
 

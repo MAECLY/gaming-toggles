@@ -82,6 +82,51 @@ test.describe("landing funcional y responsive", () => {
     await expect(page.locator("[data-latest-download]").first()).toHaveAttribute("href", /github\.com\/MAECLY/);
   });
 
+  test("hidrata todas las descargas, versiones y JSON-LD desde el último Release", async ({ page }) => {
+    const assetUrl = "https://github.com/MAECLY/gaming-toggles/releases/download/v9.8.7/Gaming-Toggles-v9.8.7.streamDeckPlugin";
+    await page.route("https://api.github.com/repos/MAECLY/gaming-toggles/releases/latest", async (route) => {
+      await route.fulfill({
+        contentType: "application/json",
+        json: {
+          tag_name: "v9.8.7",
+          assets: [
+            { name: "SHA256SUMS.txt", browser_download_url: "https://example.test/checksums" },
+            { name: "Gaming-Toggles-v9.8.7.streamDeckPlugin", browser_download_url: assetUrl }
+          ]
+        }
+      });
+    });
+
+    await page.goto("/");
+    await expect(page.locator("[data-release-version]")).toHaveCount(2);
+    await expect(page.locator("[data-release-version]")).toHaveText(["v9.8.7", "v9.8.7"]);
+    await expect(page.locator("[data-release-version]").first()).not.toHaveAttribute("aria-busy", /.+/);
+    for (const download of await page.locator("[data-latest-download]").all()) {
+      await expect(download).toHaveAttribute("href", assetUrl);
+      await expect(download).toHaveAttribute("download", "Gaming-Toggles-v9.8.7.streamDeckPlugin");
+    }
+    await expect(page.locator("[data-release-status]")).toContainText("Gaming-Toggles-v9.8.7.streamDeckPlugin");
+
+    const schema = await page.locator("[data-release-schema]").textContent();
+    const software = JSON.parse(schema ?? "{}")["@graph"].find((item) => item["@type"] === "SoftwareApplication");
+    expect(software.softwareVersion).toBe("9.8.7");
+    expect(software.downloadUrl).toBe(assetUrl);
+  });
+
+  test("conserva el enlace latest y evita una versión falsa si GitHub falla", async ({ page }) => {
+    await page.route("https://api.github.com/repos/MAECLY/gaming-toggles/releases/latest", (route) =>
+      route.fulfill({ status: 503, contentType: "application/json", body: "{}" })
+    );
+    await page.goto("/");
+
+    await expect(page.locator("[data-latest-download]")).toHaveCount(3);
+    for (const download of await page.locator("[data-latest-download]").all()) {
+      await expect(download).toHaveAttribute("href", "https://github.com/MAECLY/gaming-toggles/releases/latest");
+    }
+    await expect(page.locator("[data-release-version]").first()).toHaveText("más reciente");
+    await expect(page.locator("[data-release-version]").first()).not.toHaveAttribute("aria-busy", /.+/);
+  });
+
   test("no genera desbordamiento horizontal", async ({ page }) => {
     await page.goto("/");
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
