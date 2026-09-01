@@ -64,6 +64,12 @@ jobs:
 
           No descargues los archivos automáticos **Source code (zip/tar.gz)**: contienen el código fuente, no el instalador.
           "@
+          foreach ($language in @("en", "es")) {
+            $notesPath = "assets/maker_console/$env:GITHUB_REF_NAME/release-notes/release-notes.$language.md"
+            if (Test-Path -LiteralPath $notesPath) {
+              $notes += "`n`n" + (Get-Content -LiteralPath $notesPath -Raw)
+            }
+          }
           gh release create $env:GITHUB_REF_NAME `
             "$env:RELEASE_ASSET#Instalador para Stream Deck (Windows 11)" `
             "SHA256SUMS.txt#Checksum SHA-256" `
