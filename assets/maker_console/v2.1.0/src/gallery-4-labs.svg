@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="960" viewBox="0 0 1920 960" role="img" aria-label="Experimental Labs graphics controls: Auto HDR and windowed game optimizations">
+  <title>Experimental Labs graphics controls: Auto HDR and windowed game optimizations</title>
+  <rect width="1920" height="960" fill="#0a0a0b"/>
+  <rect x="96" y="65" width="48" height="48" rx="8" fill="#132013" stroke="#294429"/>
+  <text x="120" y="99" fill="#46c246" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700" text-anchor="middle">M</text>
+  <text x="164" y="100" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="start">MAECLY</text>
+  <text x="330" y="99" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">04 / LABS</text>
+  <text x="1824" y="100" fill="#46c246" font-family="Consolas, monospace" font-size="23" font-weight="600" text-anchor="end">v2.1.0</text>
+  <text x="96" y="212" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="62" font-weight="700" text-anchor="start">Graphics controls. Clearly experimental.</text><text x="96" y="274" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="400" text-anchor="start">Labs exposes Windows preferences; it does not guarantee game or hardware support.</text><rect x="96" y="330" width="848" height="365" rx="16" fill="#161619" stroke="#29292f"/><svg data-asset="auto-hdr-on" x="132" y="370" width="152" height="152" viewBox="0 0 144 144">
+  <defs><linearGradient id="icon-22-g" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#0067c0"/><stop offset=".52" stop-color="#6d3cff"/><stop offset="1" stop-color="#ff2d92"/></linearGradient></defs>
+  <rect width="144" height="144" rx="24" fill="url(#icon-22-g)"/>
+  <rect x="20" y="31" width="104" height="74" rx="13" fill="none" stroke="#fff" stroke-width="7"/>
+  <text x="72" y="79" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="800" fill="#fff">HDR</text>
+  <path d="m105 19 3 9 9 3-9 3-3 9-3-9-9-3 9-3Z" fill="#fff"/>
+</svg><text x="321" y="393" fill="#b39aff" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">LABS / EXPERIMENTAL</text><text x="321" y="455" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="600" text-anchor="start">Auto HDR</text><text x="132" y="592" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start">Toggle the current-user Auto HDR preference.</text>
+<text x="132" y="628.4" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start">Compatible games and an HDR display are needed.</text><rect x="976" y="330" width="848" height="365" rx="16" fill="#161619" stroke="#29292f"/><svg data-asset="windowed-on" x="1012" y="370" width="152" height="152" viewBox="0 0 144 144">
+  <rect width="144" height="144" rx="24" fill="#0078d4"/>
+  <rect x="22" y="27" width="100" height="88" rx="9" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M22 49h100" stroke="#fff" stroke-width="8"/><circle cx="38" cy="38" r="4" fill="#fff"/><circle cx="51" cy="38" r="4" fill="#fff"/>
+  <path d="m73 61 9 19 21 3-15 15 4 20-19-10-19 10 4-20-15-15 21-3Z" fill="#fff"/>
+</svg><text x="1201" y="393" fill="#b39aff" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">LABS / EXPERIMENTAL</text><text x="1201" y="455" fill="#f2f2f3" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="600" text-anchor="start">Windowed optimizations</text><text x="1012" y="592" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start">Toggle the windowed-game optimization preference.</text>
+<text x="1012" y="628.4" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="start">Applicability depends on the game and Windows.</text><text x="96" y="762" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="400" text-anchor="start">Unknown settings are preserved. Unexpected formats are not overwritten.</text>
+<text x="96" y="802" fill="#a3a3ad" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="400" text-anchor="start">Windows or GPU updates may affect these experimental controls.</text>
+  <path d="M96 854H1824" stroke="#29292f"/>
+  <text x="96" y="902" fill="#a3a3ad" font-family="Consolas, monospace" font-size="22" font-weight="400" text-anchor="start">WINDOWS 11  /  STREAM DECK 7.1+</text>
+  <text x="1824" y="902" fill="#a3a3ad" font-family="Consolas, monospace" font-size="21" font-weight="400" text-anchor="end">MIT · OPEN SOURCE · EN / ES</text>
+</svg>

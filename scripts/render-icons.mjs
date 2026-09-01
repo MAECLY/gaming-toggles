@@ -3,6 +3,7 @@ import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { Resvg } from "@resvg/resvg-js";
+import { renderMakerConsole } from "./render-maker-console.mjs";
 
 // Single source of truth: assets/icons/*.svg. Everything the plugin and the site
 // ship is rasterised from those files, so the art can never drift between the two.
@@ -19,10 +20,6 @@ const plugin = new URL("com.maecly.gamingtoggles.sdPlugin/", root);
 const web = new URL("docs/assets/", root);
 const source = (name) => new URL(`assets/icons/${name}.svg`, root);
 const socialSource = (name) => new URL(`assets/social/${name}.svg`, root);
-// Sources and uploads are kept in separate folders on purpose: Maker Console only
-// accepts .png/.jpg, and a flat folder makes it too easy to pick the .svg by mistake.
-const makerSource = (name) => new URL(`assets/maker_console/src/${name}.svg`, root);
-const maker = new URL("assets/maker_console/upload/", root);
 const readSource = (name) => readFile(source(name), "utf8");
 
 /** @type {{from: string, to: URL, sizes: [number, number]}[]} */
@@ -79,16 +76,6 @@ const site = [
 /** The social card is hand-composed rather than an icon, but it must not drift. */
 const social = [{ from: "og", to: new URL("og.png", web), size: 1200 }];
 
-/** Maker Console listing media. Elgato wants 288x288 for the icon and 1920x960 for
-    the thumbnail and every gallery image, so widths are fixed by their spec. */
-const makerMedia = [
-  { from: "thumbnail", size: 1920 },
-  { from: "gallery-1-two-keys", size: 1920 },
-  { from: "gallery-2-key-state", size: 1920 },
-  { from: "gallery-3-two-way-sync", size: 1920 },
-  { from: "gallery-4-what-it-touches", size: 1920 }
-];
-
 async function render(svg, destination, width) {
   const png = new Resvg(svg, { fitTo: { mode: "width", value: width } }).render().asPng();
   await mkdir(dirname(fileURLToPath(destination)), { recursive: true });
@@ -121,12 +108,6 @@ for (const entry of social) {
   count += 1;
 }
 
-await render(await readSource("plugin-mark"), new URL("icon-288.png", maker), 288);
-count += 1;
-for (const entry of makerMedia) {
-  const svg = await readFile(makerSource(entry.from), "utf8");
-  await render(svg, new URL(`${entry.from}.png`, maker), entry.size);
-  count += 1;
-}
+count += await renderMakerConsole();
 
 console.log(`Generados ${count} recursos desde assets/icons/.`);
