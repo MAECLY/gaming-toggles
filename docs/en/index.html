@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gaming Toggles for PC · Stream Deck Plugin | MAECLY</title>
-    <meta name="description" content="Seven Windows 11 gaming controls for Stream Deck: Game Mode, Game Bar, Xbox mode, pointer precision, power plans, Auto HDR and windowed games.">
+    <meta name="description" content="Gaming Toggles for PC for Stream Deck, available on Elgato Marketplace and GitHub. Xbox, mouse, power and graphics controls for Windows 11.">
     <meta name="author" content="Miguel Esparza · MAECLY">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#0a0a0b">
@@ -36,7 +36,7 @@
         "@graph":[
           {"@type":"WebSite","@id":"https://gaming-toggles.maecly.com/#website","url":"https://gaming-toggles.maecly.com/","name":"Gaming Toggles for PC · MAECLY","inLanguage":["es","en"]},
           {"@type":"Person","@id":"https://www.maecly.com/#miguel","name":"Miguel Esparza","url":"https://www.maecly.com/","email":"mailto:hola@maecly.com","jobTitle":"Full-Stack Developer & Content Creator"},
-          {"@type":"SoftwareApplication","@id":"https://gaming-toggles.maecly.com/#software","name":"Gaming Toggles for PC","description":"Stream Deck plugin with seven controls for Windows 11 gaming, Xbox, mouse, power and graphics.","url":"https://gaming-toggles.maecly.com/","downloadUrl":"https://github.com/MAECLY/gaming-toggles/releases/latest","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 11","isAccessibleForFree":true,"license":"https://opensource.org/license/mit","author":{"@id":"https://www.maecly.com/#miguel"},"inLanguage":["es","en"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
+          {"@type":"SoftwareApplication","@id":"https://gaming-toggles.maecly.com/#software","name":"Gaming Toggles for PC","description":"Stream Deck plugin with seven controls for Windows 11 gaming, Xbox, mouse, power and graphics.","url":"https://gaming-toggles.maecly.com/","sameAs":["https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4"],"downloadUrl":"https://github.com/MAECLY/gaming-toggles/releases/latest","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 11","isAccessibleForFree":true,"license":"https://opensource.org/license/mit","author":{"@id":"https://www.maecly.com/#miguel"},"inLanguage":["es","en"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
           {"@type":"FAQPage","@id":"https://gaming-toggles.maecly.com/en/#faq","mainEntity":[{"@type":"Question","name":"Does it require administrator permissions?","acceptedAnswer":{"@type":"Answer","text":"No. It uses current-user preferences and Windows APIs without elevation."}},{"@type":"Question","name":"Which versions are supported?","acceptedAnswer":{"@type":"Answer","text":"Windows 11 and Stream Deck 7.1 or later. Xbox mode requires a compatible Windows version."}},{"@type":"Question","name":"Is it open source?","acceptedAnswer":{"@type":"Answer","text":"Yes. The source is published on GitHub under the MIT license."}}]}
         ]
       }
@@ -65,13 +65,14 @@
           <h1 id="hero-title">Your Xbox.<br>One touch closer.</h1>
           <p class="lede">Control <strong>Xbox, mouse, power and graphics</strong> in Windows 11 directly from your Stream Deck. Seven actions, real states and no elevation.</p>
           <div class="actions">
-            <a class="button button-primary" data-latest-download href="https://github.com/MAECLY/gaming-toggles/releases/latest">Download for Stream Deck</a>
-            <a class="button button-secondary" href="https://github.com/MAECLY/gaming-toggles">View the code</a>
+            <a class="button button-primary" data-marketplace-link href="https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4">Elgato Marketplace</a>
+            <a class="button button-secondary" data-latest-download href="https://github.com/MAECLY/gaming-toggles/releases/latest">Download on GitHub</a>
           </div>
+          <p class="distribution-note">Available on Marketplace. The features described here refer to GitHub; the store version may differ.</p>
           <ul class="hero-specs">
             <li>MIT</li>
             <li>EN / ES</li>
-            <li>Version <span data-release-version aria-busy="true">latest</span></li>
+            <li>GitHub <span data-release-version aria-busy="true">latest</span></li>
             <li>No admin</li>
           </ul>
         </div>
@@ -185,14 +186,14 @@
         <ol class="steps">
           <li class="reveal">
             <div>
-              <h3>Download</h3>
-              <p>Get the <code>.streamDeckPlugin</code> file from GitHub Releases.</p>
+              <h3>Choose your channel</h3>
+              <p>Use Elgato Marketplace or get the <code>.streamDeckPlugin</code> file from GitHub Releases.</p>
             </div>
           </li>
           <li class="reveal">
             <div>
               <h3>Install</h3>
-              <p>Double-click it and accept the installation in Stream Deck.</p>
+              <p>Follow the Marketplace installation flow. If you chose GitHub, double-click the file and accept the installation in Stream Deck.</p>
             </div>
           </li>
           <li class="reveal">
@@ -205,10 +206,13 @@
         <div class="download-panel reveal">
           <img src="../assets/plugin-icon.png" width="512" height="512" alt="" loading="lazy">
           <div>
-            <h3>Gaming Toggles for PC <span data-release-version aria-busy="true">latest release</span></h3>
-            <p>Windows 11 · Stream Deck 7.1+ · EN/ES · MIT</p>
+            <h3>Gaming Toggles for PC</h3>
+            <p>GitHub <span data-release-version aria-busy="true">latest release</span> · Windows 11 · Stream Deck 7.1+ · EN/ES · MIT</p>
           </div>
-          <a class="button button-primary" data-latest-download href="https://github.com/MAECLY/gaming-toggles/releases/latest">Free download</a>
+          <div class="download-channels">
+            <a class="button button-primary" data-marketplace-link href="https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4">Elgato Marketplace</a>
+            <a class="button button-secondary" data-latest-download href="https://github.com/MAECLY/gaming-toggles/releases/latest">Download on GitHub</a>
+          </div>
         </div>
         <p class="download-note" data-release-status="official GitHub download">The download comes from the official GitHub Release.</p>
       </section>
@@ -249,6 +253,7 @@
           <details><summary>Does it require administrator permissions?</summary><p>No. It uses current-user preferences and public Windows APIs. It never requests UAC or modifies HKLM.</p></details>
           <details><summary>Which versions are supported?</summary><p>Windows 11 and Stream Deck 7.1 or later. Xbox mode depends on Windows providing and configuring the full-screen experience.</p></details>
           <details><summary>What does Labs mean?</summary><p>Auto HDR and windowed optimizations depend on an internal preference observed in current Windows builds, not a public Microsoft setter. The plugin preserves unknown fields and refuses unexpected formats.</p></details>
+          <details><summary>Do Marketplace and GitHub offer the same version?</summary><p>Not necessarily. The version shown here and the features described refer to GitHub. Marketplace updates are published separately; check the store listing for its version and available features.</p></details>
           <details><summary>Is it safe to install from GitHub?</summary><p>Every Release is built with GitHub Actions, includes a SHA-256 checksum, and publishes the same code you can audit.</p></details>
           <details><summary>Can I contribute?</summary><p>Yes. It is MIT licensed and welcomes improvements, tests, translations, and GitHub issues.</p></details>
         </div>
@@ -257,8 +262,8 @@
       <section class="section shell cta" aria-labelledby="cta-title">
         <h2 id="cta-title">Put Windows one touch away.</h2>
         <div class="actions">
-          <a class="button button-primary" data-latest-download href="https://github.com/MAECLY/gaming-toggles/releases/latest">Download free</a>
-          <a class="button button-secondary" href="https://github.com/MAECLY/gaming-toggles/issues">Suggest an improvement</a>
+          <a class="button button-primary" data-marketplace-link href="https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4">Elgato Marketplace</a>
+          <a class="button button-secondary" data-latest-download href="https://github.com/MAECLY/gaming-toggles/releases/latest">Download on GitHub</a>
         </div>
       </section>
     </main>
@@ -268,6 +273,7 @@
         <div class="footer-top">
           <a class="brand" href="https://www.maecly.com/"><span class="brand-mark" aria-hidden="true">M</span><span>MAECLY</span></a>
           <div class="footer-links">
+            <a href="https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4">Marketplace</a>
             <a href="https://github.com/MAECLY/gaming-toggles">GitHub</a>
             <a href="https://github.com/MAECLY/gaming-toggles/blob/main/LICENSE">MIT</a>
             <a href="mailto:hola@maecly.com">Contact</a>
