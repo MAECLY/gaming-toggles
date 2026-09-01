@@ -1,5 +1,15 @@
 import AxeBuilder from "@axe-core/playwright";
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
+
+const marketplace = "https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4";
+
+async function expectMarketplaceLinks(page: Page) {
+  await expect(page.locator("[data-marketplace-link]")).toHaveCount(3);
+  for (const link of await page.locator("[data-marketplace-link]").all()) {
+    await expect(link).toHaveAttribute("href", marketplace);
+    await expect(link).not.toHaveAttribute("download");
+  }
+}
 
 test.describe("landing funcional y responsive", () => {
   test("carga la versión española y alterna ambas teclas", async ({ page }) => {
@@ -111,6 +121,8 @@ test.describe("landing funcional y responsive", () => {
     const software = JSON.parse(schema ?? "{}")["@graph"].find((item) => item["@type"] === "SoftwareApplication");
     expect(software.softwareVersion).toBe("9.8.7");
     expect(software.downloadUrl).toBe(assetUrl);
+    expect(software.sameAs).toEqual([marketplace]);
+    await expectMarketplaceLinks(page);
   });
 
   test("conserva el enlace latest y evita una versión falsa si GitHub falla", async ({ page }) => {
@@ -125,6 +137,23 @@ test.describe("landing funcional y responsive", () => {
     }
     await expect(page.locator("[data-release-version]").first()).toHaveText("más reciente");
     await expect(page.locator("[data-release-version]").first()).not.toHaveAttribute("aria-busy", /.+/);
+    await expectMarketplaceLinks(page);
+  });
+
+  test("ofrece ambos canales en ES/EN incluso sin JavaScript", async ({ browser, page: configuredPage }) => {
+    const context = await browser.newContext({ javaScriptEnabled: false, viewport: configuredPage.viewportSize() });
+    const page = await context.newPage();
+    try {
+      for (const path of ["/", "/en/"]) {
+        await page.goto(`http://127.0.0.1:4173${path}`);
+        await expectMarketplaceLinks(page);
+        await expect(page.locator(".hero [data-marketplace-link]")).toBeVisible();
+        await expect(page.locator(".hero [data-latest-download]")).toHaveAttribute("href", "https://github.com/MAECLY/gaming-toggles/releases/latest");
+        await expect(page.locator(".distribution-note")).toContainText(/puede ser distinta|may differ/);
+      }
+    } finally {
+      await context.close();
+    }
   });
 
   test("no genera desbordamiento horizontal", async ({ page }) => {
