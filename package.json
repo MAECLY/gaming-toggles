@@ -75,9 +75,9 @@
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.4",
     "@resvg/resvg-js": "^2.6.2",
-    "@types/node": "^24.13.4",
+    "@types/node": "^24.13.5",
     "@playwright/test": "^1.63.0",
-    "rollup": "^4.50.0",
+    "rollup": "^4.63.3",
     "tslib": "^2.8.1",
     "typescript": "^5.9.2"
   },
