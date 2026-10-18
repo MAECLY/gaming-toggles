@@ -1,6 +1,7 @@
 import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
-import { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { dirname, resolve } from "node:path";
+import { parseArgs } from "node:util";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { Resvg } from "@resvg/resvg-js";
 import { renderMakerConsole } from "./render-maker-console.mjs";
@@ -17,7 +18,10 @@ import { renderMakerConsole } from "./render-maker-console.mjs";
 
 const root = new URL("../", import.meta.url);
 const plugin = new URL("com.maecly.gamingtoggles.sdPlugin/", root);
-const web = new URL("docs/assets/", root);
+// The landing lives in MAECLY/gaming-toggles-landing; pass `--site <its public/assets>` to
+// refresh its copies of the art too. Without it only the plugin is rendered.
+const { values: options } = parseArgs({ options: { site: { type: "string" } } });
+const web = options.site ? pathToFileURL(`${resolve(options.site)}/`) : null;
 const source = (name) => new URL(`assets/icons/${name}.svg`, root);
 const socialSource = (name) => new URL(`assets/social/${name}.svg`, root);
 const readSource = (name) => readFile(source(name), "utf8");
@@ -54,7 +58,7 @@ const vector = [
 ];
 
 /** The landing reuses the same art; the demo keys are displayed around 120 CSS px. */
-const site = [
+const site = !web ? [] : [
   { from: "plugin-mark", to: new URL("plugin-icon.png", web), size: 512 },
   { from: "plugin-mark", to: new URL("favicon.png", web), size: 64 },
   { from: "game-mode-on", to: new URL("game-mode-on.png", web), size: 256 },
@@ -74,7 +78,7 @@ const site = [
 ];
 
 /** The social card is hand-composed rather than an icon, but it must not drift. */
-const social = [{ from: "og", to: new URL("og.png", web), size: 1200 }];
+const social = !web ? [] : [{ from: "og", to: new URL("og.png", web), size: 1200 }];
 
 async function render(svg, destination, width) {
   const png = new Resvg(svg, { fitTo: { mode: "width", value: width } }).render().asPng();

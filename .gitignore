@@ -6,5 +6,3 @@ native/**/target/
 SHA256SUMS.txt
 .DS_Store
 Thumbs.db
-playwright-report/
-test-results/

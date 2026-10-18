@@ -41,4 +41,13 @@ describe("metadatos de código abierto", () => {
     assert.equal(packagedLicense, rootLicense);
     assert.match(rootLicense, /Copyright \(c\) 2026 Miguel Esparza/);
   });
+
+  it("enlaza la ficha del Marketplace en la documentación", async () => {
+    const marketplace = "https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4";
+    for (const file of ["README.md", "RELEASING.md"]) {
+      const content = await readFile(file, "utf8");
+      assert.ok(content.includes(marketplace), `${file} must link to the product listing`);
+      assert.doesNotMatch(content, /etapa previa al Marketplace|Marketplace está pendiente|Cuando Elgato apruebe/i);
+    }
+  });
 });
