@@ -2,6 +2,10 @@
 
 [![CI](https://github.com/MAECLY/gaming-toggles/actions/workflows/ci.yml/badge.svg)](https://github.com/MAECLY/gaming-toggles/actions/workflows/ci.yml)
 [![Última versión](https://img.shields.io/github/v/release/MAECLY/gaming-toggles?label=descarga)](https://github.com/MAECLY/gaming-toggles/releases/latest)
+[![Descargas](https://img.shields.io/github/downloads/MAECLY/gaming-toggles/total?label=descargas)](https://github.com/MAECLY/gaming-toggles/releases)
+[![Estrellas](https://img.shields.io/github/stars/MAECLY/gaming-toggles?label=estrellas)](https://github.com/MAECLY/gaming-toggles/stargazers)
+[![Visitas](https://hits.sh/github.com/MAECLY/gaming-toggles.svg?label=visitas)](https://hits.sh/github.com/MAECLY/gaming-toggles/)
+[![Último commit](https://img.shields.io/github/last-commit/MAECLY/gaming-toggles?label=último%20commit)](https://github.com/MAECLY/gaming-toggles/commits/main)
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
 
 Landing oficial: [gaming-toggles.maecly.com](https://gaming-toggles.maecly.com/)
