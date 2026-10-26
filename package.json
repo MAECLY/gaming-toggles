@@ -62,7 +62,7 @@
     "restart": "streamdeck restart com.maecly.gamingtoggles"
   },
   "dependencies": {
-    "@elgato/streamdeck": "^2.0.0"
+    "@elgato/streamdeck": "^3.0.3"
   },
   "devDependencies": {
     "@elgato/cli": "^1.10.3",
