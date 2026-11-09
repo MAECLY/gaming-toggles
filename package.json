@@ -71,8 +71,8 @@
     "@rollup/plugin-typescript": "^12.3.1",
     "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^24.19.2",
-    "rollup": "^4.66.0",
-    "tslib": "^2.8.1",
+    "rollup": "^4.67.5",
+    "tslib": "^2.9.1",
     "typescript": "^5.9.2"
   },
   "engines": {
