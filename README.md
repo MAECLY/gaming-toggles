@@ -9,7 +9,7 @@
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue.svg)](LICENSE)
 
 Landing oficial: [gaming-toggles.maecly.com](https://gaming-toggles.maecly.com/)
-(código en [MAECLY/gaming-toggles-landing](https://github.com/MAECLY/gaming-toggles-landing))
+(su código está en un repositorio privado)
 
 Disponible en [Elgato Marketplace](https://marketplace.elgato.com/product/gaming-toggles-for-pc-404d89bd-746d-4d2e-ac66-ac87ef96d2e4).
 
